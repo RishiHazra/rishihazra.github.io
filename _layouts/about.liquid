@@ -38,7 +38,7 @@ layout: default
       </div>
     {% endif %}
 
-    <div class="clearfix" style="clear: both; padding-top: 20px;">{{ content }}</div>
+    <div class="clearfix">{{ content }}</div>
 
     <!-- News -->
     {% if page.news and site.announcements.enabled %}
@@ -47,6 +47,8 @@ layout: default
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
+
+    <div class="clearfix">{{ content }}</div>
 
     <!-- Latest posts -->
     {% if site.latest_posts.enabled %}
