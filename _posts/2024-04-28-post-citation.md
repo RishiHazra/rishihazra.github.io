@@ -8,15 +8,6 @@ categories: sample-posts
 citation: true
 ---
 
-An example of displaying a tweet:
-{% twitter https://twitter.com/rubygems/status/518821243320287232 %}
-
-# Timeline
-
-An example of pulling from a timeline:
-{% twitter https://twitter.com/jekyllrb maxwidth=500 limit=3 %}
-
-
 In this blog post, we will address the following question:
 
 ### 1. Why?
@@ -29,14 +20,14 @@ Let's start with 1.
 <div class="row">
     <!-- Full width image -->
     <div class="col-sm-12 mt-3 mt-md-0">
-        <img src="/assets/img/open-world-planning-1.png" width="50%" alt="Description of the image content" class="img-fluid rounded z-depth-1" onerror="this.onerror=null; this.src='image-not-found.png';">
+        <img src="/assets/img/open-world-planning-1.png" width="50%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
     </div>
 </div>
 
 <div class="row">
     <!-- Full width image -->
     <div class="col-sm-12 mt-3 mt-md-0">
-        <img src="/assets/img/open-world-planning-2.png" width="50%" alt="Description of the image content" class="img-fluid rounded z-depth-1" onerror="this.onerror=null; this.src='image-not-found.png';">
+        <img src="/assets/img/open-world-planning-2.png" width="50%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
     </div>
 </div>
 
@@ -80,14 +71,14 @@ Let's start with 1.
 <div class="row">
     <!-- Full width image -->
     <div class="col-sm-12 mt-3 mt-md-0">
-        <img src="/assets/img/partial-observability.png" width="50%" alt="Description of the image content" class="img-fluid rounded z-depth-1" onerror="this.onerror=null; this.src='image-not-found.png';">
+        <img src="/assets/img/partial-observability.png" width="50%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
     </div>
 </div>
 
 <div class="row">
     <!-- Full width image -->
     <div class="col-sm-12 mt-3 mt-md-0">
-        <img src="/assets/img/partial-observability-2.png" width="50%" alt="Description of the image content" class="img-fluid rounded z-depth-1" onerror="this.onerror=null; this.src='image-not-found.png';">
+        <img src="/assets/img/partial-observability-2.png" width="50%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
     </div>
 </div>
 
@@ -104,30 +95,30 @@ Let's start with 1.
     Is it though?
 
 <div class="row">
-    <!-- Full width image -->
     <div class="col-sm-12 mt-3 mt-md-0">
-        <img src="/assets/img/well-well.png" width="50%" alt="Description of the image content" class="img-fluid rounded z-depth-1" onerror="this.onerror=null; this.src='image-not-found.png';">
+        <img src="/assets/img/well-well.png" width="50%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
     </div>
 </div>
+
 
 ### LLMs seem to struggle a bit.
 
 <div class="row">
-    <!-- Full width video -->
-    <div class="col-sm-12 mt-3 mt-md-0">
-        <video class="img-fluid rounded z-depth-1" controls>
+    <div class="col-sm-12 col-md-6 offset-md-3 mt-3 mt-md-0">
+        <video class="img-fluid rounded z-depth-1" controls style="display: block; margin-left: auto; margin-right: auto;">
             <source src="/assets/videos/say_final_hanoi.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
 </div>
 
+
 ### In fact, it struggles a lot.
 
 <div class="row">
     <!-- Full width video -->
-    <div class="col-sm-12 mt-3 mt-md-0">
-        <video class="img-fluid rounded z-depth-1" controls>
+    <div class="col-sm-12 col-md-6 offset-md-3 mt-3 mt-md-0">
+        <video class="img-fluid rounded z-depth-1" controls style="display: block; margin-left: auto; margin-right: auto;">
             <source src="/assets/videos/say_final_virtualhome.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -139,11 +130,18 @@ Let's start with 1.
 <div class="row">
     <!-- Full width image -->
     <div class="col-sm-12 mt-3 mt-md-0">
-        <img src="/assets/img/blocksworld.png" width="50%" alt="Description of the image content" class="img-fluid rounded z-depth-1" onerror="this.onerror=null; this.src='image-not-found.png';">
+        <img src="/assets/img/blocksworld.png" width="50%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
     </div>
 </div>
 
+{% twitter https://twitter.com/rao2z/status/1624881790212251649 %}
+
 ### And neither Prompting, nor Finetuning helps.
+
+* 50 human planners
+* 39 (78%) came up with valid plan
+* 35 (70%) came up with optimal plan
+* <u>Finetuned-GPT3</u> could only solve 20% (122 out of 600)
 
 So what do we have now?
 
@@ -158,5 +156,5 @@ So what do we have now?
 
 LLMs are useful for planning. However, there are no formal guarantees.
 
-Can we improve it to have some formal guarantees? 
+### Can we improve it to have <u>some</u> formal guarantees? 
     Yes
