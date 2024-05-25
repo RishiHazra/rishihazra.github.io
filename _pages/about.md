@@ -12,14 +12,12 @@ profile:
     <p>T2245, Teknikhuset</p>
     <p>Örebro University</p>
 
-news: true  # includes a list of news items
+announcements: true  # includes a list of news items
 academic_service: true
 latest_posts: false  # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-
-📢 ✨ **I'm actively looking for internships for summer 2024** ✨ 📢
 
 I am a third-year Ph.D. student though [Wallenberg AI, Autonomous Systems and Software Program (WASP)](https://wasp-sweden.org/) graduate school, under the supervision of Professor [Luc De Raedt](https://wms.cs.kuleuven.be/people/lucderaedt).
 During my PhD, I also interned at [Meta Reality Labs](https://about.meta.com/realitylabs/), Seattle under the mentorship of [Ruta Desai](https://rutadesai.github.io/).
