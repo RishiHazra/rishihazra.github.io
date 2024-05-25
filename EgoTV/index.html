@@ -1,0 +1,510 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-weight:300;
+		font-size:18px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+	}
+	
+	h1 {
+		font-size:32px;
+		font-weight:300;
+	}
+	
+	.disclaimerbox {
+		background-color: #eee;		
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.rounded {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #208799;
+	}
+	
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+	
+	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+		15px 15px 0 0px #fff, /* The fourth layer */
+		15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+		20px 20px 0 0px #fff, /* The fifth layer */
+		20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+		25px 25px 0 0px #fff, /* The fifth layer */
+		25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
+
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+
+	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+	
+	.vert-cent {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	hr
+	{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+</style>
+
+<html>
+<head>
+	<title>EgoTV: Egocentric Task Verification from Natural Language Task Descriptions</title>
+	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+	<meta property="og:title" content="EgoTV: Egocentric Task Verification from Natural Language Task Descriptions" />
+	<meta property="og:description" content="Paper description." />
+
+	<!-- Get from Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src=""></script> 
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-75863369-6');
+	</script>
+</head>
+
+
+<body>
+	<br>
+	<center>
+		<span style="font-size:30px">EgoTV <img src="./resources/TV.png" width="50" style="vertical-align: middle;" />: Egocentric Task Verification from Natural Language Task Descriptions</span>
+		<br>
+		<td align=center width=200px>
+		<span style="font-size:22px"><b>ICCV 2023</b></a></span><br>
+		</td>
+		<br>
+		<table align=center width=1000px>
+			<table align=center width=900px>
+				<tr>
+					<td align=center width=200px>
+						<center>
+							<span style="font-size:22px"><a href="https://rishihazra.github.io/">Rishi Hazra<sup>1</sup></a></span><br>
+<!--							<span>Affiliation [1]</span>-->
+						</center>
+					</td>
+					<td align=center width=200px>
+						<center>
+							<span style="font-size:22px"><a href="https://brian7685.github.io/">Brian Chen<sup>2</sup></a></span><br>
+<!--							<span>Affiliation [2]</span>-->
+						</center>
+					</td>
+					<td align=center width=200px>
+						<center>
+							<span style="font-size:22px"><a href="https://akshararai.github.io//">Akshara Rai<sup>3</sup></a></span><br>
+<!--							<span>Affiliation [3]</span>-->
+						</center>
+					</td>
+					<td align=center width=200px>
+						<center>
+							<span style="font-size:22px"><a href="https://nitinkamra1992.github.io/">Nitin Kamra<sup>2</sup></a></span><br>
+<!--							<span>Affiliation [2]</span>-->
+						</center>
+					</td>
+					<td align=center width=200px>
+						<center>
+							<span style="font-size:22px"><a href="https://rutadesai.github.io/">Ruta Desai<sup>3</sup></a></span><br>
+<!--							<span>Affiliation [2]</span>-->
+						</center>
+					</td>
+				</tr>
+			</table>
+			<table align=center width=800px>
+				<tr>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:20px">Örebro University<sup>1</sup></span>
+						</center>
+					</td>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:20px">Meta Reality Labs Research<sup>2</sup></span>
+						</center>
+					</td>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:20px">Meta AI<sup>3</sup></span>
+						</center>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<table align=center width=500px>
+				<tr>
+					<td align=center width=85px>
+						<center>
+							<span style="font-size:18px"><a href='https://arxiv.org/pdf/2303.16975.pdf'>[Paper]</a></span>
+						</center>
+					</td>
+					<td align=center width=85px>
+						<center>
+							<span style="font-size:18px"><a href='https://github.com/facebookresearch/EgoTV'>[GitHub]</a></span><br>
+						</center>
+					</td>
+					<td align=center width=150px>
+						<center>
+							<span style="font-size:18px"><a href='https://www.dropbox.com/s/6ac5yslze5mct1k/EgoTV.zip?dl=0'>[EgoTV Dataset]</a></span><br>
+						</center>
+					</td>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:18px"><a href='https://www.dropbox.com/scl/fi/bbrqxvgb2vqbmjb64otop/CrossTask_Verification.zip?rlkey=w49wtztbwnsduhgalukpb25fx&dl=0'>[CTV Dataset]</a></span><br>
+						</center>
+					</td>
+				</tr>
+			</table>
+		</table>
+	</center>
+
+	<center>
+		<table align=center width=900px>
+			<tr>
+				<td width=900px>
+					<div id="wrapper">
+						  <video width="430" height="340" controls>
+							  <source src="./resources/demo1_positive_verification.mp4" type="video/mp4">
+						  </video>
+						  &nbsp;
+						  <video width="430" height="340" controls>
+							  <source src="./resources/demo2_negative_verification.mp4" type="video/mp4">
+						  </video>
+						<div class="clear"></div>
+					</div>
+<!--					<center>-->
+<!--						<video width="620" height="540" controls>-->
+<!--							  <source src="./resources/demo1_positive_verification.mp4" type="video/mp4">-->
+<!--							<source src="./resources/demo2_negative_verification.mp4" type="video/mp4">-->
+<!--						</video>-->
+<!--&lt;!&ndash;						<img class="round" style="width:500px" src="./resources/teaser.png"/>&ndash;&gt;-->
+<!--					</center>-->
+				</td>
+			</tr>
+		</table>
+		<br>
+		<table align=center width=850px>
+			<tr>
+				<td>
+					TLDR: We introduce synthetic <b>EgoTV</b> and real-world <b>CTV</b> datasets for advancing egocentric agents. <b>Given:</b> (1) natural language task description, and (2) (egocentric) video of agent performing the task, <b>Objective:</b> to determine if the task was executed correctly based on description. The datasets feature multi-step tasks with diverse complexities. We also propose a novel <b>Neuro-Symbolic Grounding (NSG)</b> approach that outperforms SOTA vision-language models in causal, temporal, and compositional reasoning.
+				</td>
+			</tr>
+		</table>
+	</center>
+	<br>
+	<hr>
+
+	<table align=center width=850px>
+		<center><h1>Abstract</h1></center>
+		<tr>
+			<td>
+				<p style="text-align: left; font-size: 15px; color: #333333;">To enable progress towards egocentric agents capable of understanding everyday tasks specified in natural language, we propose a benchmark and a synthetic dataset called Egocentric Task Verification (EgoTV). The goal in EgoTV is to verify the execution of tasks from egocentric videos based on the natural language description of these tasks. EgoTV contains pairs of videos and their task descriptions for multi-step tasks -- these tasks contain multiple sub-task decompositions, state changes, object interactions, and sub-task ordering constraints. In addition, EgoTV also provides abstracted task descriptions that contain only partial details about ways to accomplish a task. Consequently, EgoTV requires causal, temporal, and compositional reasoning of video and language modalities, which is missing in existing datasets. We also find that existing vision-language models struggle at such all round reasoning needed for task verification in EgoTV. Inspired by the needs of EgoTV, we propose a novel Neuro-Symbolic Grounding (NSG) approach that leverages symbolic representations to capture the compositional and temporal structure of tasks. We demonstrate NSG's capability towards task tracking and verification on our EgoTV dataset and a real-world dataset derived from CrossTask (CTV). We open-source the EgoTV and CTV datasets and the NSG model for future research on egocentric assistive agents.</p>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<hr>
+
+	<center>
+		<table align=center width=850px>
+			<center><h1>EgoTV Dataset</h1></center>
+			<tr>
+				<td width=260px>
+					<center>
+						<img class="round" style="width:800px" src="./resources/egoTV-1.png"/>
+						<br>
+						<figcaption><p style="text-align: left; font-size: 14px">Figure 1. EgoTV dataset. A positive example [Left] and a negative example [Right] from the train set along with illustrative examples from the test splits [Bottom] of EgoTV are shown. The test splits are focused on generalization to novel compositions of tasks, unseen sub-tasks or steps and scenes, and abstraction in NL task descriptions. The bounding boxes are solely for demonstration purposes and are not used during training/inference.</p></figcaption>
+					</center>
+				</td>
+			</tr>
+		</table>
+<!--		<hr>-->
+		<br>
+		<br>
+		<table align=center width=850px>
+		<tr>
+			<td>
+				<ul>
+					<li>Benchmark: Determine if a task described in NL has been correctly executed by the agent in the egocentric video.</li>
+				    <li>Tasks: Actions <i>heat, clean, slice, cool, place, pick</i> parameterized by a target object. <i>place</i> action is additionally parameterized by a receptacle object.</li>
+					<li>Ordering Constraints: <i>and, then, before/after</i></li>
+					<li>Example: <i>heat_then_clean(apple)</i> | NL Description: <i>apple is heated, then cleaned in a sinkbasin</i>. The task consists of two ordered sub-tasks: heat &rightarrow; clean on target object: apple</li>
+					<li>Metrics: <i>Complexity</i>: #sub-tasks in a task requiring compositional reasoning. <i>Ordering</i>: #ordering constraints in a task requiring temporal reasoning. Moreover, F1-score and accuracy are used to measure performance. </li>
+					<li>Generalization Splits: <b>Novel Tasks</b>: Unseen compositions of seen sub-tasks. <b>Novel Steps</b>: Unseen affordances. <b>Novel Scenes</b>: seen tasks in unseen kitchen scenes. <b>Abstraction</b>: Abstract task descriptions.</li>
+				</ul>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<hr>
+
+		<center>
+		<table align=center width=850px>
+			<center><h1>EgoTV Dataset Statistics</h1></center>
+			<tr>
+				<td width=260px>
+					<center>
+						<img class="round" style="width:800px" src="./resources/egotv_data_stats.png"/>
+						<br>
+						<figcaption><p style="text-align: center; font-size: 14px">Figure 2. EgoTV dataset Stats</p></figcaption>
+					</center>
+				</td>
+			</tr>
+		</table>
+<!--		<hr>-->
+		<br>
+		<br>
+		<table align=center width=850px>
+		<tr>
+			<td>
+				<ul>
+					<li> 168 hours, 82 tasks, 1038 task-object combinations </li>
+					<li> average video length of 84 seconds </li>
+					<li> 4.6 sub-tasks per task in the EgoTV dataset, each sub-task spans ~ 14 frames </li>
+					<li> <b>~2.4 ways to verify a task from NL description</b> </li>
+				</ul>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<hr>
+
+		<center>
+		<table align=center width=850px>
+			<center><h1>CTV Dataset</h1></center>
+			<tr>
+				<td width=260px>
+					<center>
+						<img class="round" style="width:800px" src="./resources/ctv.png"/>
+						<br>
+						<figcaption><p style="text-align: center; font-size: 14px">Figure 3. CrossTask Verification (CTV) dataset</figcaption>
+					</center>
+				</td>
+			</tr>
+		</table>
+<!--		<hr>-->
+			<br>
+		<br>
+		<table align=center width=850px>
+		<tr>
+			<td>
+				We introduce CrossTask Verification (CTV) dataset, using videos from the CrossTask dataset to evaluate task verification models on real-world videos. Thus, CTV complements EgoTV dataset -- CTV and EgoTV together provide a solid test-bed for future research on task verification.  CrossTask has 18 task classes, each with ~ 150 videos, from which we create ~ 2.7K samples.
+			</td>
+		</tr>
+	</table>
+	<br>
+	<hr>
+
+	<center><h1>Neuro-Symbolic Grounding (NSG)</h1></center>
+
+	<table align=center width=620px>
+		<center>
+			<tr>
+				<td>
+				</td>
+			</tr>
+		</center>
+	</table>
+	<table align=center width=680px>
+		<tr>
+			<td align=center width=700px>
+				<center>
+<!--					<td>-->
+						<img class="round" style="width:800px" src="./resources/model-layout-1.png"/>
+						<figcaption><p style="text-align: center; font-size: 14px">Figure 4. NSG Model (a) Semantic Parser and Query Encoder. (b) Video Aligner.</p></figcaption>
+<!--					</td>-->
+				</center>
+			</td>
+		</tr>
+	</table>
+		<br>
+			<br>
+	<table align=center width=850px>
+		<center>
+			<tr>
+				<td>
+					EgoTV requires visual grounding of task-relevant entities such as actions, state changes, etc. extracted from NL task descriptions for verifying tasks in videos. To enable grounding that generalizes to novel compositions of tasks and actions, we propose the Neuro-symbolic Grounding (NSG). NSG consists of three modules: <b>(a Left) semantic parser</b>, which converts task-relevant states from NL task descriptions into symbolic graphs, <b>(a Right) query encoders</b>, which generate the probability of a node in the symbolic graph being grounded in a video segment, and <b>(b) video aligner</b>, which uses the query encoders to align these symbolic graphs with videos. NSG thus uses intermediate symbolic representations between NL task descriptions and corresponding videos to achieve compositional generalization.
+				</td>
+			</tr>
+		</center>
+	</table>
+		<br>
+			<hr>
+
+			<center>
+		<table align=center width=850px>
+			<center><h1>Results</h1></center>
+			<tr>
+				<td width=260px>
+					<center>
+						<img class="round" style="width:800px" src="./resources/egotv-results.png"/>
+						<br>
+						<figcaption><p style="text-align: left; font-size: 14px">Figure 5. [Left] Comparison of baselines with NSG on different data splits using F1-score. [Middle] F1-score of NSG vs. best-performing baseline for EgoTV tasks with varying complexity averaged over all splits. [Right] Confusion Matrix for NSG Queries on validation split (SQuery: StateQuery, RQuery: RelationQuery). </p></figcaption>
+					</center>
+				</td>
+			</tr>
+		</table>
+<!--		<hr>-->
+			<br>
+		<br>
+		<table align=center width=850px>
+		<tr>
+			<td>
+				<li>NSG learns to perform compositional & temporal reasoning on EgoTV and CTV datasets.</li>
+				<li>NSG shows consistent performance with increasing task difficulty.</li>
+				<li>NSG learns to localize task-relevant entities without explicit supervision.</li>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<hr>
+
+				<table align=center width=850px>
+			<center><h1>Why is a new benchmark necessary?</h1></center>
+			<tr>
+				<td width=260px>
+					<center>
+						<img class="round" style="width:800px" src="./resources/egotv-motivation.png"/>
+						<br>
+						<figcaption><p style="text-align: left; font-size: 14px">EgoTV vs. existing video-language datasets. EgoTV benchmark enables systematic investigation (diagnostics) on compositional, causal (e.g., effect of actions), and temporal (e.g., action ordering) reasoning in egocentric settings. </p></figcaption>
+					</center>
+				</td>
+			</tr>
+		</table>
+<!--		<hr>-->
+			<br>
+		<br>
+		<table align=center width=850px>
+		<tr>
+			<td>
+				<li>Reasoning: EgoTV focuses on compositional, causal and temporal reasoning.</li>
+				<li>Observations: EgoTV is egocentric unlike fully-observable CLEVRER dataset.</li>
+				<li>Objective: EgoTV focuses on task verification, while ALFRED on task execution.</li>
+				<li>Control: EgoTV provides systematic control and precise diagnostics across various independent reasoning aspects that Ego4D, EPIC-KITCHENS do not.</li>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<hr>
+<!--	<table align=center width=800px>-->
+<!--		<br>-->
+<!--		<tr><center>-->
+<!--			<span style="font-size:28px">&nbsp;<a href='https://github.com/richzhang/webpage-template'>[GitHub]</a>-->
+<!--			</center>-->
+<!--		</span>-->
+<!--	</table>-->
+<!--	<br>-->
+	<table align=center width=650px>
+		<center><h1>Paper</h1></center>
+		<tr>
+			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
+			<td><span style="font-size:14pt">R. Hazra, B. Chen, A. Rai, N. Kamra, R. Desai.<br>
+				<b>EgoTV: Egocentric Task Verification from Natural Language Task Descriptions.</b><br>
+				ICCV, 2023.<br>
+				<br>
+				<a href="./resources/bibtex.txt">[Bibtex]</a>
+<!--				(hosted on <a href="">ArXiv</a>)<br>-->
+				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
+				<span style="font-size:4pt"><a href=""><br></a>
+				</span>
+			</td>
+		</tr>
+<!--		<tr>-->
+<!--			<td><span style="font-size:14pt"><center>-->
+<!--				<a href="./resources/bibtex.txt">[Bibtex]</a>-->
+<!--			</center></td>-->
+<!--		</tr>-->
+	</table>
+	<br>
+
+<!--	<table align=center width=600px>-->
+<!--		-->
+<!--	</table>-->
+
+<!--	<hr>-->
+<!--	<br>-->
+
+<!--	<table align=center width=900px>-->
+<!--		<tr>-->
+<!--			<td width=400px>-->
+<!--				<left>-->
+<!--					<center><h1>Acknowledgements</h1></center>-->
+<!--					This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.-->
+<!--				</left>-->
+<!--			</td>-->
+<!--		</tr>-->
+<!--	</table>-->
+
+<br>
+</body>
+</html>
+
