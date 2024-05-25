@@ -38,7 +38,7 @@ layout: default
       </div>
     {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+    <div class="clearfix" style="clear: both; padding-top: 20px;">{{ content }}</div>
 
     <!-- News -->
     {% if page.news and site.announcements.enabled %}
@@ -58,6 +58,9 @@ layout: default
 
      <!-- Academic Service -->
           {% if page.academic_service %}
+          <h2>
+            <a href="{{ '/blog/' | relative_url }}" style="color: inherit">academic service</a>
+          </h2>
            <div class="academic_service">
               <p>Program Committee & Session Chair for AAMAS'22, Reviewer for ICML'23-24, EACL'23, NeurIPS'22-23-24, ICLR'24</p>
            </div>
