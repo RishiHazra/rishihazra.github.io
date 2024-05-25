@@ -1,0 +1,9 @@
+@inproceedings{hazra2024saycanpay,
+  title={SayCanPay: Heuristic Planning with Large Language Models using Learnable Domain Knowledge},
+  author={Hazra, Rishi and Dos Martires, Pedro Zuidberg and De Raedt, Luc},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={38},
+  number={18},
+  pages={20123--20133},
+  year={2024}
+}

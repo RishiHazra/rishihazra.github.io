@@ -1,0 +1,8 @@
+@InProceedings{Hazra_2023_ICCV,
+    author    = {Hazra, Rishi and Chen, Brian and Rai, Akshara and Kamra, Nitin and Desai, Ruta},
+    title     = {EgoTV: Egocentric Task Verification from Natural Language Task Descriptions},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2023},
+    pages     = {15417-15429}
+}
