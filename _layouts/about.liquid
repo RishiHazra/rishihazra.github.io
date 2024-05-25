@@ -41,12 +41,20 @@ layout: default
     <div class="clearfix">{{ content }}</div>
 
     <!-- News -->
-    {% if page.news and site.announcements.enabled %}
+    {% if page.news %}
       <h2>
         <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
+
+     <!-- Academic Service -->
+          {% if page.academic_service %}
+            <h2>
+                <a href="{{ '/blog/' | relative_url }}" style="color: inherit;">academic service</a>
+            </h2>
+            {%- include academic_service.html %}
+          {%- endif %}
 
     <!-- Latest posts -->
     {% if site.latest_posts.enabled %}
