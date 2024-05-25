@@ -1,7 +1,7 @@
 ---
 layout: post
-title: a post that can be cited
-date: 2024-04-28 15:06:00
+title: LLMs as Planners?
+date: 2024-05-28 15:06:00
 description: this is what a post that can be cited looks like
 tags: formatting citation
 categories: sample-posts

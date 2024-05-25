@@ -5,6 +5,7 @@ description: Object Detection, Planning with Large Language Models, Plan Executi
 img: /assets/img/robot-saycanpay.jpg
 importance: 1
 category: work
+citation: true
 related_publications: saycanpay
 ---
 

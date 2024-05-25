@@ -42,7 +42,7 @@ layout: default
 
     <!-- News -->
     {% if page.news and site.announcements.enabled %}
-      <h2>
+      <h2 style="margin-top: 30px;"> <!-- Added top margin to create space -->
         <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
       </h2>
       {% include news.liquid limit=true %}
@@ -57,12 +57,12 @@ layout: default
     {% endif %}
 
      <!-- Academic Service -->
-          {% if page.academic_service %}
-          <h2>
+     {% if page.academic_service %}
+         <h2 style="margin-top: 30px;"> <!-- Added top margin to create space -->
             <a href="{{ '/blog/' | relative_url }}" style="color: inherit">academic service</a>
           </h2>
            <div class="academic_service">
-              <p>Program Committee & Session Chair for AAMAS'22, Reviewer for ICML'23-24, EACL'23, NeurIPS'22-23-24, ICLR'24</p>
+              <p>Program Committee & Session Chair for AAMAS'22, Reviewer for EACL'23, ICML'23-24, NeurIPS'22-23-24, ICLR'24</p>
            </div>
      {%- endif %}
 
