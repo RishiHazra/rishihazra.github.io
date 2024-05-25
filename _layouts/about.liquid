@@ -56,6 +56,12 @@ layout: default
       {% include latest_posts.liquid %}
     {% endif %}
 
+     <!-- Academic Service -->
+          {% if page.academic_service %}
+            <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">academic service</a></h2>
+            {%- include academic_service.liquid %}
+     {%- endif %}
+
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
