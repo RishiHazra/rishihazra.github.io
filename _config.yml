@@ -170,7 +170,7 @@ collections:
     output: true
     permalink: /projects/:path/
 
-announcements:
+news:
   enabled: true
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 10 # leave blank to include all the news in the `_news` folder
@@ -595,20 +595,3 @@ third_party_libraries:
 # -----------------------------------------------------------------------------
 # Get external JSON data
 # -----------------------------------------------------------------------------
-
-jekyll_get_json:
-  - data: resume
-    json: assets/json/resume.json # it can also be an url
-jsonresume:
-  - basics
-  - work
-  - education
-  - publications
-  - projects
-  - volunteer
-  - awards
-  - certificates
-  - skills
-  - languages
-  - interests
-  - references
