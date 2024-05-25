@@ -3,35 +3,94 @@ layout: post
 title: LLMs as Planners?
 date: 2024-05-28 15:06:00
 description: this is what a post that can be cited looks like
-tags: [formatting citation,formatting images]
+tags: formatting citation
 categories: sample-posts
 citation: true
-images:
-  compare: true
-  slider: true
 ---
 
-This is an example post that can be cited. The content of the post ends here, while the citation information is automatically provided below. The only thing needed is for you to set the `citation` key in the front matter to `true`.
+In this blog post, we will address the following question:
 
-This is an example post with advanced image components.
+### 1. Why?
+### 2. Are they really All You Need (for Planning)?
 
-## Image Slider
+Let's start with 1.
 
-This is a simple image slider. It uses the [Swiper](https://swiperjs.com/) library. Check the [examples page](https://swiperjs.com/demos) for more information of what you can achieve with it.
+### Open-world Planning
 
-<swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/9.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/7.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/8.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/10.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/12.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
-</swiper-container>
+<div class="row">
+    <!-- Full width image -->
+    <div class="col-sm-12 mt-3 mt-md-0">
+        <img src="/assets/img/open-world-planning-1.png" alt="Description of the image content" class="img-fluid rounded z-depth-1" onerror="this.onerror=null; this.src='image-not-found.png';">
+    </div>
+</div>
 
-## Image Comparison Slider
+<div class="row">
+    <!-- Full width image -->
+    <div class="col-sm-12 mt-3 mt-md-0">
+        <img src="/assets/img/open-world-planning-2.png" alt="Description of the image content" class="img-fluid rounded z-depth-1" onerror="this.onerror=null; this.src='image-not-found.png';">
+    </div>
+</div>
 
-This is a simple image comparison slider. It uses the [img-comparison-slider](https://img-comparison-slider.sneas.io/) library. Check the [examples page](https://img-comparison-slider.sneas.io/examples.html) for more information of what you can achieve with it.
 
-<img-comparison-slider>
-  {% include figure.liquid path="assets/img/prof_pic.jpg" class="img-fluid rounded z-depth-1" slot="first" %}
-  {% include figure.liquid path="assets/img/prof_pic_color.png" class="img-fluid rounded z-depth-1" slot="second" %}
-</img-comparison-slider>
+### Handling Abstract Tasks
+
+<div class="container">
+    <div class="row">
+        <!-- Video 1 -->
+        <div class="col-md-4">
+            <video class="img-fluid rounded" controls>
+                <source src="/assets/videos/organize_closet.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <!-- Video 2 -->
+        <div class="col-md-4">
+            <video class="img-fluid rounded" controls>
+                <source src="/assets/videos/browse_internet.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <!-- Video 3 -->
+        <div class="col-md-4">
+            <video class="img-fluid rounded" controls>
+                <source src="/assets/videos/turn_off_tv.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</div>
+
+### Handling Partial Observability
+
+<div class="row">
+    <!-- Full width image -->
+    <div class="col-sm-12 mt-3 mt-md-0">
+        <img src="/assets/img/partial-observability.png" alt="Description of the image content" class="img-fluid rounded z-depth-1" onerror="this.onerror=null; this.src='image-not-found.png';">
+    </div>
+</div>
+
+<div class="row">
+    <!-- Full width image -->
+    <div class="col-sm-12 mt-3 mt-md-0">
+        <img src="/assets/img/partial-observability-2.png" alt="Description of the image content" class="img-fluid rounded z-depth-1" onerror="this.onerror=null; this.src='image-not-found.png';">
+    </div>
+</div>
+
+### What we know so far?
+    So, an LLM is All You Need for Planning. Period. 
+    Is it though?
+
+### LLMs seem to struggle a bit.
+
+### In fact, it struggles a lot.
+
+### Even on simple Blocksworld.
+
+### And neither Prompting, nor Finetuning helps.
+
+So what do we have now?
+
+LLMs are useful for planning. However, there are no formal guarantees.
+
+Can we improve it to have some formal guarantees? 
+    Yes
