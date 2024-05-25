@@ -2,24 +2,28 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: <a href='#'>WASP Ph.D. at Örebro University, Sweden</a>
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  address: >
+    <p>T2245, Teknikhuset</p>
+    <p>Örebro University</p>
 
-news: true # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+news: true  # includes a list of news items
+academic_service: true
+latest_posts: false  # includes a list of the newest posts
+selected_papers: false # includes a list of papers marked as "selected={true}"
+social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+📢 ✨ **I'm actively looking for internships for summer 2024** ✨ 📢
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I am a third-year Ph.D. student though [Wallenberg AI, Autonomous Systems and Software Program (WASP)](https://wasp-sweden.org/) graduate school, under the supervision of Professor [Luc De Raedt](https://wms.cs.kuleuven.be/people/lucderaedt).
+During my PhD, I also interned at [Meta Reality Labs](https://about.meta.com/realitylabs/), Seattle under the mentorship of [Ruta Desai](https://rutadesai.github.io/).
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+My research seeks to answer the following question: **How to enable autonomous agents to learn, reason, and plan?** This allows me to explore novel ways of integrating machine learning and symbolic reasoning, via neuro-symbolic approaches, specifically in decision-making in dynamic environments. This fusion empowers AI models to be more robust, transparent, and capable of generalizing to complex tasks.
+
+In 2019, I earned my Master's degree in AI from Indian Institute of Science (IISc), Bangalore, focusing on Active Learning for NLP applications, under the supervision of [Dr. Ambedkar Dukkipati](https://www.csa.iisc.ac.in/~ambedkar/). Following that, I served as a Research Associate in the [Statistics and Machine Learning Group](https://sml.csa.iisc.ac.in/) at IISc, working on Multi-Agent Reinforcement Learning. Prior to beginning my doctoral journey, I worked with the Natural Understanding group @ [Amazon Alexa-AI](https://developer.amazon.com/en-US/alexa), Bangalore.
