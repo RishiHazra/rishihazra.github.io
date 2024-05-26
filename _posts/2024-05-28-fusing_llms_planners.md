@@ -3,7 +3,7 @@ layout: post
 title: Fusing LLM & Classical Planning
 date: 2024-05-28 15:06:00
 description:
-tags: formatting citation
+tags: LLMs Planning
 categories: llm-planning
 citation: true
 ---

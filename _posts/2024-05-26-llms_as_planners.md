@@ -3,7 +3,7 @@ layout: post
 title: Why are LLMs required for Planning?
 date: 2024-05-26 15:06:00
 description:
-tags: formatting citation
+tags: LLMs Planning
 categories: llm-planning
 citation: true
 ---
