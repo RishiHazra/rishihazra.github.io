@@ -84,8 +84,41 @@ Ring any bells now? You guessed it right. <br><br>
 </table><br><br>
 
 Considering <span style="color: cornflowerblue;">LLM Planning</span> as <span style="color: cornflowerblue;">System 1</span> and <span style="color: darksalmon;">Classical Planning</span> as <span style="color: darksalmon;">System 2</span>, we look at two different ways of combining the best of both.
+* Equip LLMs with verifiers, dynamics, and heuristic search.
+* Use LLms as knowledge bases for open-world planning
 <br><br>
 
+<div class="row">
+    <!-- Full width image -->
+    <div class="col-sm-12 mt-3 mt-md-0">
+        <img src="/assets/img/classical_plus_llms.png" width="70%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
+    </div>
+</div><br><br>
+
+---
+
+## LLMs + verifiers, dynamics, and heuristic search.
+
+### 1. LLMs + external verifiers
+
+### 2. LLMs + external verifiers + heuristic search
+
+### 3. LLMs + dynamics models
+
+---
+
+## LLMs as Knowledge Base for Planners
 
 
+---
 
+Perhaps, a more apt conlusion would be:
+
+A Large Language Model *(+ a Solver)* is All You Need!<br><br>
+
+<div class="row">
+    <!-- Full width image -->
+    <div class="col-sm-12 mt-3 mt-md-0">
+        <img src="/assets/img/llm-modulo.png" width="70%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
+    </div>
+</div><br><br>

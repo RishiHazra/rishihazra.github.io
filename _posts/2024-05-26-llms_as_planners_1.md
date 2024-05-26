@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Why LLMs are required for Planning?
+title: Why are LLMs required for Planning?
 date: 2024-05-26 15:06:00
 description:
 tags: formatting citation
@@ -200,13 +200,14 @@ So what do we have now?<br><br>
 | **Optimality**                     |         ✅          |       ❌       |
 
 <br><br>
-LLMs are useful for planning. However, there are no formal guarantees.
+LLMs are useful for planning. However, there are no formal guarantees.<br><br>
 
 ---
 
-
+<br><br>
 ## Can we improve it to have <u>some</u> formal guarantees? 
-    Yes
+Read the next article in the series:
+[Fusing LLM and Classical Planning](https://rishihazra.github.io/llm-planning/2024/05/26/llms_as_planners_2.html)
 
 ---
 
@@ -252,5 +253,6 @@ ICAPS 2023 Tutorial
 
 ---
 
-## Read the next article in the series:
+<br><br>
+## Next article in the series:
 [Fusing LLM and Classical Planning](https://rishihazra.github.io/llm-planning/2024/05/26/llms_as_planners_2.html)
