@@ -115,15 +115,12 @@ Yet another example is where the agent is given the task of ``stacking the light
 
 ### What we know so far?<br><br>
 
-<div align="center">
-
 |                                    | Classical Planning | LLM Planning  |
 |:-----------------------------------|:------------------:|:-------------:|
 | **Open-world Planning**            |         ❌          |       ✅       |
 | **Handling Abstract Tasks**        |         ❌          |       ✅       |
 | **Handling Partial Observability** |         ❌          |       ✅       |
 
-</div>
 
 <br><br>
 Note that these aspects are not outliers -- on the contrary -- these are pretty much the norm in the real-world. 
@@ -193,7 +190,6 @@ Are LLMs the be-all and end-all for planning? Maybe not just yet. Let's explore 
 
 So what do we have now?<br><br>
 
-<div align="center">
 
 |                                    | Classical Planning | LLM Planning  |
 |:-----------------------------------|:------------------:|:-------------:|
@@ -202,8 +198,6 @@ So what do we have now?<br><br>
 | **Handling Partial Observability** |         ❌          |       ✅       |
 | **Feasibility**                    |         ✅          |       ❌       |
 | **Optimality**                     |         ✅          |       ❌       |
-
-</div>
 
 <br><br>
 LLMs are useful for planning. However, there are no formal guarantees.
