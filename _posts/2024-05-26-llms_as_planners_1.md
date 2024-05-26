@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Exploring LLMs as Planners (1/2)?
+title: Why LLMs are required for Planning?
 date: 2024-05-26 15:06:00
 description:
 tags: formatting citation
-categories: sample-posts
+categories: llm-planning
 citation: true
 ---
 In my talks, I often encounter a couple of recurring questions. 
@@ -253,4 +253,4 @@ ICAPS 2023 Tutorial
 ---
 
 ## Read the next article in the series:
-Exploring LLMs as Planners (1/2)?
+[Fusing LLM and Classical Planning](https://rishihazra.github.io/llm-planning/2024/05/26/llms_as_planners_2.html)

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Exploring LLMs as Planners (2/2)?
+title: Fusing LLM & Classical Planning
 date: 2024-05-28 15:06:00
 description:
 tags: formatting citation
-categories: sample-posts
+categories: llm-planning
 citation: true
 ---
 In the previous part, the question we asked was: 
