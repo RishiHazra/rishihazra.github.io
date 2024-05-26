@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Exploring LLMs as Planners?
-date: 2024-04-28 15:06:00
+title: Exploring LLMs as Planners (1/2)?
+date: 2024-05-26 15:06:00
 description:
 tags: formatting citation
 categories: sample-posts
@@ -16,30 +16,23 @@ Once we tackle that, the inevitable follow-up question arises **Are they all you
 These are common questions, and many of us don't have clear answers. Through this blog post, I aim to shed light on these inquiries. 
 To kick things off, let's clearly outline the key questions we'll explore:
 
-[//]: # (Let's dive into the epic face-off between LLM Planning and Classical Planning approaches. )
-
-[//]: # (Imagine you're preparing for a grand feast, and you've got your recipes &#40;think of these as the Classical Planning's domain files written in Planning Domain Definition Language or PDDL&#41;.)
-
-[//]: # (These recipes are tried and true, but what if you suddenly find out you're out of a key ingredient?)
-
-[//]: # (Enter LLMs, the culinary improvisers of the planning world! Unlike Classical Planning, which sticks strictly to the recipe book, LLMs draw )
-
-## Q1. Why are LLMs useful for planning?
+**Q1. Why are LLMs useful for planning?** 
 Why consider LLMs over classical methods? We'll dive into the flexibility and dynamic problem-solving capabilities of LLMs, illustrating how they adapt to new and unforeseen challenges in planning.
 
-## Q2. Are they really All You Need *for planning*?
+**Q2. Are they really All You Need *for planning*?**
 Can LLMs meet all your planning needs, or do they have their limitations? We'll critically assess the strengths and potential drawbacks of relying solely on LLMs for planning tasks.
 
 
 ---
-### 1. Open-world Planning
+## Q1. Why are LLMs useful for planning?<br><br>
+### 1. Open-world Planning<br><br>
 
 <div class="row">
     <!-- Full width image -->
     <div class="col-sm-12 mt-3 mt-md-0">
         <img src="/assets/img/open-world-planning-1.png" width="70%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
     </div>
-</div>
+</div><br><br>
 
 Here's a scenario: a robot is tasked to deliver a cup for a drink, but the cup is already occupied by tableware. If the robot can't empty the cup itself, what's it to do? Stuck with a predefined domain, a classical planner is restricted to the predefined objects (cups and glasses) it in its [domain file]((https://planning.wiki/ref/pddl/domain)).
 
@@ -118,8 +111,11 @@ Yet another example is where the agent is given the task of ``stacking the light
 <br><br>
 
 ---
+## Q2. Are they really All You Need *for planning*?<br><br>
 
-## What we know so far?<br><br>
+### What we know so far?<br><br>
+
+<div align="center">
 
 |                                    | Classical Planning | LLM Planning  |
 |:-----------------------------------|:------------------:|:-------------:|
@@ -127,6 +123,7 @@ Yet another example is where the agent is given the task of ``stacking the light
 | **Handling Abstract Tasks**        |         ❌          |       ✅       |
 | **Handling Partial Observability** |         ❌          |       ✅       |
 
+</div>
 
 <br><br>
 Note that these aspects are not outliers -- on the contrary -- these are pretty much the norm in the real-world. 
@@ -142,7 +139,7 @@ But let's hold that thought. The world of planning doesn't end with these three 
 Are LLMs the be-all and end-all for planning? Maybe not just yet. Let's explore this further and keep our tech enthusiasm in check 😉.
 <br><br>
 
-### ➡️ LLMs seem to struggle a bit [[6]](#6).<br><br>
+### LLMs seem to struggle a bit [[6]](#6).<br><br>
 
 <div class="row">
     <div class="col-sm-12 col-md-6 offset-md-3 mt-3 mt-md-0">
@@ -154,7 +151,7 @@ Are LLMs the be-all and end-all for planning? Maybe not just yet. Let's explore 
 </div><br><br>
 
 
-### ➡️ In fact, it struggles a lot [[6]](#6).<br><br>
+### In fact, it struggles a lot [[6]](#6).<br><br>
 
 <div class="row">
     <!-- Full width video -->
@@ -167,7 +164,7 @@ Are LLMs the be-all and end-all for planning? Maybe not just yet. Let's explore 
 </div><br><br>
 
 
-### ➡️ Even on simple Blocksworld [[7]](#7).<br><br>
+### Even on simple Blocksworld [[7]](#7).<br><br>
 
 [//]: # (<div class="row">)
 
@@ -187,15 +184,16 @@ Are LLMs the be-all and end-all for planning? Maybe not just yet. Let's explore 
 </div><br><br>
 
 
-### ➡️ And neither Prompting, nor Finetuning helps [[8]](#8).<br><br>
+### And neither Prompting, nor Finetuning helps [[8]](#8).<br><br>
 
 * 50 human planners
 * 39 (78%) came up with valid plan
 * 35 (70%) came up with optimal plan
-* <u>Finetuned GPT-3</u> could only solve 20% (122 out of 600)
+* <u>Finetuned GPT-3</u> could only solve 20% (122 out of 600)<br><br>
 
-So what do we have now?
+So what do we have now?<br><br>
 
+<div align="center">
 
 |                                    | Classical Planning | LLM Planning  |
 |:-----------------------------------|:------------------:|:-------------:|
@@ -205,6 +203,9 @@ So what do we have now?
 | **Feasibility**                    |         ✅          |       ❌       |
 | **Optimality**                     |         ✅          |       ❌       |
 
+</div>
+
+<br><br>
 LLMs are useful for planning. However, there are no formal guarantees.
 
 ---
@@ -254,3 +255,8 @@ NeurIPS 2023 Track on Datasets and Benchmarks.
 Kambhampati, S. (2023). 
 On the Role of Large Language Models in Planning. 
 ICAPS 2023 Tutorial
+
+---
+
+## Read the next article in the series:
+Exploring LLMs as Planners (1/2)?
