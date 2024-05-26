@@ -7,15 +7,24 @@ tags: formatting citation
 categories: sample-posts
 citation: true
 ---
+Let's dive into the epic face-off between LLM Planning and Classical Planning approaches. 
+Imagine you're preparing for a grand feast, and you've got your recipes (think of these as the Classical Planning's domain files written in Planning Domain Definition Language or PDDL).
+These recipes are tried and true, but what if you suddenly find out you're out of a key ingredient?
 
-In this blog post, we will address the following question:
+Enter LLMs, the culinary improvisers of the planning world! Unlike Classical Planning, which sticks strictly to the recipe book, LLMs draw 
 
-### 1. Why?
-### 2. Are they really All You Need (for Planning)?
+In this blog post, we will address the following questions:
 
-Let's start with 1.
 
-### Open-world Planning
+## Q1. Why?
+Why consider LLMs over classical methods? We'll dive into the flexibility and dynamic problem-solving capabilities of LLMs, illustrating how they adapt to new and unforeseen challenges in planning.
+
+## Q2. Are they really All You Need *for Planning*?
+Can LLMs meet all your planning needs, or do they have their limitations? We'll critically assess the strengths and potential drawbacks of relying solely on LLMs for planning tasks.
+
+
+
+### 1. Open-world Planning
 
 <div class="row">
     <!-- Full width image -->
@@ -24,7 +33,11 @@ Let's start with 1.
     </div>
 </div>
 
-We will mainly compare LLM Planning with Classical Planning approaches. Classical Planning approaches generally require a predefined [domain file, for e.g. defined in Planning Domain Definition Language (PDDL))](https://planning.wiki/ref/pddl/domain). That is not the case with LLMs. Owing to its internet-scale training, LLMs acquire vast world knowledge that can be utilized to plan in the world. Here's an example where the robot needs to deliver a cup for drinking, however the cup is already occupied by tableware. Let's assume the robot lacks to ability to empty the cup, can it adapt its plan to accommodate another object that is NOT a cup or glass. As humans, we know that a bowl can also be utilized since it has similar *affordances*, however the knowledge of the classical planner is restricted to the confines of the PDDL domain file -- hence, *closed-world*. However, an LLM can utilize its world knowledge for open-world planning [[1]](#1). 
+Here's a scenario: a robot is tasked to deliver a cup for a drink, but the cup is already occupied by tableware. If the robot can't empty the cup itself, what's it to do? Stuck with a predefined domain, a classical planner is restricted to the predefined objects (cups and glasses) it in its [domain file]((https://planning.wiki/ref/pddl/domain)).
+
+Enter the LLM planner, a true out-of-the-box thinker [[1]](#1). Drawing from its world knowledge, it might suggest, "How about a bowl?" As humans, we know a bowl can function much like a cup — in technical terms, they have similar *affordances*.
+
+[//]: # (We will mainly compare LLM Planning with Classical Planning approaches. Classical Planning approaches generally require a predefined [domain file, for e.g. defined in Planning Domain Definition Language &#40;PDDL&#41;&#41;]&#40;https://planning.wiki/ref/pddl/domain&#41;. That is not the case with LLMs. Owing to its internet-scale training, LLMs acquire vast world knowledge that can be utilized to plan in the world. Here's an example where the robot needs to deliver a cup for drinking, however the cup is already occupied by tableware. Let's assume the robot lacks to ability to empty the cup, can it adapt its plan to accommodate another object that is NOT a cup or glass. As humans, we know that a bowl can also be utilized since it has similar *affordances*, however the knowledge of the classical planner is restricted to the confines of the PDDL domain file -- hence, *closed-world*. However, an LLM can utilize its world knowledge for open-world planning [[1]]&#40;#1&#41;. )
 
 <div class="row">
     <!-- Full width image -->
@@ -33,9 +46,10 @@ We will mainly compare LLM Planning with Classical Planning approaches. Classica
     </div>
 </div>
 
-Yet another example is Voyager [[2]](#2), a lifelong learning agent in Minecraft, which by designing its own *curriculum*, builds a skill library and constantly expands it by interacting with the Minecraft environment. Each skill is defined in form of executable code blocks and more complex skills are build by composing simpler skills. For e.g., to ``combatZombie``, the agent needs to ``craftStoneSword`` and ``craftShield``, which in turn requires skills like  ``mineWood`` and ``makeFurnace`` No rewards for guessing that the world knowledge of the LLMs come in handy. The methods leads to quite advance and complex minecraft behaviour. To preemtively define all skills (including unexpected scenarios) in a classical planner requires expert knowledge of the domain and also the environment.
+Take Voyager [[2]](#2), a lifelong learning agent in Minecraft, for example. It's a lifelong learning agent in Minecraft which designs its own *curriculum*, builds a skill library and constantly expands it by interacting with the environment. Each skill is defined in form of executable code blocks and more complex skills are build by composing simpler skills. For e.g., to ``combatZombie``, the agent needs to ``craftStoneSword`` and ``craftShield``, which in turn requires skills like  ``mineWood`` and ``makeFurnace``. 
+So how does it work? No rewards for guessing that the world knowledge of the LLMs come in handy. In contrast, predefining every possible skill and scenario in a classical planner would require extensive knowledge of both the domain and the environment.
 
-### Handling Abstract Tasks
+### 2. Handling Abstract Tasks
 
 <table>
   <tbody>
@@ -68,9 +82,11 @@ Yet another example is Voyager [[2]](#2), a lifelong learning agent in Minecraft
   </tbody>
 </table>
 
-As shown in the videos, LLMs can -- in zero-shot --generate plans for any abstractly defined tasks[[3]](#3). In contrast, classical planning requires an expert to formally define goal conditions in a [PDDL problem file](https://planning.wiki/ref/pddl/problem).
+Furthermore, LLMs, the veritable know-it-alls, can instantly generate plans for just about any task you can think of, all in *zero-shot* [[3]](#3). Meanwhile, classical planning requires expertly formalized goal conditions in a [PDDL problem file](https://planning.wiki/ref/pddl/problem)
 
-### Handling Partial Observability
+[//]: # (As shown in the videos, LLMs can -- in zero-shot --generate plans for any abstractly defined tasks[[3]]&#40;#3&#41;. In contrast, classical planning requires an expert to formally define goal conditions in a [PDDL problem file]&#40;https://planning.wiki/ref/pddl/problem&#41;.)
+
+### 3. Handling Partial Observability
 
 <div class="row">
     <!-- Full width image -->
@@ -91,7 +107,7 @@ LLMs can use its world knowledge to get handle partial observability. Think of i
 
 Yet another example is where the agent is given the task of ``stacking the lighter block on the heavier block``[[5]](#5). Without the information of weights, a planner will never work. However, a LLM uses *active perception* to first pick up each block to register the weights, then perform the task.
 
-### What we know so far?
+## What we know so far?
 
 |                                    | Classical Planning | LLM Planning  |
 |:-----------------------------------|:------------------:|:-------------:|
@@ -100,8 +116,8 @@ Yet another example is where the agent is given the task of ``stacking the light
 | **Handling Partial Observability** |         ❌          |       ✅       |
 
 
-Note that these aspects are not outlier -- on the contrary -- these are pretty much the norm in the real-world. Now that I have managed to convince you that LLMs are required for real-world planning, what next?  An LLM is All You Need for Planning. Period. 
-Is it though? Let's not get ahead of ourselves ;)
+Note that these aspects are not outliers -- on the contrary -- these are pretty much the norm in the real-world. 
+With LLMs checking all the boxes, it is tempting to declare, **"An LLM is all you need for planning. Period."**
 
 <div class="row">
     <div class="col-sm-12 mt-3 mt-md-0">
@@ -109,7 +125,11 @@ Is it though? Let's not get ahead of ourselves ;)
     </div>
 </div>
 
-### LLMs seem to struggle a bit [[6]](#6).
+But let's hold that thought. The world of planning doesn't end with these three aspects. 
+Are LLMs the be-all and end-all for planning? Maybe not just yet. Let's explore this further and keep our tech enthusiasm in check 😉.
+
+
+### ➡️ LLMs seem to struggle a bit [[6]](#6).
 
 <div class="row">
     <div class="col-sm-12 col-md-6 offset-md-3 mt-3 mt-md-0">
@@ -121,7 +141,7 @@ Is it though? Let's not get ahead of ourselves ;)
 </div>
 
 
-### In fact, it struggles a lot [[6]](#6).
+### ➡️ In fact, it struggles a lot [[6]](#6).
 
 <div class="row">
     <!-- Full width video -->
@@ -133,23 +153,31 @@ Is it though? Let's not get ahead of ourselves ;)
     </div>
 </div>
 
-### Even on simple Blocksworld [[7]](#7).
+### ➡️ Even on simple Blocksworld [[7]](#7).
 
-<div class="row">
-    <!-- Full width image -->
-    <div class="col-sm-12 mt-3 mt-md-0">
-        <img src="/assets/img/blocksworld.png" width="50%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
-    </div>
+[//]: # (<div class="row">)
+
+[//]: # (    <!-- Full width image -->)
+
+[//]: # (    <div class="col-sm-12 mt-3 mt-md-0">)
+
+[//]: # (        <img src="/assets/img/blocksworld.png" width="50%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">)
+
+[//]: # (    </div>)
+
+[//]: # (</div>)
+
+<div align="center">
+  {% twitter https://twitter.com/rao2z/status/1624881790212251649 %}
 </div>
 
-{% twitter https://twitter.com/rao2z/status/1624881790212251649 %}
 
-### And neither Prompting, nor Finetuning helps [[8]](#8).
+### ➡️ And neither Prompting, nor Finetuning helps [[8]](#8).
 
 * 50 human planners
 * 39 (78%) came up with valid plan
 * 35 (70%) came up with optimal plan
-* <u>Finetuned-GPT3</u> could only solve 20% (122 out of 600)
+* <u>Finetuned GPT-3</u> could only solve 20% (122 out of 600)
 
 So what do we have now?
 
