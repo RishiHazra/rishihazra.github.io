@@ -12,8 +12,6 @@ In the previous part, the question we asked was:
 
 To answer that, Let's first recap.
 
-<div align="center">
-
 |                                    | Classical Planning | LLM Planning  |
 |:-----------------------------------|:------------------:|:-------------:|
 | **Open-world Planning**            |         ❌          |       ✅       |
@@ -21,8 +19,6 @@ To answer that, Let's first recap.
 | **Handling Partial Observability** |         ❌          |       ✅       |
 | **Feasibility**                    |         ✅          |       ❌       |
 | **Optimality**                     |         ✅          |       ❌       |
-
-</div>
 
 <br><br>
 
