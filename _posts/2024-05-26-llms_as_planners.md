@@ -36,7 +36,7 @@ Can LLMs meet all your planning needs, or do they have their limitations? We'll 
 
 Here's a scenario: a robot is tasked to deliver a cup for a drink, but the cup is already occupied by tableware. If the robot can't empty the cup itself, what's it to do? Stuck with a predefined domain, a classical planner is restricted to the predefined objects (cups and glasses) it in its [domain file]((https://planning.wiki/ref/pddl/domain)).
 
-Enter the LLM planner, a true out-of-the-box thinker [[1]](#1). Drawing from its world knowledge, it might suggest, "How about a bowl?" As humans, we know a bowl can function much like a cup — in technical terms, they have similar *affordances*. <br><br>
+A LLM can draw from its world knowledge to suggest, "How about a bowl?"[[1]](#1) As humans, we know a bowl can function much like a cup — in technical terms, they have similar *affordances*. <br><br>
 
 [//]: # (We will mainly compare LLM Planning with Classical Planning approaches. Classical Planning approaches generally require a predefined [domain file, for e.g. defined in Planning Domain Definition Language &#40;PDDL&#41;&#41;]&#40;https://planning.wiki/ref/pddl/domain&#41;. That is not the case with LLMs. Owing to its internet-scale training, LLMs acquire vast world knowledge that can be utilized to plan in the world. Here's an example where the robot needs to deliver a cup for drinking, however the cup is already occupied by tableware. Let's assume the robot lacks to ability to empty the cup, can it adapt its plan to accommodate another object that is NOT a cup or glass. As humans, we know that a bowl can also be utilized since it has similar *affordances*, however the knowledge of the classical planner is restricted to the confines of the PDDL domain file -- hence, *closed-world*. However, an LLM can utilize its world knowledge for open-world planning [[1]]&#40;#1&#41;. )
 
@@ -48,7 +48,7 @@ Enter the LLM planner, a true out-of-the-box thinker [[1]](#1). Drawing from its
 </div><br><br>
 
 Take Voyager [[2]](#2), a lifelong learning agent in Minecraft, for example. It's a lifelong learning agent in Minecraft which designs its own *curriculum*, builds a skill library and constantly expands it by interacting with the environment. Each skill is defined in form of executable code blocks and more complex skills are build by composing simpler skills. For e.g., to ``combatZombie``, the agent needs to ``craftStoneSword`` and ``craftShield``, which in turn requires skills like  ``mineWood`` and ``makeFurnace``. 
-So how does it work? No rewards for guessing that the world knowledge of the LLMs come in handy. In contrast, predefining every possible skill and scenario in a classical planner would require extensive knowledge of both the domain and the environment. <br><br>
+So how does it work? No points for guessing that the world knowledge of the LLMs come in handy. In contrast, predefining every possible skill and scenario in a classical planner would require extensive knowledge of both the domain and the environment. <br><br>
 
 ### 2. Handling Abstract Tasks<br><br>
 

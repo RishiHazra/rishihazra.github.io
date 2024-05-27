@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Fusing LLM & Classical Planning
-date: 2024-03-20 14:37:00-0400
+date: 2024-06-20 14:37:00-0400
 description:
 tags: LLMs Planning
 categories: llm-planning
-giscus_comments: true
+giscus_comments: false
 related_posts: true
 pretty_table: true
 ---
@@ -144,6 +144,20 @@ Let's first start with some motivation. [[1]](#1) shows that:
 
 ## LLMs as Knowledge Base for Planners<br><br>
 
+<div class="row">
+    <!-- Full width image -->
+    <div class="col-sm-12 mt-3 mt-md-0">
+        <img src="/assets/img/llm_p.png" width="80%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
+    </div>
+</div><br><br>
+
+<div class="row">
+    <!-- Full width image -->
+    <div class="col-sm-12 mt-3 mt-md-0">
+        <img src="/assets/img/hierarchical_planning.png" width="80%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
+    </div>
+</div><br><br>
+
 
 ---
 
@@ -182,6 +196,15 @@ Reasoning with Language Models is Planning with World Models.
 Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing, 8154--8173.
 
 <a id="5">[5]</a> 
-Du, Y. (2023). 
+Du, Y. (2024). 
 Video Language Planning.
 The Twelfth International Conference on Learning Representations.
+
+<a id="6">[6]</a> 
+Liu, B. (2023). 
+LLM+P: Empowering Large Language Models with Optimal Planning Proficiency.
+
+<a id="7">[7]</a> 
+Wong, L. (2024). 
+Learning Grounded Action Abstraction from Language.
+The Twelfth International Conference on Learning Representations
