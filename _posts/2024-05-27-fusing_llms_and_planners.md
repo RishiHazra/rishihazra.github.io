@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Fusing LLM & Classical Planning
-date: 2024-05-27 14:37:00-0400
+date: 2024-03-20 14:37:00-0400
 description:
 tags: LLMs Planning
 categories: llm-planning
@@ -14,29 +14,6 @@ In the previous part, the question we asked was:
 **Can we improve LLM planning to have <u>some</u> formal guarantees?**
 
 To answer that, Let's first recap.
-
-|                                    | Classical Planning | LLM Planning  |
-|:-----------------------------------|:------------------:|:-------------:|
-| **Open-world Planning**            |         ❌          |       ✅       |
-| **Handling Abstract Tasks**        |         ❌          |       ✅       |
-| **Handling Partial Observability** |         ❌          |       ✅       |
-| **Feasibility**                    |         ✅          |       ❌       |
-| **Optimality**                     |         ✅          |       ❌       |
-
-<br><br>
-
-We can observe that the formal guarantees come from classical planning. 
-Can we somehow combine the best of both? Any guesses? Here's a hint to jog your memories.<br><br>
-
-<div class="row">
-    <!-- Full width image -->
-    <div class="col-sm-12 mt-3 mt-md-0">
-        <img src="/assets/img/thinking_fast_slow.png" width="50%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
-    </div>
-</div><br><br>
-
-Ring any bells now? You guessed it right. <br><br>
-
 <style>
   /* Color the header of the second column blue */
   .blue-text {
@@ -82,7 +59,19 @@ Ring any bells now? You guessed it right. <br><br>
 </tr>
 </table><br><br>
 
-Considering <span style="color: cornflowerblue;">LLM Planning</span> as <span style="color: cornflowerblue;">System 1</span> and <span style="color: darksalmon;">Classical Planning</span> as <span style="color: darksalmon;">System 2</span>, we look at two different ways of combining the best of both.
+We can observe that the formal guarantees come from classical planning. 
+Can we somehow combine the best of both? Any guesses? Here's a hint to jog your memories.<br><br>
+
+<div class="row">
+    <!-- Full width image -->
+    <div class="col-sm-12 mt-3 mt-md-0">
+        <img src="/assets/img/thinking_fast_slow.png" width="40%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
+    </div>
+</div><br><br>
+
+Ring any bells now? You guessed it right. <br><br>
+
+Considering <span style="color: darksalmon;">LLM Planning</span> as <span style="color: darksalmon;">System 1</span> and <span style="color: cornflowerblue;">Classical Planning</span> as <span style="color: cornflowerblue;">System 2</span>, we look at two different ways of combining the best of both.
 * Equip LLMs with verifiers, dynamics, and heuristic search.
 * Use LLms as knowledge bases for open-world planning
 <br><br>
@@ -118,11 +107,38 @@ Let's first start with some motivation. [[1]](#1) shows that:
     </div>
 </div><br><br>
 
-
+<div class="row">
+    <!-- Full width image -->
+    <div class="col-sm-12 mt-3 mt-md-0">
+        <img src="/SayCanPay/resources/saycanpay_teaser.png" width="80%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
+    </div>
+</div><br><br>
 
 ### 2. LLMs + external verifiers + heuristic search<br><br>
 
+<div class="row">
+    <!-- Full width image -->
+    <div class="col-sm-12 mt-3 mt-md-0">
+        <img src="/SayCanPay/resources/decoding_strategies.png" width="80%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
+    </div>
+</div><br><br>
+
 ### 3. LLMs + dynamics models<br><br>
+
+<div class="row">
+    <!-- Full width image -->
+    <div class="col-sm-12 mt-3 mt-md-0">
+        <img src="/assets/img/llms_as_world_models.png" width="80%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
+    </div>
+</div><br><br>
+
+<div class="row">
+    <!-- Full width image -->
+    <div class="col-sm-12 mt-3 mt-md-0">
+        <img src="/assets/img/video_language_planning.png" width="80%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
+    </div>
+</div><br><br>
+
 
 ---
 
