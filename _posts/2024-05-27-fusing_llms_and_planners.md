@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Fusing LLM & Classical Planning
-date: 2024-03-20 14:37:00-0400
+date: 2024-03-20 14:37:00
 description:
 tags: LLMs Planning
 categories: llm-planning
