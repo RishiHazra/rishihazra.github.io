@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Fusing LLM & Classical Planning.
-date: 2024-05-29 14:37:00-0400
+title: Fusing LLM & Classical Planning
+date: 2023-03-20 14:37:00-0400
 description:
 tags: LLMs Planning
 categories: llm-planning
-giscus_comments: false
-related_posts: false
+giscus_comments: true
+related_posts: true
 pretty_table: true
 ---
 
@@ -82,7 +82,7 @@ Ring any bells now? You guessed it right. <br><br>
 </tr>
 </table><br><br>
 
-Considering <span style="color: darksalmon;">LLM Planning</span> as <span style="color: darksalmon;">System 1</span> and <span style="color: cornflowerblue;">Classical Planning</span> as <span style="color: cornflowerblue;">System 2</span>, we look at two different ways of combining the best of both.
+Considering <span style="color: cornflowerblue;">LLM Planning</span> as <span style="color: cornflowerblue;">System 1</span> and <span style="color: darksalmon;">Classical Planning</span> as <span style="color: darksalmon;">System 2</span>, we look at two different ways of combining the best of both.
 * Equip LLMs with verifiers, dynamics, and heuristic search.
 * Use LLms as knowledge bases for open-world planning
 <br><br>
