@@ -1,12 +1,15 @@
 ---
 layout: post
 title: Fusing LLM & Classical Planning
-date: 2024-05-28 15:06:00
+date: 2024-05-29 14:37:00-0400
 description:
 tags: LLMs Planning
 categories: llm-planning
-citation: true
+giscus_comments: false
+related_posts: false
+pretty_table: true
 ---
+
 In the previous part, the question we asked was: 
 **Can we improve LLM planning to have <u>some</u> formal guarantees?**
 

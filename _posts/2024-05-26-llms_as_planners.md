@@ -207,7 +207,8 @@ LLMs are useful for planning. However, there are no formal guarantees.<br><br>
 <br><br>
 ## Can we improve it to have <u>some</u> formal guarantees? 
 Read the next article in the series:
-[Fusing LLM and Classical Planning](https://rishihazra.github.io/llm-planning/2024/05/26/fusing_llms_planners.html)
+
+[//]: # ([Fusing LLM and Classical Planning]&#40;https://rishihazra.github.io/llm-planning/2024/05/26/fusing_llms_planners.html&#41;)
 
 ---
 
@@ -255,4 +256,5 @@ ICAPS 2023 Tutorial
 
 <br><br>
 ## Next article in the series:
-[Fusing LLM and Classical Planning](https://rishihazra.github.io/llm-planning/2024/05/26/fusing_llms_planners.html)
+
+[//]: # ([Fusing LLM and Classical Planning]&#40;https://rishihazra.github.io/llm-planning/2024/05/26/fusing_llms_planners.html&#41;)
