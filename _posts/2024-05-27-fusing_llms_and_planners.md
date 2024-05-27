@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Fusing LLM & Classical Planning
-date: 2024-03-20 14:37:00-0400
+date: 2024-05-27 14:37:00-0400
 description:
 tags: LLMs Planning
 categories: llm-planning
@@ -109,15 +109,24 @@ Let's first start with some motivation. [[1]](#1) shows that:
 * LLMs can generate *good* solutions if called multiple times.
 * Verifiers help discard *bad* candidate actions/plans.<br><br>
 
-### 1. LLMs + external verifiers
+### 1. LLMs + external verifiers<br><br>
 
-### 2. LLMs + external verifiers + heuristic search
+<div class="row">
+    <!-- Full width image -->
+    <div class="col-sm-12 mt-3 mt-md-0">
+        <img src="/assets/img/saycan.png" width="70%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
+    </div>
+</div><br><br>
 
-### 3. LLMs + dynamics models
+
+
+### 2. LLMs + external verifiers + heuristic search<br><br>
+
+### 3. LLMs + dynamics models<br><br>
 
 ---
 
-## LLMs as Knowledge Base for Planners
+## LLMs as Knowledge Base for Planners<br><br>
 
 
 ---
