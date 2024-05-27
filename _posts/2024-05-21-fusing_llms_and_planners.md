@@ -96,7 +96,18 @@ Considering <span style="color: cornflowerblue;">LLM Planning</span> as <span st
 
 ---
 
-## LLMs + verifiers, dynamics, and heuristic search.
+## LLMs + verifiers, dynamics, and heuristic search.<br><br>
+
+<div class="row">
+    <!-- Full width image -->
+    <div class="col-sm-12 mt-3 mt-md-0">
+        <img src="/assets/img/verify_step_by_step.png" width="70%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
+    </div>
+</div><br><br>
+
+Let's first start with some motivation. [[1]](#1) shows that:
+* LLMs can generate *good* solutions if called multiple times.
+* Verifiers help discard *bad* candidate actions/plans.<br><br>
 
 ### 1. LLMs + external verifiers
 
@@ -121,3 +132,31 @@ A Large Language Model *(+ a Solver)* is All You Need!<br><br>
         <img src="/assets/img/llm-modulo.png" width="70%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
     </div>
 </div><br><br>
+
+---
+
+
+## References
+<a id="1">[1]</a> 
+Lightman, H. (2023). 
+Let's Verify Step by Step.
+
+<a id="2">[2]</a> 
+Ahn, M. (2022). 
+Do As I Can, Not As I Say: Grounding Language in Robotic Affordances.
+6th Annual Conference on Robot Learning
+
+<a id="3">[3]</a> 
+Hazra, R. (2023). 
+SayCanPay: Heuristic Planning with Large Language Models Using Learnable Domain Knowledge. 
+Proceedings of the AAAI Conference on Artificial Intelligence, 20123--20133.
+
+<a id="4">[4]</a> 
+Hao, S. (2023). 
+Reasoning with Language Models is Planning with World Models.
+Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing, 8154--8173.
+
+<a id="5">[5]</a> 
+Du, Y. (2023). 
+Video Language Planning.
+The Twelfth International Conference on Learning Representations.
