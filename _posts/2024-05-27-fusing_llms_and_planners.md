@@ -174,12 +174,19 @@ They show that the overall score for each action is a sum of the aggregated scor
 
 Perhaps, a more apt conlusion would be:
 
-A Large Language Model *(+ a Solver)* is All You Need!<br><br>
+[//]: # (A Large Language Model *&#40;+ a Solver&#41;* is All You Need!<br><br>)
 
 <div class="row">
     <!-- Full width image -->
     <div class="col-sm-12 mt-3 mt-md-0">
         <img src="/assets/img/llm-modulo.png" width="70%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
+    </div>
+</div><br><br>
+
+<div class="row">
+    <!-- Full width image -->
+    <div class="col-sm-12 mt-3 mt-md-0">
+        <img src="/assets/img/llm_solver_conclusion.png" width="90%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
     </div>
 </div><br><br>
 
