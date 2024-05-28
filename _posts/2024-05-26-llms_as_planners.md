@@ -130,6 +130,7 @@ With LLMs checking all the boxes, it is tempting to declare, **"An LLM is all yo
     <div class="col-sm-12 mt-3 mt-md-0">
         <img src="/assets/img/well-well.png" width="50%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
     </div>
+© DALL-E
 </div><br><br>
 
 But let's hold that thought. The world of planning doesn't end with these three aspects. 
@@ -219,6 +220,7 @@ Find out in the next installment of our series::
     <div class="col-sm-12 mt-3 mt-md-0">
         <img src="/assets/img/Robot_Suspense_PNG.png" width="60%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
     </div>
+© DALL-E
 </div><br><br>
 
 ---
