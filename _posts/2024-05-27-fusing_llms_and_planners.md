@@ -11,7 +11,7 @@ pretty_table: true
 citation: true
 ---
 
-In the previous part, the question we asked was: 
+In the previous part ([Why are LLMs required for Planning?](https://rishihazra.github.io/llm-planning/2024/05/26/llms_as_planners.html)), the question we asked was: 
 **Can we improve LLM planning to have <u>some</u> formal guarantees?**
 
 To answer that, Let's first recap.
