@@ -184,34 +184,37 @@ Given the task to ```browse internet```, the LLM generates actions like ```walk 
 </div><br><br>
 
 
-### And neither Prompting, nor Finetuning helps [[8]](#8).<br><br>
+### And neither Finetuning[[8]](#8), nor clever Prompting[[9]](#9) helps.<br><br>
 
-* 50 human planners
-* 39 (78%) came up with valid plan
-* 35 (70%) came up with optimal plan
-* <u>Finetuned GPT-3</u> could only solve 20% (122 out of 600)<br><br>
+* On simple blocksworld, <u>finetuned GPT-3</u> could only solve 122/600 (20%)[[8]](#8).
+* GPT-4 could only solve 210/600 (34%) in zero-shot and 214/600 (35.6%) with Chain-of-Thought (CoT) prompting[[8]](#8).
+* LLMs perform poorly at verifying solutions (graph colorings[[9]](#9)), hence showing they cannot self-critique and improve.
+
+Comparing to human performance:
+* A group of 50 human planners were tested.
+* 39 (78%) came up with valid plans.
+* 35 (70%) came up with optimal plans.
 
 So what do we have now?<br><br>
 
-
-|                                    | Classical Planning | LLM Planning  |
-|:-----------------------------------|:------------------:|:-------------:|
-| **Open-world Planning**            |         ❌          |       ✅       |
-| **Handling Abstract Tasks**        |         ❌          |       ✅       |
-| **Handling Partial Observability** |         ❌          |       ✅       |
-| **Feasibility**                    |         ✅          |       ❌       |
-| **Optimality**                     |         ✅          |       ❌       |
+|                                       |       Classical Planning        |           LLM Planning           |
+|:--------------------------------------|:-------------------------------:|:--------------------------------:|
+| **Open-world Planning**               |                ❌                |                ✅                |
+| **Handling Abstract Tasks**           |                ❌                |                ✅                |
+| **Handling Partial Observability**    |                ❌                |                ✅                |
+| **Feasibility**                       |                ✅                |                ❌                |
+| **Optimality**                        |                ✅                |                ❌                |
 
 <br><br>
-LLMs are useful for planning. However, there are no formal guarantees.<br><br>
+**LLMs are useful for planning. However, there are no formal guarantees.<br><br>**
 
 ---
+<br><br>
+## Is it possible to enhance LLMs to have <u>some</u> formal guarantees? 
+Find out in the next installment of our series::
+[**Fusing LLM and Classical Planning**](https://rishihazra.github.io/llm-planning/2024/05/26/fusing_llms_and_planners.html)
 
 <br><br>
-## Can we improve it to have <u>some</u> formal guarantees? 
-To know more, read the next article in the series:
-[Fusing LLM and Classical Planning](https://rishihazra.github.io/llm-planning/2024/05/26/fusing_llms_and_planners.html)
-
 ---
 
 
@@ -254,6 +257,10 @@ Kambhampati, S. (2023).
 On the Role of Large Language Models in Planning. 
 ICAPS 2023 Tutorial
 
+<a id="9">[9]</a> 
+Stechly, K. (2023). 
+GPT-4 Doesn’t Know It’s Wrong: An Analysis of Iterative Prompting for Reasoning Problems. 
+NeurIPS 2023 Foundation Models for Decision Making Workshop
 ---
 
 <br><br>
