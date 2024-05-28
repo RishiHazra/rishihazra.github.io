@@ -5,6 +5,7 @@ date: 2024-05-26 15:06:00
 description:
 tags: LLMs Planning
 categories: llm-planning
+pretty_table: true
 citation: true
 ---
 In my talks, I often encounter a couple of recurring questions. 

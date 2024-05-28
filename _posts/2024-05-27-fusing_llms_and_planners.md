@@ -115,6 +115,11 @@ Let's first start with some motivation. [[1]](#1) shows that:
     </div>
 </div><br><br>
 
+SayCan has a critical limitation: it selects actions based solely on feasibility, not their relevance to the goal. 
+Consider this analogy: if you're traveling from San Francisco to New York, would it make sense to fly via New Delhi simply because it's feasible?
+To address this, **SayCanPay**[[3]](#3) further adds a Pay model to estimate the payoff of an action with respect to the goal. 
+That is, actions which are more *optimal* wrt the goal are more likely to be selected.<br><br>
+
 ### 2. LLMs + external verifiers + heuristic search<br><br>
 
 <div class="row">
@@ -123,6 +128,11 @@ Let's first start with some motivation. [[1]](#1) shows that:
         <img src="/SayCanPay/resources/decoding_strategies.png" width="80%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
     </div>
 </div><br><br>
+
+**SayCanPay**[[3]](#3) also proposes heuristic search using an aggregated score of the Say (LLM), Can (feasibility), and Pay (optimality) models. 
+As shown in the Figure, the Beam-Action search performs a beam search over the action. This mirrors the search in heuristic planners. 
+They show that the overall score for each action is a sum of the aggregated score and heuristic score, akin to A* planning.
+<br><br>
 
 ### 3. LLMs + dynamics models<br><br>
 
