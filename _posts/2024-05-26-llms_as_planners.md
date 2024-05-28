@@ -196,7 +196,7 @@ Given the task to ```browse internet```, the LLM generates actions like ```walk 
 [//]: # (</div>)
 
 
-<div align="center">
+<div style="text-align: center; width: 50%; margin: auto;">
   {% twitter https://twitter.com/rao2z/status/1624881790212251649 %}
 </div><br><br>
 
@@ -252,13 +252,14 @@ So what do we have now?<br><br>
 ---
 
 ## Is it possible to enhance LLMs to have <u>some</u> formal guarantees? 
-Find out in the next installment of our series::
-[**Fusing LLM and Classical Planning**](https://rishihazra.github.io/llm-planning/2024/05/26/fusing_llms_and_planners.html)
+<br><br>
+Find out in the next installment of our series:
+[Fusing LLM and Classical Planning](https://rishihazra.github.io/llm-planning/2024/05/26/fusing_llms_and_planners.html)
 <br><br>
 <div class="row">
     <!-- Full width image -->
     <div class="col-sm-12 mt-3 mt-md-0">
-        <img src="/assets/img/Robot_Suspense_PNG.png" width="60%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
+        <img src="/assets/img/Robot_Suspense_PNG.png" width="50%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
     </div>
 © DALL-E
 </div><br><br>
