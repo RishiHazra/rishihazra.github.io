@@ -97,7 +97,7 @@ Furthermore, LLMs, the veritable know-it-alls, can instantly generate plans for 
 </div><br><br>
 
 Classical planners generally work under the assumption of *full observability* modeled via a Markov Decision Process (MDP). Unfortunately, in the real-world, the agent's senors provide only partial information, called *observation*. Such problems are modeled as a Partially Observable MDP (POMDP). At each time step, the sequence of observations made by the agent determines a probability distribution over states of the environment. Such a distribution is called a *belief state*. Needless to say that often leads to intractibility problems as the length of the plan grows.
-LLMs can use its world knowledge to get handle partial observability. Think of it as a commonsense prior that helps to better (posterior) belief state. For instance, given the task ``make an omlette``, the LLM can output actions to ``go to the fridge`` since eggs are likely to be found in the fridge -- even though eggs are not visible (i.e. partial observation) [[4]](#4).
+LLMs can use its world knowledge to handle partial observability. Think of it as a commonsense prior that helps to shape better (posterior) beliefs. For instance, given the task ``make an omlette``, the LLM can output actions to ``go to the fridge`` since eggs are likely to be found in the fridge -- even though eggs are not visible (i.e. partial observation) [[4]](#4).
 <br><br>
 
 <div class="row">
@@ -115,14 +115,29 @@ Yet another example is where the agent is given the task of ``stacking the light
 
 ### What we know so far?<br><br>
 
-|                                    | Classical Planning | LLM Planning  |
-|:-----------------------------------|:------------------:|:-------------:|
-| **Open-world Planning**            |         ❌          |       ✅       |
-| **Handling Abstract Tasks**        |         ❌          |       ✅       |
-| **Handling Partial Observability** |         ❌          |       ✅       |
+<table>
+<tr>
+  <th></th>
+ <td><strong>LLM Planning</strong></td>
+  <td><strong>Classical Planning</strong></td>
+</tr>
+<tr>
+  <td><strong>Open-world Planning</strong></td>
+  <td align="center">✅</td>
+  <td align="center">❌</td>
+</tr>
+<tr>
+  <td><strong>Handling Abstract Tasks</strong></td>
+  <td align="center">✅</td>
+  <td align="center">❌</td>
+</tr>
+<tr>
+  <td><strong>Handling Partial Observability</strong></td>
+  <td align="center">✅</td>
+  <td align="center">❌</td>
+</tr>
+</table><br><br>
 
-
-<br><br>
 Note that these aspects are not outliers -- on the contrary -- these are pretty much the norm in the real-world. 
 With LLMs checking all the boxes, it is tempting to declare, **"An LLM is all you need for planning. Period."**
 <br><br>
@@ -198,15 +213,39 @@ Comparing to human performance:
 
 So what do we have now?<br><br>
 
-|                                       |       Classical Planning        |           LLM Planning           |
-|:--------------------------------------|:-------------------------------:|:--------------------------------:|
-| **Open-world Planning**               |                ❌                |                ✅                |
-| **Handling Abstract Tasks**           |                ❌                |                ✅                |
-| **Handling Partial Observability**    |                ❌                |                ✅                |
-| **Feasibility**                       |                ✅                |                ❌                |
-| **Optimality**                        |                ✅                |                ❌                |
+<table>
+<tr>
+  <th></th>
+ <td><strong>LLM Planning</strong></td>
+  <td><strong>Classical Planning</strong></td>
+</tr>
+<tr>
+  <td><strong>Open-world Planning</strong></td>
+  <td align="center">✅</td>
+  <td align="center">❌</td>
+</tr>
+<tr>
+  <td><strong>Handling Abstract Tasks</strong></td>
+  <td align="center">✅</td>
+  <td align="center">❌</td>
+</tr>
+<tr>
+  <td><strong>Handling Partial Observability</strong></td>
+  <td align="center">✅</td>
+  <td align="center">❌</td>
+</tr>
+<tr>
+  <td><strong>Feasibility</strong></td>
+  <td align="center">❌</td>
+  <td align="center">✅</td>
+</tr>
+<tr>
+  <td><strong>Optimality</strong></td>
+  <td align="center">❌</td>
+  <td align="center">✅</td>
+</tr>
+</table><br><br>
 
-<br><br>
 **LLMs are useful for planning. However, there are no formal guarantees.<br><br>**
 
 ---
@@ -268,13 +307,3 @@ ICAPS 2023 Tutorial
 Stechly, K. (2023). 
 GPT-4 Doesn’t Know It’s Wrong: An Analysis of Iterative Prompting for Reasoning Problems. 
 NeurIPS 2023 Foundation Models for Decision Making Workshop
-
----
-
-[//]: # ()
-[//]: # (<br><br>)
-
-[//]: # (## Next article in the series:)
-
-[//]: # ()
-[//]: # ([Fusing LLM and Classical Planning]&#40;https://rishihazra.github.io/llm-planning/2024/05/26/fusing_llms_and_planners.html&#41;)

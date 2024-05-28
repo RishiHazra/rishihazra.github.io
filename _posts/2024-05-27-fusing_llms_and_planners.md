@@ -8,6 +8,7 @@ categories: llm-planning
 giscus_comments: false
 related_posts: true
 pretty_table: true
+citation: true
 ---
 
 In the previous part, the question we asked was: 
@@ -29,33 +30,33 @@ To answer that, Let's first recap.
 <table>
 <tr>
   <th></th>
-  <th class="blue-text">Classical Planning</th>
   <th class="pink-text">LLM Planning</th>
+  <th class="blue-text">Classical Planning</th>
 </tr>
 <tr>
   <td><strong>Open-world Planning</strong></td>
-  <td align="center">❌</td>
   <td align="center">✅</td>
+  <td align="center">❌</td>
 </tr>
 <tr>
   <td><strong>Handling Abstract Tasks</strong></td>
-  <td align="center">❌</td>
   <td align="center">✅</td>
+  <td align="center">❌</td>
 </tr>
 <tr>
   <td><strong>Handling Partial Observability</strong></td>
-  <td align="center">❌</td>
   <td align="center">✅</td>
+  <td align="center">❌</td>
 </tr>
 <tr>
   <td><strong>Feasibility</strong></td>
-  <td align="center">✅</td>
   <td align="center">❌</td>
+  <td align="center">✅</td>
 </tr>
 <tr>
   <td><strong>Optimality</strong></td>
-  <td align="center">✅</td>
   <td align="center">❌</td>
+  <td align="center">✅</td>
 </tr>
 </table><br><br>
 
