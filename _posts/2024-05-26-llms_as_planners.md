@@ -147,6 +147,8 @@ Are LLMs the be-all and end-all for planning? Maybe not just yet. Let's explore 
     </div>
 </div><br><br>
 
+In the tower of Hanoi setup with just three disks, the LLM outputs infeasible actions.<br><br>
+
 
 ### In fact, it struggles a lot [[6]](#6).<br><br>
 
@@ -160,6 +162,7 @@ Are LLMs the be-all and end-all for planning? Maybe not just yet. Let's explore 
     </div>
 </div><br><br>
 
+Given the task to ```browse internet```, the LLM generates actions like ```walk stereo``` and ```find bed``` which are irrelevant to the goal.<br><br> 
 
 ### Even on simple Blocksworld [[7]](#7).<br><br>
 
@@ -206,9 +209,8 @@ LLMs are useful for planning. However, there are no formal guarantees.<br><br>
 
 <br><br>
 ## Can we improve it to have <u>some</u> formal guarantees? 
-Read the next article in the series:
-
-[//]: # ([Fusing LLM and Classical Planning]&#40;https://rishihazra.github.io/llm-planning/2024/05/26/fusing_llms_planners.html&#41;)
+To know more, read the next article in the series:
+[Fusing LLM and Classical Planning](https://rishihazra.github.io/llm-planning/2024/05/26/fusing_llms_and_planners.html)
 
 ---
 
@@ -257,4 +259,4 @@ ICAPS 2023 Tutorial
 <br><br>
 ## Next article in the series:
 
-[//]: # ([Fusing LLM and Classical Planning]&#40;https://rishihazra.github.io/llm-planning/2024/05/26/fusing_llms_planners.html&#41;)
+[Fusing LLM and Classical Planning](https://rishihazra.github.io/llm-planning/2024/05/26/fusing_llms_and_planners.html)
