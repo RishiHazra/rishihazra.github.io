@@ -209,14 +209,19 @@ So what do we have now?<br><br>
 **LLMs are useful for planning. However, there are no formal guarantees.<br><br>**
 
 ---
-<br><br>
+
 ## Is it possible to enhance LLMs to have <u>some</u> formal guarantees? 
 Find out in the next installment of our series::
 [**Fusing LLM and Classical Planning**](https://rishihazra.github.io/llm-planning/2024/05/26/fusing_llms_and_planners.html)
-
 <br><br>
----
+<div class="row">
+    <!-- Full width image -->
+    <div class="col-sm-12 mt-3 mt-md-0">
+        <img src="/assets/img/Robot_Suspense_PNG.png" width="60%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
+    </div>
+</div><br><br>
 
+---
 
 ## References
 <a id="1">[1]</a> 
@@ -261,9 +266,13 @@ ICAPS 2023 Tutorial
 Stechly, K. (2023). 
 GPT-4 Doesn’t Know It’s Wrong: An Analysis of Iterative Prompting for Reasoning Problems. 
 NeurIPS 2023 Foundation Models for Decision Making Workshop
+
 ---
 
-<br><br>
-## Next article in the series:
+[//]: # ()
+[//]: # (<br><br>)
 
-[Fusing LLM and Classical Planning](https://rishihazra.github.io/llm-planning/2024/05/26/fusing_llms_and_planners.html)
+[//]: # (## Next article in the series:)
+
+[//]: # ()
+[//]: # ([Fusing LLM and Classical Planning]&#40;https://rishihazra.github.io/llm-planning/2024/05/26/fusing_llms_and_planners.html&#41;)
