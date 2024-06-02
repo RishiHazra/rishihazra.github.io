@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<!--  <meta name="description"-->
+<!--        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">-->
+<!--  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>REvolve: Reward Evolution with Large Language Models for Autonomous Driving</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Videos Side by Side</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <style>
+        .video-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .video-container video {
+            height: 300px; /* Set the height you want */
+            width: 100%;
+            object-fit: cover; /* Ensure the video covers the area */
+        }
+    </style>
+<!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">-->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+<!--  <link rel="icon" href="./static/images/favicon.svg">-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!--<nav class="navbar" role="navigation" aria-label="main navigation">-->
+<!--  <div class="navbar-brand">-->
+<!--    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">-->
+<!--      <span aria-hidden="true"></span>-->
+<!--      <span aria-hidden="true"></span>-->
+<!--      <span aria-hidden="true"></span>-->
+<!--    </a>-->
+<!--  </div>-->
+<!--  <div class="navbar-menu">-->
+<!--    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">-->
+<!--      <a class="navbar-item" href="https://keunhong.com">-->
+<!--      <span class="icon">-->
+<!--          <i class="fas fa-home"></i>-->
+<!--      </span>-->
+<!--      </a>-->
+
+<!--      <div class="navbar-item has-dropdown is-hoverable">-->
+<!--        <a class="navbar-link">-->
+<!--          More Research-->
+<!--        </a>-->
+<!--        <div class="navbar-dropdown">-->
+<!--          <a class="navbar-item" href="https://hypernerf.github.io">-->
+<!--            HyperNeRF-->
+<!--          </a>-->
+<!--          <a class="navbar-item" href="https://nerfies.github.io">-->
+<!--            Nerfies-->
+<!--          </a>-->
+<!--          <a class="navbar-item" href="https://latentfusion.github.io">-->
+<!--            LatentFusion-->
+<!--          </a>-->
+<!--          <a class="navbar-item" href="https://photoshape.github.io">-->
+<!--            PhotoShape-->
+<!--          </a>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--  </div>-->
+<!--</nav>-->
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">REvolve: Reward Evolution with Large Language Models for Autonomous Driving</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://rishihazra.github.io/">Rishi Hazra</a><sup>*</sup>,</span>
+            <span class="author-block">
+              <a href="https://mpi.aass.oru.se/alkis-sygkounas/">Alkis Sygkounas</a><sup>*</sup>,</span>
+            <span class="author-block">
+              <a href="https://mpi.aass.oru.se/andreas-persson/">Andreas Persson</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://pedrozudo.github.io/">Pedro Zuidberg Dos Martires</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://mpi.aass.oru.se/amy-loutfi/">Amy Loutfi</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Örebro University</span>
+          </div>
+
+           <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>*</sup>equal contribution</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://rishihazra.github.io/publications/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://rishihazra.github.io/publications/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://rishihazra.github.io/publications/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/revolve.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Autonomous Driving agent trained with REvolve-designed rewards.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Designing effective reward functions is crucial to training reinforcement learning (RL) algorithms.
+            However, this design is non-trivial, even for domain experts, due to the subjective nature of certain
+            tasks that are hard to quantify explicitly. In recent works, large language models (LLMs) have been used
+            for reward generation from natural language task descriptions, leveraging their extensive instruction
+            tuning and commonsense understanding of human behavior. In this work, we hypothesize that LLMs, guided
+            by human feedback, can be used to formulate <i>human-aligned</i> reward functions. Specifically,
+            we study this in the challenging setting of autonomous driving (AD), wherein notions of "good" driving
+            are tacit and hard to quantify. To this end, we introduce REvolve, an evolutionary framework that uses
+            LLMs for reward design in AD. REvolve creates and refines reward functions by utilizing human feedback
+            to guide the evolution process, effectively translating implicit human knowledge into explicit reward
+            functions for training (deep) RL agents. We demonstrate that agents trained on REvolve-designed rewards
+            align closely with human driving standards, thereby outperforming other state-of-the-art baselines.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">REvolve Overview</h2>
+        <div class="content has-text-justified">
+            <img src="./static/images/rewolve-overview.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>Given the task of autonomous driving and abstracted environment variables,
+              a reward designer \(G\) (LLM) outputs a population of reward functions, each used to train an AD policy
+              \(\pi(R)\) in driving simulation. Then, we collect human preferences and natural language feedback on
+              pairs of policy rollouts \(\theta \sim \Theta_{\pi(R)}\) through a human user feedback interface.
+              Policy (and thus, corresponding reward function) fitness \(\sigma\) is calculated, and the fittest
+              individuals, along with their NL feedback \(\lambda\), are refined by \(G\). The process leverages
+              genetic programming for evolution. The flames symbolize trainable parameters.</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-fullwidth">
+<!--        <h2 class="title is-3">REwolve Overview</h2>-->
+        <div class="content has-text-justified">
+          <p>REvolve offers several key advantages:
+          <br>
+          <b>(1) Framing reward design as a search problem.</b> Compared to <i>greedy search</i> in Eureka, REvolve enhances genetic diversity
+            and <i>prevents premature convergence without incurring additional computational costs</i>.
+
+            <br>
+
+          <b>(2) Utilizing human feedback to guide the search.</b> Human preference data is directly mapped into fitness scores,
+            effectively allowing humans to serve as fitness functions
+
+            <br>
+
+          <b>(3) Eliminating the need for additional reward model training.</b> Unlike RLHF, REvolve requires no reward model
+            training and reward functions are interpretable.</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+<div class="columns is-centered has-text-centered">
+    <h2 class="title is-3">Results</h2>
+    </div>
+    <div class="columns is-centered">
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+<!--          <h2 class="title is-3">REwolve vs. Baseline</h2>-->
+          <p>
+            REvolve vs. baselines on manually designed fitness scores. It can be observed that
+            REvolve consistently improves over generations, achieving its highest fitness score \(\sigma=0.84\).
+            The upper limit is marked by Human Driving at \(\sigma=0.90\) while the Expert Designed fitness score is
+            fixed at \(\sigma=0.65\).
+          </p>
+          <img src="./static/images/max_final.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <div class="column">
+<!--        <h2 class="title is-3">Matting</h2>-->
+        <div class="columns is-centered">
+          <div class="column content">
+           <p>
+             Figure compares policy training with REvolve and Expert Designed reward functions, on episodic steps.
+             Policy training converges at a higher value for REvolve signifying a higher success rate.
+             This is true for REvolve and REvolve Auto, with the former outperforming the latter.
+          </p>
+          <img src="./static/images/300k_steps_comparison.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+<!--<section class="hero is-light is-small">-->
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns video-container">
+                    <div class="column">
+                        <video poster="" id="human-driving" autoplay controls muted loop playsinline>
+                            <source src="./static/videos/human_driving.mp4" type="video/mp4">
+                        </video>
+                      <p>Human Driving</p>
+                    </div>
+                    <div class="column">
+                        <video poster="" id="revolve" autoplay controls muted loop playsinline>
+                            <source src="./static/videos/revolve.mp4" type="video/mp4">
+                        </video>
+                      <p>REvolve</p>
+                    </div>
+                    <div class="column">
+                        <video poster="" id="eureka" autoplay controls muted loop playsinline>
+                            <source src="./static/videos/eureka.mp4" type="video/mp4">
+                        </video>
+                      <p>Eureka</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--    </section>-->
+
+    <!-- Animation. -->
+<!--    <div class="columns is-centered">-->
+<!--      <div class="column is-full-width">-->
+<!--        <h2 class="title is-3">Animation</h2>-->
+
+<!--        &lt;!&ndash; Interpolating. &ndash;&gt;-->
+<!--        <h3 class="title is-4">Interpolating states</h3>-->
+<!--        <div class="content has-text-justified">-->
+<!--          <p>-->
+<!--            We can also animate the scene by interpolating the deformation latent codes of two input-->
+<!--            frames. Use the slider here to linearly interpolate between the left frame and the right-->
+<!--            frame.-->
+<!--          </p>-->
+<!--        </div>-->
+<!--        <div class="columns is-vcentered interpolation-panel">-->
+<!--          <div class="column is-3 has-text-centered">-->
+<!--            <img src="./static/images/interpolate_start.jpg"-->
+<!--                 class="interpolation-image"-->
+<!--                 alt="Interpolate start reference image."/>-->
+<!--            <p>Start Frame</p>-->
+<!--          </div>-->
+<!--          <div class="column interpolation-video-column">-->
+<!--            <div id="interpolation-image-wrapper">-->
+<!--              Loading...-->
+<!--            </div>-->
+<!--            <input class="slider is-fullwidth is-large is-info"-->
+<!--                   id="interpolation-slider"-->
+<!--                   step="1" min="0" max="100" value="0" type="range">-->
+<!--          </div>-->
+<!--          <div class="column is-3 has-text-centered">-->
+<!--            <img src="./static/images/interpolate_end.jpg"-->
+<!--                 class="interpolation-image"-->
+<!--                 alt="Interpolation end reference image."/>-->
+<!--            <p class="is-bold">End Frame</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <br/>-->
+<!--        &lt;!&ndash;/ Interpolating. &ndash;&gt;-->
+
+<!--        &lt;!&ndash; Re-rendering. &ndash;&gt;-->
+<!--        <h3 class="title is-4">Re-rendering the input video</h3>-->
+<!--        <div class="content has-text-justified">-->
+<!--          <p>-->
+<!--            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel-->
+<!--            viewpoint such as a stabilized camera by playing back the training deformations.-->
+<!--          </p>-->
+<!--        </div>-->
+<!--        <div class="content has-text-centered">-->
+<!--          <video id="replay-video"-->
+<!--                 controls-->
+<!--                 muted-->
+<!--                 preload-->
+<!--                 playsinline-->
+<!--                 width="75%">-->
+<!--            <source src="./static/videos/replay.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;/ Re-rendering. &ndash;&gt;-->
+
+<!--      </div>-->
+<!--    </div>-->
+    <!--/ Animation. -->
+
+
+<!--    &lt;!&ndash; Concurrent Work. &ndash;&gt;-->
+<!--    <div class="columns is-centered">-->
+<!--      <div class="column is-full-width">-->
+<!--        <h2 class="title is-3">Related Links</h2>-->
+
+<!--        <div class="content has-text-justified">-->
+<!--          <p>-->
+<!--            There's a lot of excellent work that was introduced around the same time as ours.-->
+<!--          </p>-->
+<!--          <p>-->
+<!--            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.-->
+<!--          </p>-->
+<!--          <p>-->
+<!--            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>-->
+<!--            both use deformation fields to model non-rigid scenes.-->
+<!--          </p>-->
+<!--          <p>-->
+<!--            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>-->
+<!--          </p>-->
+<!--          <p>-->
+<!--            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.-->
+<!--          </p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{hazra2024revolve,
+  author    = {Hazra, Rishi and Sygkounas, Alkis and Persson, Andreas and Martires, Pedro Zuidberg Dos and Loutfi, Amy},
+  title     = {REvolve: Reward Evolution with Large Language Models for Autonomous Driving},
+  journal   = {preprint},
+  year      = {2024},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            The website template is borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
