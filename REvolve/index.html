@@ -8,18 +8,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>REvolve: Reward Evolution with Large Language Models for Autonomous Driving</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Three Videos Side by Side</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Five Videos Side by Side</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
     <style>
         .video-container {
             display: flex;
             justify-content: space-between;
+            width: 80vw; /* Full viewport width */
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .video-container .column {
+            flex: 1;
+            padding: 5px;
         }
         .video-container video {
             height: 300px; /* Set the height you want */
             width: 100%;
             object-fit: cover; /* Ensure the video covers the area */
+        }
+    </style>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Carousel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <style>
+        .carousel-container {
+            overflow: hidden;
+            width: 60vw; /* Full viewport width */
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .carousel-item {
+            min-width: calc(100% / 3); /* Adjust to show 3 items at a time */
+            box-sizing: border-box;
+            padding: 5px;
+        }
+        .carousel-item video {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-button {
+            background: white;
+            border: 2px solid gray;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        .carousel-button svg {
+            width: 20px;
+            height: 20px;
+            fill: gray;
+        }
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .carousel-dot {
+            height: 10px;
+            width: 10px;
+            margin: 0 5px;
+            background-color: gray;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .carousel-dot.active {
+            background-color: black;
         }
     </style>
 <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">-->
@@ -304,31 +381,170 @@
 
 
 <!--<section class="hero is-light is-small">-->
-        <div class="hero-body">
-            <div class="container">
-                <div class="columns video-container">
-                    <div class="column">
-                        <video poster="" id="human-driving" autoplay controls muted loop playsinline>
-                            <source src="./static/videos/human_driving.mp4" type="video/mp4">
-                        </video>
-                      <p>Human Driving</p>
+<!--        <div class="hero-body">-->
+<!--            <div class="container is-fluid">-->
+<!--                <div class="columns video-container">-->
+<!--                    <div class="column">-->
+<!--                        <video poster="" id="human-driving" autoplay controls muted loop playsinline>-->
+<!--                            <source src="./static/videos/human_driving.mp4" type="video/mp4">-->
+<!--                        </video>-->
+<!--                      <p>Human Driving</p>-->
+<!--                    </div>-->
+<!--                    <div class="column">-->
+<!--                        <video poster="" id="revolve" autoplay controls muted loop playsinline>-->
+<!--                            <source src="./static/videos/revolve.mp4" type="video/mp4">-->
+<!--                        </video>-->
+<!--                      <p>REvolve</p>-->
+<!--                    </div>-->
+<!--                   <div class="column">-->
+<!--                        <video poster="" id="revolve-auto" autoplay controls muted loop playsinline>-->
+<!--                            <source src="./static/videos/revolve_auto.mp4" type="video/mp4">-->
+<!--                        </video>-->
+<!--                      <p>REvolve Auto</p>-->
+<!--                    </div>-->
+<!--                    <div class="column">-->
+<!--                        <video poster="" id="eureka" autoplay controls muted loop playsinline>-->
+<!--                            <source src="./static/videos/eureka.mp4" type="video/mp4">-->
+<!--                        </video>-->
+<!--                      <p>Eureka</p>-->
+<!--                    </div>-->
+<!--                  <div class="column">-->
+<!--                        <video poster="" id="eureka-auto" autoplay controls muted loop playsinline>-->
+<!--                            <source src="./static/videos/eureka_auto.mp4" type="video/mp4">-->
+<!--                        </video>-->
+<!--                      <p>Eureka Auto</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+     <div class="hero-body">
+            <div class="container is-fluid">
+                <h2 class="title is-3">Video Carousel</h2>
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <div class="carousel-item">
+                            <video poster="" id="human-driving" autoplay controls muted loop playsinline>
+                              <source src="./static/videos/human_driving.mp4" type="video/mp4">
+                            </video>
+                            <p>Human Driving</p>
+                        </div>
+                        <div class="carousel-item">
+                            <video poster="" id="revolve" autoplay controls muted loop playsinline>
+                              <source src="./static/videos/revolve.mp4" type="video/mp4">
+                            </video>
+                            <p>REvolve</p>
+                        </div>
+                        <div class="carousel-item">
+                            <video poster="" id="toby" autoplay controls muted loop playsinline>
+                                <source src="./static/videos/eureka.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="carousel-item">
+                            <video poster="" id="revolve-auto" autoplay controls muted loop playsinline>
+                                <source src="./static/videos/revolve_auto.mp4" type="video/mp4">
+                            </video>
+                            <p>REvolve Auto</p>
+                        </div>
+                        <div class="carousel-item">
+                          <video poster="" id="eureka" autoplay controls muted loop playsinline>
+                              <source src="./static/videos/eureka.mp4" type="video/mp4">
+                          </video>
+                          <p>Eureka</p>
+                        </div>
+                        <div class="carousel-item">
+                            <video poster="" id="eureka-auto" autoplay controls muted loop playsinline>
+                              <source src="./static/videos/eureka_auto.mp4" type="video/mp4">
+                            </video>
+                            <p>Eureka Auto</p>
+                        </div>
                     </div>
-                    <div class="column">
-                        <video poster="" id="revolve" autoplay controls muted loop playsinline>
-                            <source src="./static/videos/revolve.mp4" type="video/mp4">
-                        </video>
-                      <p>REvolve</p>
+                   <div class="carousel-buttons">
+                        <button class="carousel-button" id="prevBtn">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                            </svg>
+                        </button>
+                        <button class="carousel-button" id="nextBtn">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+                            </svg>
+                        </button>
                     </div>
-                    <div class="column">
-                        <video poster="" id="eureka" autoplay controls muted loop playsinline>
-                            <source src="./static/videos/eureka.mp4" type="video/mp4">
-                        </video>
-                      <p>Eureka</p>
+                    <div class="carousel-dots">
+                        <!-- Dots will be dynamically added by JavaScript -->
                     </div>
                 </div>
             </div>
         </div>
 <!--    </section>-->
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const nextButton = document.getElementById('nextBtn');
+        const prevButton = document.getElementById('prevBtn');
+        const items = document.querySelectorAll('.carousel-item');
+        const itemCount = items.length;
+        const itemsPerView = 5;
+        const dotsContainer = document.querySelector('.carousel-dots');
+        let currentIndex = 0;
+
+        function createDots() {
+            for (let i = 0; i < Math.ceil(itemCount / itemsPerView); i++) {
+                const dot = document.createElement('span');
+                dot.classList.add('carousel-dot');
+                if (i === 0) dot.classList.add('active');
+                dot.dataset.index = i;
+                dotsContainer.appendChild(dot);
+            }
+        }
+
+        function updateDots() {
+            const dots = document.querySelectorAll('.carousel-dot');
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[Math.floor(currentIndex / itemsPerView)].classList.add('active');
+        }
+
+        nextButton.addEventListener('click', () => {
+            if (currentIndex < itemCount - itemsPerView) {
+                currentIndex++;
+                track.style.transform = `translateX(-${currentIndex * (100 / itemsPerView)}%)`;
+                updateDots();
+            }
+        });
+
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                track.style.transform = `translateX(-${currentIndex * (100 / itemsPerView)}%)`;
+                updateDots();
+            }
+        });
+
+        dotsContainer.addEventListener('click', (e) => {
+            if (e.target.classList.contains('carousel-dot')) {
+                const index = parseInt(e.target.dataset.index) * itemsPerView;
+                currentIndex = index;
+                track.style.transform = `translateX(-${currentIndex * (100 / itemsPerView)}%)`;
+                updateDots();
+            }
+        });
+
+        createDots();
+    </script>
+
+    <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+<!--        <h2 class="title is-3">Best REvolve-designed Reward Function</h2>-->
+        <div class="content has-text-justified">
+            <img src="./static/images/revolve-best-reward.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+<!--          <p>Best REvolve-designed Reward Function</p>-->
+          </div>
+      </div>
+    </div>
+    </div>
 
     <!-- Animation. -->
 <!--    <div class="columns is-centered">-->
@@ -422,6 +638,41 @@
 <!--    </div>-->
     <!--/ Concurrent Work. -->
 
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Comparison with other AD frameworks</h2>
+        <div class="content has-text-justified">
+            <img src="./static/images/rewolve-comparison.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+          </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-fullwidth">
+<!--        <h2 class="title is-3">REwolve Overview</h2>-->
+        <div class="content has-text-justified">
+          <p>Comparison of REvolve with existing frameworks used to train AD agents. (a.) Expert Designed reward function
+              \(R\) to train the AD agent; (b.) learning from demonstrations (LfD) and learning from interventions (LfI),
+              where the agent is trained to imitate the human; (c.) humans acting as reward functions within the training loop,
+              by assessing policy rollouts and providing scalar rewards, which requires significant manual effort;
+              (d.) Reinforcement learning from human feedback (RLHF), where human preference data is used to train an
+              additional (black-box) reward model. This reward model is used as a proxy for human rewards to train the AD policy;
+              (e) Proposed REvolve, which uses GPT-4 as a reward function generator \(G\) and evolves them based on (minimal)
+              human feedback on the rollouts sampled from the trained models. This feedback is directly incorporated into
+              the reward design process. REvolve outputs interpretable reward functions, thereby avoiding learning an
+              additional reward model. Here, \(\pi \in \Pi\) is a trainable policy in the set of policies \(\Pi\).
+              The trainable blocks are denoted by the symbol of the flame.
+          </p>
+          </div>
+      </div>
+    </div>
   </div>
 </section>
 
