@@ -19,7 +19,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a third-year Ph.D. student though [Wallenberg AI, Autonomous Systems and Software Program (WASP)](https://wasp-sweden.org/) graduate school, supervised by Professor [Luc De Raedt](https://wms.cs.kuleuven.be/people/lucderaedt).
+I am a fourth-year Ph.D. student though [Wallenberg AI, Autonomous Systems and Software Program (WASP)](https://wasp-sweden.org/) graduate school, supervised by Professor [Luc De Raedt](https://wms.cs.kuleuven.be/people/lucderaedt).
 During my PhD, I also interned at [Meta Reality Labs](https://about.meta.com/realitylabs/), Seattle under the mentorship of [Ruta Desai](https://rutadesai.github.io/).
 
 My research seeks to answer the following questions like: **Can Large Language Models reason?** and **How to improve their reasoning abilities?** This allows me to explore novel ways of integrating machine learning (LMs) and symbolic reasoning (solvers, verifiers), via **LM-Modulo Frameworks**. This fusion empowers LLMs to be more grounded, robust, and capable of generalizing to complex scenarios.
