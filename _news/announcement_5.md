@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Presenting [EgoTV: Egocentric Task Verification from Natural Language Task Descriptions](https://rishihazra.github.io/EgoTV/) at the **Embodied AI Seminar in Meta AI (FAIR)**.
+Presented [EgoTV: Egocentric Task Verification from Natural Language Task Descriptions](https://rishihazra.github.io/EgoTV/) at the **Embodied AI Seminar in Meta AI (FAIR)**.

@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Demonstrated our [Robot Planning and Manipulation framework](https://rishihazra.github.io/projects/1_project/) at WASP Winter Conference 2024, Norrköping, Sweden . 
+Demoing [Robot Planning and Manipulation framework](https://rishihazra.github.io/projects/1_project/) at WASP Winter Conference 2024, Norrköping, Sweden . 
