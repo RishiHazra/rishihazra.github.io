@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Paper accepted at **LLMRA@RoMan**: [Bidirectional Intent Communication: A Role for Large Foundation Models](https://sites.google.com/view/llmra/schedule?authuser=0).
+Paper accepted at **LLMRA@RoMan 2024**: [Bidirectional Intent Communication: A Role for Large Foundation Models](https://sites.google.com/view/llmra/schedule?authuser=0).
