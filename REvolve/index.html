@@ -6,7 +6,7 @@
 <!--        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">-->
 <!--  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>REvolve: Reward Evolution with Large Language Models for Autonomous Driving</title>
+  <title>REvolve: Reward Evolution with Large Language Models using Human Feedback</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Five Videos Side by Side</title>
@@ -112,6 +112,7 @@
             background-color: black;
         }
     </style>
+
 <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">-->
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -157,7 +158,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">REvolve: Reward Evolution with Large Language Models for Autonomous Driving</h1>
+          <h1 class="title is-1 publication-title">REvolve: Reward Evolution with Large Language Models using Human Feedback</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://rishihazra.github.io/">Rishi Hazra</a><sup>*</sup>,</span>
@@ -222,19 +223,41 @@
   </div>
 </section>
 
+
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" class="custom-video-height" autoplay muted loop playsinline>
-        <source src="./static/videos/revolve.mp4"
-                type="video/mp4">
-      </video>
+      <div class="video-container" style="display: flex; justify-content: space-between;">
+        <video style="width: 32%; height: 400px; object-fit: cover;" autoplay muted loop playsinline>
+          <source src="./static/videos/driving-revolve.mp4" type="video/mp4">
+        </video>
+        <video style="width: 32%; height: 400px; object-fit: cover;" autoplay muted loop playsinline>
+          <source src="./static/videos/humanoid-revolve.mp4" type="video/mp4">
+        </video>
+        <video style="width: 32%; height: 400px; object-fit: cover;" autoplay muted loop playsinline>
+          <source src="./static/videos/adroit-revolve.mp4" type="video/mp4">
+        </video>
+      </div>
+      <br>
       <h2 class="subtitle has-text-centered">
-        Autonomous Driving agent trained with REvolve-designed rewards.
+        <b>Agents trained with REvolve-designed rewards </b>: [Left] Autonomous Driving; [Middle] Humanoid Locomotion; [Right] Adroit Hand Manipulation.
       </h2>
     </div>
   </div>
 </section>
+
+
+<!--<style>-->
+<!--  .video-container {-->
+<!--    display: flex;-->
+<!--    justify-content: space-between;-->
+<!--  }-->
+<!--  .custom-video-height {-->
+<!--    width: 300px; /* Adjust width as needed to fit three videos */-->
+<!--      height: 300px; /* Set the desired height */-->
+<!--    object-fit: cover; /* Ensures the video scales nicely */-->
+<!--  }-->
+<!--</style>-->
 
 
 
@@ -246,18 +269,22 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Designing effective reward functions is crucial to training reinforcement learning (RL) algorithms.
-            However, this design is non-trivial, even for domain experts, due to the subjective nature of certain
-            tasks that are hard to quantify explicitly. In recent works, large language models (LLMs) have been used
-            for reward generation from natural language task descriptions, leveraging their extensive instruction
-            tuning and commonsense understanding of human behavior. In this work, we hypothesize that LLMs, guided
-            by human feedback, can be used to formulate <i>human-aligned</i> reward functions. Specifically,
-            we study this in the challenging setting of autonomous driving (AD), wherein notions of "good" driving
-            are tacit and hard to quantify. To this end, we introduce REvolve, an evolutionary framework that uses
-            LLMs for reward design in AD. REvolve creates and refines reward functions by utilizing human feedback
-            to guide the evolution process, effectively translating implicit human knowledge into explicit reward
-            functions for training (deep) RL agents. We demonstrate that agents trained on REvolve-designed rewards
-            align closely with human driving standards, thereby outperforming other state-of-the-art baselines.
+            Designing effective reward functions is crucial to training reinforcement learning
+            (RL) algorithms. However, this design is non-trivial, even for domain experts, due
+            to the subjective nature of certain tasks that are hard to quantify explicitly. In recent
+            works, large language models (LLMs) have been used for reward generation from
+            natural language task descriptions, leveraging their extensive instruction tuning and
+            commonsense understanding of human behavior. In this work, we hypothesize that
+            LLMs, guided by human feedback, can be used to formulate reward functions that
+            reflect human implicit knowledge. We study this in three challenging settings –
+            autonomous driving, humanoid locomotion, and dexterous manipulation – wherein
+            notions of <i> good </i> behavior are tacit and hard to quantify. To this end, we introduce
+            REvolve, a truly evolutionary framework that uses LLMs for reward design in
+            RL. REvolve generates and refines reward functions by utilizing human feedback
+            to guide the evolution process, effectively translating implicit human knowledge
+            into explicit reward functions for training (deep) RL agents. Experimentally, we
+            demonstrate that agents trained on REvolve-designed rewards outperform other
+            state-of-the-art baselines.
           </p>
         </div>
       </div>
@@ -291,8 +318,10 @@
         <div class="content has-text-justified">
           <p>REvolve offers several key advantages:
           <br>
-          <b>(1) Framing reward design as a search problem.</b> Compared to <i>greedy search</i> in Eureka, REvolve uses Genetic Programming to
-           prevents premature convergence without incurring additional computational costs.
+          <b>(1) Using Evolutionary Algorithms (EAs) for Reward Design.</b> Traditional gradient-based optimization is
+            unsuitable for reward design due to the lack of a differentiable cost function. Instead, REvolve utilizes
+            meta-heuristic optimization through EAs. Our evolutionary framework considerably outperforms iterative
+            frameworks like Eureka -- without additional computational costs.
 
             <br>
 
@@ -374,19 +403,18 @@
 <!--        <h2 class="title is-3">REwolve Overview</h2>-->
         <div class="content has-text-justified">
           <p>
-          <b>How does REvolve fair against the baselines on manually designed fitness scores?</b>
+          <b>How does REvolve fair against the baselines?</b>
             REvolve exhibits continuous improvement across successive generations, ultimately achieving a higher fitness score on the manually designed fitness scale.
 
             <br>
 
-          <b>Do human fitness scores induce human-aligned behavior?</b>
-            REvolve policies secure second and third Elo ranks, surpassed only by Human Driving.
+          <b>How do humans judge REvolve policies?</b>
+            REvolve policies are ranked the best amongst other baselines.
 
             <br>
 
-          <b>How does REvolve affect policy learning?</b>
-            REvolve-designed rewards converge to a higher number of episodic steps compared to expert-designed rewards,
-            signifying a higher rate of successful actions per episode.
+          <b>How do different genetic operators impact overall performance?</b>
+            REvolve with mutation + crossover > REvolve with crossover > REvolve with mutation
             <br>
 
           <b>Do REvolve-designed reward functions generalize to new environments?</b>
@@ -401,166 +429,262 @@
 
       <!--/ Visual Effects. -->
 
+    <br>
+    <br>
 
-<!--<section class="hero is-light is-small">-->
-<!--        <div class="hero-body">-->
-<!--            <div class="container is-fluid">-->
-<!--                <div class="columns video-container">-->
-<!--                    <div class="column">-->
-<!--                        <video poster="" id="human-driving" autoplay controls muted loop playsinline>-->
-<!--                            <source src="./static/videos/human_driving.mp4" type="video/mp4">-->
-<!--                        </video>-->
-<!--                      <p>Human Driving</p>-->
-<!--                    </div>-->
-<!--                    <div class="column">-->
-<!--                        <video poster="" id="revolve" autoplay controls muted loop playsinline>-->
-<!--                            <source src="./static/videos/revolve.mp4" type="video/mp4">-->
-<!--                        </video>-->
-<!--                      <p>REvolve</p>-->
-<!--                    </div>-->
-<!--                   <div class="column">-->
-<!--                        <video poster="" id="revolve-auto" autoplay controls muted loop playsinline>-->
-<!--                            <source src="./static/videos/revolve_auto.mp4" type="video/mp4">-->
-<!--                        </video>-->
-<!--                      <p>REvolve Auto</p>-->
-<!--                    </div>-->
-<!--                    <div class="column">-->
-<!--                        <video poster="" id="eureka" autoplay controls muted loop playsinline>-->
-<!--                            <source src="./static/videos/eureka.mp4" type="video/mp4">-->
-<!--                        </video>-->
-<!--                      <p>Eureka</p>-->
-<!--                    </div>-->
-<!--                  <div class="column">-->
-<!--                        <video poster="" id="eureka-auto" autoplay controls muted loop playsinline>-->
-<!--                            <source src="./static/videos/eureka_auto.mp4" type="video/mp4">-->
-<!--                        </video>-->
-<!--                      <p>Eureka Auto</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-    <br>
-    <br>
      <div class="hero-body">
         <div class="container is-fluid">
-            <div class="carousel-container">
+            <div class="carousel-container carousel-1">
                 <div class="carousel-track">
                     <div class="carousel-item">
                         <video poster="" id="human-driving" autoplay controls muted loop playsinline>
-                            <source src="./static/videos/human_driving.mp4" type="video/mp4">
+                            <source src="./static/videos/driving/human_driving.mp4" type="video/mp4">
                         </video>
                         <p>Human Driving</p>
                     </div>
                     <div class="carousel-item">
                         <video poster="" id="revolve" autoplay controls muted loop playsinline>
-                            <source src="./static/videos/revolve.mp4" type="video/mp4">
+                            <source src="./static/videos/driving/revolve.mp4" type="video/mp4">
                         </video>
                         <p>REvolve</p>
                     </div>
                     <div class="carousel-item">
                         <video poster="" id="revolve-auto" autoplay controls muted loop playsinline>
-                            <source src="./static/videos/revolve_auto.mp4" type="video/mp4">
+                            <source src="./static/videos/driving/revolve_auto.mp4" type="video/mp4">
                         </video>
                         <p>REvolve Auto</p>
                     </div>
                     <div class="carousel-item">
                         <video poster="" id="eureka" autoplay controls muted loop playsinline>
-                            <source src="./static/videos/eureka.mp4" type="video/mp4">
+                            <source src="./static/videos/driving/eureka.mp4" type="video/mp4">
                         </video>
                         <p>Eureka</p>
                     </div>
                     <div class="carousel-item">
                         <video poster="" id="eureka-auto" autoplay controls muted loop playsinline>
-                            <source src="./static/videos/eureka_auto.mp4" type="video/mp4">
+                            <source src="./static/videos/driving/eureka_auto.mp4" type="video/mp4">
                         </video>
                         <p>Eureka Auto</p>
                     </div>
                 </div>
                 <div class="carousel-buttons">
-                    <button class="carousel-button" id="prevBtn">
+                    <button class="carousel-button" id="prevBtn1">
                         <svg viewBox="0 0 24 24">
                             <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
                         </svg>
                     </button>
-                    <button class="carousel-button" id="nextBtn">
+                    <button class="carousel-button" id="nextBtn1">
                         <svg viewBox="0 0 24 24">
                             <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
                         </svg>
                     </button>
                 </div>
-                <div class="carousel-dots">
-                    <!-- Dots will be dynamically added by JavaScript -->
+            </div>
+        </div>
+<!--     </div>-->
+<!--     <div class="hero-body">-->
+       <div class="container is-fluid">
+            <div class="carousel-container carousel-2">
+                <div class="carousel-track">
+                    <div class="carousel-item">
+                        <video poster="" id="humanoid-revolve" autoplay controls muted loop playsinline>
+                            <source src="./static/videos/humanoid/revolve.mp4" type="video/mp4">
+                        </video>
+                        <p>REvolve</p>
+                    </div>
+                    <div class="carousel-item">
+                        <video poster="" id="humanoid-revolve-auto" autoplay controls muted loop playsinline>
+                            <source src="./static/videos/humanoid/revolve_auto.mp4" type="video/mp4">
+                        </video>
+                        <p>REvolve Auto</p>
+                    </div>
+                    <div class="carousel-item">
+                        <video poster="" id="humanoid-eureka" autoplay controls muted loop playsinline>
+                            <source src="./static/videos/humanoid/eureka.mp4" type="video/mp4">
+                        </video>
+                        <p>Eureka</p>
+                    </div>
+                    <div class="carousel-item">
+                        <video poster="" id="humanoid-eureka-auto" autoplay controls muted loop playsinline>
+                            <source src="./static/videos/humanoid/eureka_auto.mp4" type="video/mp4">
+                        </video>
+                        <p>Eureka Auto</p>
+                    </div>
+                    <div class="carousel-item">
+                          <video poster="" id="humanoid-expert" autoplay controls muted loop playsinline>
+                              <source src="./static/videos/humanoid/expert_designed.mp4" type="video/mp4">
+                          </video>
+                          <p>Expert Designed</p>
+                    </div>
+                </div>
+                <div class="carousel-buttons">
+                    <button class="carousel-button" id="prevBtn2">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+                    <button class="carousel-button" id="nextBtn2">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
+<!--    </div>-->
+<!--    <div class="hero-body">-->
+       <div class="container is-fluid">
+            <div class="carousel-container carousel-3">
+                <div class="carousel-track">
+                    <div class="carousel-item">
+                        <video poster="" id="adroit-revolve" autoplay controls muted loop playsinline>
+                            <source src="./static/videos/adroit/revolve.mp4" type="video/mp4">
+                        </video>
+                        <p>REvolve</p>
+                    </div>
+                    <div class="carousel-item">
+                        <video poster="" id="adroit-revolve-auto" autoplay controls muted loop playsinline>
+                            <source src="./static/videos/adroit/revolve_auto.mp4" type="video/mp4">
+                        </video>
+                        <p>REvolve Auto</p>
+                    </div>
+                    <div class="carousel-item">
+                        <video poster="" id="adroit-eureka" autoplay controls muted loop playsinline>
+                            <source src="./static/videos/adroit/eureka.mp4" type="video/mp4">
+                        </video>
+                        <p>Eureka</p>
+                    </div>
+                    <div class="carousel-item">
+                        <video poster="" id="adroit-eureka-auto" autoplay controls muted loop playsinline>
+                            <source src="./static/videos/adroit/eureka_auto.mp4" type="video/mp4">
+                        </video>
+                        <p>Eureka Auto</p>
+                    </div>
+                    <div class="carousel-item">
+                          <video poster="" id="adroit-expert" autoplay controls muted loop playsinline>
+                              <source src="./static/videos/adroit/expert_designed.mp4" type="video/mp4">
+                          </video>
+                          <p>Expert Designed</p>
+                    </div>
+                </div>
+                <div class="carousel-buttons">
+                    <button class="carousel-button" id="prevBtn3">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+                    <button class="carousel-button" id="nextBtn3">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+                        </svg>
+                    </button>
+                </div>
+<!--                <div class="carousel-dots">-->
+<!--                    &lt;!&ndash; Dots will be dynamically added by JavaScript &ndash;&gt;-->
+<!--                </div>-->
+            </div>
+        </div>
+     </div>
 
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-fullwidth">
-                <div class="content has-text-justified">
-                    <p><br>
-                    Comparison of Human Driving with rollouts from policies trained with REvolve and Eureka-designed reward functions.
-                    REvolve-designed rewards lead to no collisions, smoother driving, better lane following, and better turn handling at intersections, compared to Eureka.
-                    </p>
-                </div>
-            </div>
-        </div>
     </div>
 
     <script>
-        const track = document.querySelector('.carousel-track');
-        const nextButton = document.getElementById('nextBtn');
-        const prevButton = document.getElementById('prevBtn');
-        const items = document.querySelectorAll('.carousel-item');
-        const dotsContainer = document.querySelector('.carousel-dots');
-        let currentIndex = 0;
+         // First Row of Videos - Carousel 1
+        const track1 = document.querySelector('.carousel-1 .carousel-track');
+        const nextButton1 = document.getElementById('nextBtn1');
+        const prevButton1 = document.getElementById('prevBtn1');
+        const items1 = document.querySelectorAll('.carousel-1 .carousel-item');
+        let currentIndex1 = 0;
+
+        // Second Row of Videos - Carousel 2
+        const track2 = document.querySelector('.carousel-2 .carousel-track');
+        const nextButton2 = document.getElementById('nextBtn2');
+        const prevButton2 = document.getElementById('prevBtn2');
+        const items2 = document.querySelectorAll('.carousel-2 .carousel-item');
+        let currentIndex2 = 0;
+
+        const track3 = document.querySelector('.carousel-3 .carousel-track');
+        const nextButton3 = document.getElementById('nextBtn3');
+        const prevButton3 = document.getElementById('prevBtn3');
+        const items3 = document.querySelectorAll('.carousel-3 .carousel-item');
+        let currentIndex3 = 0;
+
         const visibleCount = 3; // Number of videos visible at a time
 
-        function createDots() {
-            for (let i = 0; i < items.length; i++) {
-                const dot = document.createElement('span');
-                dot.classList.add('carousel-dot');
-                if (i === 0) dot.classList.add('active');
-                dot.dataset.index = i;
-                dotsContainer.appendChild(dot);
-            }
+            // Function to update the position of the carousel
+        function updateCarousel(track, currentIndex) {
+            track.style.transform = `translateX(-${currentIndex * (100 / visibleCount)}%)`;
         }
 
-        function updateDots() {
-            const dots = document.querySelectorAll('.carousel-dot');
-            dots.forEach(dot => dot.classList.remove('active'));
-            dots[currentIndex].classList.add('active');
-        }
-
-        nextButton.addEventListener('click', () => {
-            if (currentIndex < items.length - visibleCount) {
-                currentIndex++;
+        nextButton1.addEventListener('click', () => {
+            if (currentIndex1 < items1.length - visibleCount) {
+                currentIndex1++;
             } else {
-                currentIndex = 0;
+                currentIndex1 = 0; // Loop back to start
             }
-            track.style.transform = `translateX(-${currentIndex * (100 / visibleCount)}%)`;
-            updateDots();
+            updateCarousel(track1, currentIndex1);
         });
 
-        prevButton.addEventListener('click', () => {
-             if (currentIndex > 0) {
-                currentIndex--;
+        prevButton1.addEventListener('click', () => {
+            if (currentIndex1 > 0) {
+                currentIndex1--;
             } else {
-                currentIndex = items.length - visibleCount;
+                currentIndex1 = items1.length - visibleCount; // Loop back to end
             }
-            track.style.transform = `translateX(-${currentIndex * (100 / visibleCount)}%)`;
-            updateDots();
+            updateCarousel(track1, currentIndex1);
         });
 
-        dotsContainer.addEventListener('click', (e) => {
-            if (e.target.classList.contains('carousel-dot')) {
-                const index = parseInt(e.target.dataset.index);
-                currentIndex = index;
-                track.style.transform = `translateX(-${currentIndex * 100}%)`;
-                updateDots();
+        // Second carousel controls
+        nextButton2.addEventListener('click', () => {
+            if (currentIndex2 < items2.length - visibleCount) {
+                currentIndex2++;
+            } else {
+                currentIndex2 = 0; // Loop back to start
             }
+            updateCarousel(track2, currentIndex2);
         });
 
-        createDots();
+        prevButton2.addEventListener('click', () => {
+            if (currentIndex2 > 0) {
+                currentIndex2--;
+            } else {
+                currentIndex2 = items2.length - visibleCount; // Loop back to end
+            }
+            updateCarousel(track2, currentIndex2);
+        });
+
+        nextButton3.addEventListener('click', () => {
+            if (currentIndex3 < items3.length - visibleCount) {
+                currentIndex3++;
+            } else {
+                currentIndex3 = 0;
+            }
+            updateCarousel(track3, currentIndex3);
+        });
+
+        prevButton3.addEventListener('click', () => {
+             if (currentIndex3 > 0) {
+                currentIndex3--;
+            } else {
+                currentIndex3 = items3.length - visibleCount;
+            }
+            updateCarousel(track3, currentIndex3);
+        });
+
+        // Initial rendering
+        updateCarousel(track1, currentIndex1);
+        updateCarousel(track2, currentIndex2);
+        updateCarousel(track3, currentIndex3);
+        // dotsContainer.addEventListener('click', (e) => {
+        //     if (e.target.classList.contains('carousel-dot')) {
+        //         const index = parseInt(e.target.dataset.index);
+        //         currentIndex = index;
+        //         track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        //         updateDots();
+        //     }
+        // });
+
+        // createDots();
     </script>
   </div>
 
@@ -634,14 +758,16 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@misc{hazra2024revolve,
-      title={REvolve: Reward Evolution with Large Language Models for Autonomous Driving},
+    <pre><code>@misc{hazra2024revolverewardevolutionlarge,
+      title={REvolve: Reward Evolution with Large Language Models using Human Feedback},
       author={Rishi Hazra and Alkis Sygkounas and Andreas Persson and Amy Loutfi and Pedro Zuidberg Dos Martires},
       year={2024},
       eprint={2406.01309},
       archivePrefix={arXiv},
-      primaryClass={cs.NE}
-}</code></pre>
+      primaryClass={cs.NE},
+      url={https://arxiv.org/abs/2406.01309},
+}
+    </code></pre>
   </div>
 </section>
 
