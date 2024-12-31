@@ -35,7 +35,7 @@ Can LLMs meet all your planning needs, or do they have their limitations? We'll 
     </div>
 </div><br><br>
 
-Here's a scenario: a robot is tasked to deliver a cup for a drink, but the cup is already occupied by tableware. If the robot can't empty the cup itself, what's it to do? Stuck with a predefined domain, a classical planner is restricted to the predefined objects (cups and glasses) it in its [domain file]((https://planning.wiki/ref/pddl/domain)).
+Here's a scenario: a robot is tasked to deliver a cup for a drink, but the cup is already occupied by tableware. If the robot can't empty the cup itself, what's it to do? Stuck with a predefined domain, a classical planner is restricted to the predefined objects (cups and glasses) it in its [domain file](https://planning.wiki/ref/pddl/domain).
 
 A LLM can draw from its world knowledge to suggest, "How about a bowl?"[[1]](#1) As humans, we know a bowl can function much like a cup — in technical terms, they have similar *affordances*. <br><br>
 
