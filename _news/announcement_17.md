@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Paper accepted at **HRI 2025**: Evaluating Efficiency and Engagement in Scripted and LLM-Enhanced Human-Robot Interactions.
+Paper accepted at **HRI 2025** (Late Breaking Report): Evaluating Efficiency and Engagement in Scripted and LLM-Enhanced Human-Robot Interactions.
