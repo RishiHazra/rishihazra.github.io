@@ -20,7 +20,7 @@ social: true  # includes social icons at the bottom of the page
 ---
 
 I am a fourth-year Ph.D. student though [Wallenberg AI, Autonomous Systems and Software Program (WASP)](https://wasp-sweden.org/) graduate school, supervised by Professor [Luc De Raedt](https://wms.cs.kuleuven.be/people/lucderaedt).
-This fall, I'm interning at [FAIR](https://ai.meta.com/research/), London under [Nicolas Carion](https://www.nicolascarion.com/) working on LLMs. In 2022, I also interned at [Meta Reality Labs](https://about.meta.com/realitylabs/), Seattle under [Ruta Desai](https://rutadesai.github.io/).
+This fall, I'm interning at [FAIR](https://ai.meta.com/research/), London with [Nicolas Carion](https://www.nicolascarion.com/) and [Yoram Bachrach](https://sites.google.com/view/yoram-bachrach) working on LLMs. In 2022, I also interned at [Meta Reality Labs](https://about.meta.com/realitylabs/), Seattle under [Ruta Desai](https://rutadesai.github.io/).
 
 My research seeks to answer the following questions like: **Can Large Language Models reason?** and **How to improve their reasoning abilities?** This allows me to explore novel ways of integrating machine learning (LMs) and symbolic reasoning (solvers, verifiers), via **LM-Modulo Frameworks**. This fusion empowers LLMs to be more grounded, robust, and capable of generalizing to complex scenarios.
 
