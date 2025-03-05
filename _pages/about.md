@@ -19,7 +19,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a fourth-year Ph.D. student though [Wallenberg AI, Autonomous Systems and Software Program (WASP)](https://wasp-sweden.org/) graduate school, supervised by Professor [Luc De Raedt](https://wms.cs.kuleuven.be/people/lucderaedt) and [Pedro Zuidberg Dos Martires](https://pedrozudo.github.io/).
+I am a fourth-year Ph.D. student though [Wallenberg AI, Autonomous Systems and Software Program (WASP)](https://wasp-sweden.org/) graduate school, supervised by [Luc De Raedt](https://wms.cs.kuleuven.be/people/lucderaedt) and [Pedro Zuidberg Dos Martires](https://pedrozudo.github.io/).
 Last fall, I interned at [FAIR](https://ai.meta.com/research/), London with [Nicolas Carion](https://www.nicolascarion.com/) working on VLMs and [Yoram Bachrach](https://sites.google.com/view/yoram-bachrach) on Agentic systems. In Fall 2022, I also interned at [Meta Reality Labs](https://about.meta.com/realitylabs/), Seattle under [Ruta Desai](https://rutadesai.github.io/).
 
 My research seeks to answer the following questions like: **Can Large Language Models reason?** and **How to improve their reasoning abilities?** This allows me to explore novel ways of integrating *System 1* Reasoning into *System 2* LLMs. This fusion empowers LLMs to be more grounded, robust, and capable of generalizing to complex scenarios.
