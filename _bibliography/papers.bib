@@ -1,17 +1,23 @@
 ---
 ---
-@article{revolve,
-    author = {Hazra*, Rishi and Sygkounas*, Alkis and Persson, Andreas and Loutfi, Amy and Zuidberg Dos Martires, Pedro},
-    title = {REvolve: Reward Evolution with Large Language Models using Human Feedback},
-    year={2025},
-    journal={International Conference for Learning Representations (ICLR)},
-    abbr={ICLR 2025},
-    selected = {true},
-    pdf={https://arxiv.org/pdf/2406.01309},
-    preview = {revolve.gif},
-    abstract = {Designing effective reward functions is crucial to training reinforcement learning (RL) algorithms. However, this design is non-trivial, even for domain experts, due to the subjective nature of certain tasks that are hard to quantify explicitly. In recent works, large language models (LLMs) have been used for reward generation from natural language task descriptions, leveraging their extensive instruction tuning and commonsense understanding of human behavior. In this work, we hypothesize that LLMs, guided by human feedback, can be used to formulate reward functions that reflect human implicit knowledge. We study this in three challenging settings – autonomous driving, humanoid locomotion, and dexterous manipulation – wherein notions of “good” behavior are tacit and hard to quantify. To this end, we introduce REvolve, a truly evolutionary framework that uses LLMs for reward design in RL. REvolve generates and refines reward functions by utilizing human feedback to guide the evolution process, effectively translating implicit human knowledge into explicit reward functions for training (deep) RL agents. Experimentally, we demonstrate that agents trained on REvolve-designed rewards outperform other state-of-the-art baselines.},
-    website = {https://rishihazra.github.io/REvolve/},
-    code = {https://github.com/RishiHazra/Revolve/tree/main},
+@misc{bident,
+      title={Bidirectional Intent Communication: A Role for Large Foundation Models},
+      author={Tim Schreiter* and Rishi Hazra* and Jens Ruppel and Andrey Rudenko},
+      year={2024},
+      abbr={LLMRA @ RO-MAN 2024},
+      pdf={https://arxiv.org/abs/2408.10589},
+      abstract={Integrating multimodal foundation models has significantly enhanced autonomous agents’ language comprehension, perception, and planning capabilities. However, while existing works adopt a task-centric approach with minimal human interaction, applying these models to developing assistive user-centric robots that can interact and cooperate with humans remains underexplored. This paper introduces “Bident”, a framework designed to integrate robots seamlessly into shared spaces with humans. Bident enhances the interactive experience by incorporating multimodal inputs like speech and user gaze dynamics. Furthermore, Bident supports verbal utterances and physical actions like gestures, making it versatile for bidirectional human-robot interactions. Potential applications include personalized education, where robots can adapt to individual learning styles and paces, and healthcare, where robots can offer personalized support, companionship, and everyday assistance in the home and workplace environments.},
+      preview={bident_overview.png}
+}
+
+@misc{llm_hri,
+      title={LLM-Driven Adaptability or Pre-programmed Efficiency? A Comparative Study for Short Interactions},
+      author={Tim Schreiter* and Jens V. Ruppel* and Rishi Hazra and Andrey Rudenko and Martin Magnusson and Achim J. Lilienthal},
+      year={2025},
+      abbr={HRI 2025},
+      pdf={https://arxiv.org/pdf/2501.12128},
+      abstract={To achieve natural and intuitive interaction with people, HRI frameworks combine a wide array of methods for human perception, intention communication, human-aware navigation and collaborative action. In practice, when encountering unpredictable behavior of people or unexpected states of the environment, these frameworks may lack the ability to dynamically recognize such states, adapt and recover to resume the interaction. Large Language Models (LLMs), owing to their advanced reasoning capabilities and context retention, present a promising solution for enhancing robot adaptability. This potential, however, may not directly translate to improved interaction metrics. This paper considers a representative interaction with an industrial robot involving approach, instruction, and object manipulation, implemented in two conditions: (1) fully scripted and (2) including LLM-enhanced responses. We use gaze tracking and questionnaires to measure the participants' task efficiency, engagement, and robot perception. The results indicate higher subjective ratings for the LLM condition, but objective metrics show that the scripted condition performs comparably, particularly in efficiency and focus during simple tasks. We also note that the scripted condition may have an edge over LLM-enhanced responses in terms of response latency and energy consumption, especially for trivial and repetitive interactions.},
+      preview={nao_robot.jpg}
 }
 
 @misc{llmsat,
@@ -25,25 +31,18 @@
       preview={gpt4-search-vs-decision.png}
 }
 
-@misc{llm_hri,
-      title={LLM-Driven Adaptability or Pre-programmed Efficiency? A Comparative Study for Short Interactions},
-      author={Tim Schreiter* and Jens V. Ruppel* and Rishi Hazra and Andrey Rudenko and Martin Magnusson and Achim J. Lilienthal},
-      year={2025},
-      abbr={HRI 2025},
-      pdf={https://arxiv.org/pdf/2501.12128},
-      abstract={To achieve natural and intuitive interaction with people, HRI frameworks combine a wide array of methods for human perception, intention communication, human-aware navigation and collaborative action. In practice, when encountering unpredictable behavior of people or unexpected states of the environment, these frameworks may lack the ability to dynamically recognize such states, adapt and recover to resume the interaction. Large Language Models (LLMs), owing to their advanced reasoning capabilities and context retention, present a promising solution for enhancing robot adaptability. This potential, however, may not directly translate to improved interaction metrics. This paper considers a representative interaction with an industrial robot involving approach, instruction, and object manipulation, implemented in two conditions: (1) fully scripted and (2) including LLM-enhanced responses. We use gaze tracking and questionnaires to measure the participants' task efficiency, engagement, and robot perception. The results indicate higher subjective ratings for the LLM condition, but objective metrics show that the scripted condition performs comparably, particularly in efficiency and focus during simple tasks. We also note that the scripted condition may have an edge over LLM-enhanced responses in terms of response latency and energy consumption, especially for trivial and repetitive interactions.},
-      preview={nao_robot.jpg}
-}
-
-@misc{bident,
-      title={Bidirectional Intent Communication: A Role for Large Foundation Models},
-      author={Tim Schreiter* and Rishi Hazra* and Jens Ruppel and Andrey Rudenko},
-      year={2024},
-      abbr={RO-MAN 2024},
-      journal={Large Language Models in the RoMan Age @ IEEE International Conference on Robot & Human Interactive Communication},
-      pdf={https://arxiv.org/abs/2408.10589},
-      abstract={Integrating multimodal foundation models has significantly enhanced autonomous agents’ language comprehension, perception, and planning capabilities. However, while existing works adopt a task-centric approach with minimal human interaction, applying these models to developing assistive user-centric robots that can interact and cooperate with humans remains underexplored. This paper introduces “Bident”, a framework designed to integrate robots seamlessly into shared spaces with humans. Bident enhances the interactive experience by incorporating multimodal inputs like speech and user gaze dynamics. Furthermore, Bident supports verbal utterances and physical actions like gestures, making it versatile for bidirectional human-robot interactions. Potential applications include personalized education, where robots can adapt to individual learning styles and paces, and healthcare, where robots can offer personalized support, companionship, and everyday assistance in the home and workplace environments.},
-      preview={bident_overview.png}
+@article{revolve,
+    author = {Hazra*, Rishi and Sygkounas*, Alkis and Persson, Andreas and Loutfi, Amy and Zuidberg Dos Martires, Pedro},
+    title = {REvolve: Reward Evolution with Large Language Models using Human Feedback},
+    year={2025},
+    journal={International Conference for Learning Representations (ICLR)},
+    abbr={ICLR 2025},
+    selected = {true},
+    pdf={https://arxiv.org/pdf/2406.01309},
+    preview = {revolve.gif},
+    abstract = {Designing effective reward functions is crucial to training reinforcement learning (RL) algorithms. However, this design is non-trivial, even for domain experts, due to the subjective nature of certain tasks that are hard to quantify explicitly. In recent works, large language models (LLMs) have been used for reward generation from natural language task descriptions, leveraging their extensive instruction tuning and commonsense understanding of human behavior. In this work, we hypothesize that LLMs, guided by human feedback, can be used to formulate reward functions that reflect human implicit knowledge. We study this in three challenging settings – autonomous driving, humanoid locomotion, and dexterous manipulation – wherein notions of “good” behavior are tacit and hard to quantify. To this end, we introduce REvolve, a truly evolutionary framework that uses LLMs for reward design in RL. REvolve generates and refines reward functions by utilizing human feedback to guide the evolution process, effectively translating implicit human knowledge into explicit reward functions for training (deep) RL agents. Experimentally, we demonstrate that agents trained on REvolve-designed rewards outperform other state-of-the-art baselines.},
+    website = {https://rishihazra.github.io/REvolve/},
+    code = {https://github.com/RishiHazra/Revolve/tree/main},
 }
 
 @article{saycanpay,
@@ -61,11 +60,11 @@
 }
 
 @article{hazra2023egotv,
-    title={EgoTV: Egocentric Task Verification from Natural Language Task Descriptions},
-    author={Hazra, Rishi and Chen, Brian and Rai, Akshara and Kamra, Nitin and Desai, Ruta},
-    journal={International Conference of Computer Vision (ICCV)},
-    year={2023},
-    abbr={ICCV 2023},
+  title={EgoTV: Egocentric Task Verification from Natural Language Task Descriptions},
+  author={Hazra, Rishi and Chen, Brian and Rai, Akshara and Kamra, Nitin and Desai, Ruta},
+  journal={International Conference of Computer Vision (ICCV)},
+  year={2023},
+  abbr={ICCV 2023},
     selected={true},
     preview = {egotv-pos.gif},
     pdf = {https://arxiv.org/pdf/2303.16975.pdf},
@@ -75,39 +74,39 @@
 }
 
 @article{hazra2023derrl,
-    title={Deep Explainable Relational Reinforcement Learning: A Neuro-Symbolic Approach},
-    author={Hazra, Rishi and De Raedt, Luc},
-    year={2023},
-    journal={European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD)},
-    abbr = {ECML PKDD 2023},
+      title={Deep Explainable Relational Reinforcement Learning: A Neuro-Symbolic Approach},
+      author={Hazra, Rishi and De Raedt, Luc},
+      year={2023},
+      journal={European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD)},
+      abbr = {ECML PKDD 2023},
     selected={true},
-    preview = {derrl-all-envs.png},
+      preview = {derrl-all-envs.png},
     pdf = {https://arxiv.org/pdf/2304.08349.pdf},
     abstract = {Despite numerous successes in Deep Reinforcement Learning (DRL), the learned policies are not interpretable. Moreover, since DRL does not exploit symbolic relational representations, it has difficulties in coping with structural changes in its environment (such as increasing the number of objects). Relational Reinforcement Learning, on the other hand, inherits the relational representations from symbolic planning to learn reusable policies. However, it has so far been unable to scale up and exploit the power of deep neural networks. We propose Deep Explainable Relational Reinforcement Learning (DERRL), a framework that exploits the best of both -- neural and symbolic worlds. By resorting to a neuro-symbolic approach, DERRL combines relational representations and constraints from symbolic planning with deep learning to extract interpretable policies. These policies are in the form of logical rules that explain how each decision (or action) is arrived at. Through several experiments, in setups like the Countdown Game, Blocks World, Gridworld, and Traffic, we show that the policies learned by DERRL can be applied to different configurations and contexts, hence generalizing to environmental modifications.},
     slides = {DERRL.pptx},
 }
 
 @misc{hazra2023intrinsically,
-    title={Intrinsically Motivated Compositional Language Emergence},
-    author={Rishi Hazra and Sonu Dixit and Sayambhu Sen},
-    year={2023},
-    abbr={NAACL 2021},
-    selected = {true},
-    pdf={https://arxiv.org/pdf/2012.05011.pdf},
+      title={Intrinsically Motivated Compositional Language Emergence},
+      author={Rishi Hazra and Sonu Dixit and Sayambhu Sen},
+      year={2023},
+      journal={arXiv preprint},
+      abbr={preprint},
+      selected = {true},
+      pdf={https://arxiv.org/pdf/2012.05011.pdf},
     preview = {push.gif},
-    journal={Fourth workshop on Visually Grounded Interaction and Language (ViGIL) @ NAACL},
     abstract = {Recently, there has been a great deal of research in emergent communication on artificial agents interacting in simulated environments. Recent studies have revealed that, in general, emergent languages do not follow the compositionality patterns of natural language. To deal with this, existing works have proposed a limited channel capacity as an important constraint for learning highly compositional languages. In this paper, we show that this is not a sufficient condition and propose an intrinsic reward framework for improving compositionality in emergent communication. We use a reinforcement learning setting with two agents -- a task-aware Speaker and a state-aware Listener that are required to communicate to perform a set of tasks. Through our experiments on three different referential game setups, including a novel environment gComm, we show intrinsic rewards improve compositionality scores by ~1.5−2 times that of existing frameworks that use limited channel capacity.},
     website = {https://sites.google.com/view/compositional-comm},
 }
 
 @article{hazra2021gcomm,
-    title={gComm: An environment for investigating generalization in Grounded Language Acquisition},
-    author={Hazra*, Rishi and Dixit*, Sonu},
-    journal={Fourth workshop on Visually Grounded Interaction and Language (ViGIL) @ NAACL},
-    year={2021},
-    pdf={https://vigilworkshop.github.io/static/papers-2021/16.pdf},
-    abbr={NAACL 2021},
-    preview = {gcomm.png},
+  title={gComm: An environment for investigating generalization in Grounded Language Acquisition},
+  author={Hazra*, Rishi and Dixit*, Sonu},
+  journal={Fourth workshop on Visually Grounded Interaction and Language (ViGIL)},
+  year={2021},
+  pdf={https://vigilworkshop.github.io/static/papers-2021/16.pdf},
+  abbr={ViGIL @ NAACL 2021},
+     preview = {gcomm.png},
     selected={true},
     code = {https://github.com/SonuDixit/gComm},
     poster = {https://drive.google.com/file/d/1b512g822Z-h0PvJkmO8y8YwhkDUNDHeG/view?usp=sharing},
@@ -117,10 +116,10 @@
 @inproceedings{hazra-etal-2021-active2,
     title = "Active$^2$ Learning: Actively reducing redundancies in Active Learning methods for Sequence Tagging and Machine Translation",
     author = "Hazra, Rishi  and
-        Dutta, Parag  and
-        Gupta, Shubham  and
-        Qaathir, Mohammed Abdul  and
-        Dukkipati, Ambedkar",
+      Dutta, Parag  and
+      Gupta, Shubham  and
+      Qaathir, Mohammed Abdul  and
+      Dukkipati, Ambedkar",
     booktitle = "Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (NAACL-HLT)",
     month = jun,
     year = "2021",
@@ -138,20 +137,20 @@
 }
 
 @inproceedings{10.5555/3398761.3399006,
-    author = {Gupta*, Shubham and Hazra*, Rishi and Dukkipati, Ambedkar},
-    title = {Networked Multi-Agent Reinforcement Learning with Emergent Communication},
-    year = {2020},
-    isbn = {9781450375184},
-    publisher = {International Foundation for Autonomous Agents and Multiagent Systems},
-    address = {Richland, SC},
-    abstract = {We develop a Multi-Agent Reinforcement Learning (MARL) method that finds approximately optimal policies for cooperative agents that co-exist in an environment. Central to achieving this is how the agents learn to communicate with each other. Can they together develop a language while learning to perform a common task? We formulate and study a MARL problem where cooperative agents are connected via a fixed underlying network. These agents communicate along the edges of this network by exchanging discrete symbols. However, the semantics of these symbols are not predefined and have to be learned during the training process. We propose a method for training these agents using emergent communication. We demonstrate the applicability of the proposed framework by applying it to the problem of managing traffic controllers, where we achieve state-of-the-art performance (as compared to several strong baselines) and perform a detailed analysis of the emergent communication.},
-    booktitle = {Proceedings of the 19th International Conference on Autonomous Agents and MultiAgent Systems (AAMAS)},
-    pages = {1858–1860},
-    numpages = {3},
-    keywords = {multi-agent reinforcement learning, emergent communication, traffic},
-    location = {Auckland, New Zealand},
-    pdf = {https://arxiv.org/pdf/2004.02780.pdf},
-    abbr = {AAMAS 2020},
+author = {Gupta*, Shubham and Hazra*, Rishi and Dukkipati, Ambedkar},
+title = {Networked Multi-Agent Reinforcement Learning with Emergent Communication},
+year = {2020},
+isbn = {9781450375184},
+publisher = {International Foundation for Autonomous Agents and Multiagent Systems},
+address = {Richland, SC},
+abstract = {We develop a Multi-Agent Reinforcement Learning (MARL) method that finds approximately optimal policies for cooperative agents that co-exist in an environment. Central to achieving this is how the agents learn to communicate with each other. Can they together develop a language while learning to perform a common task? We formulate and study a MARL problem where cooperative agents are connected via a fixed underlying network. These agents communicate along the edges of this network by exchanging discrete symbols. However, the semantics of these symbols are not predefined and have to be learned during the training process. We propose a method for training these agents using emergent communication. We demonstrate the applicability of the proposed framework by applying it to the problem of managing traffic controllers, where we achieve state-of-the-art performance (as compared to several strong baselines) and perform a detailed analysis of the emergent communication.},
+booktitle = {Proceedings of the 19th International Conference on Autonomous Agents and MultiAgent Systems (AAMAS)},
+pages = {1858–1860},
+numpages = {3},
+keywords = {multi-agent reinforcement learning, emergent communication, traffic},
+location = {Auckland, New Zealand},
+pdf = {https://arxiv.org/pdf/2004.02780.pdf},
+abbr = {AAMAS 2020},
     selected={true},
-    preview = {word_action_whole.png}
+     preview = {word_action_whole.png}
 }
