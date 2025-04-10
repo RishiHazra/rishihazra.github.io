@@ -11,17 +11,6 @@
       preview={sat_cnf_qualitative.png}
 }
 
-@article{llmsat,
-      title={Can Large Language Models Reason? A Characterization via 3-SAT},
-      author={Rishi Hazra and Gabriele Venturato and Pedro Zuidberg Dos Martires and Luc De Raedt},
-      year={2025},
-      abbr={ICLR 2025},
-      pdf={https://arxiv.org/abs/2408.07215},
-      journal={Planning and Reasoning for LLMs @ International Conference for Learning Representations (ICLR)},
-      abstract={Large Language Models (LLMs) are said to possess advanced reasoning abilities. However, some skepticism exists as recent works show how LLMs often bypass true reasoning using shortcuts. Current methods for assessing the reasoning abilities of LLMs typically rely on open-source benchmarks that may be overrepresented in LLM training data, potentially skewing performance. We instead provide a computational theory perspective of reasoning, using 3-SAT -- the prototypical NP-complete problem that lies at the core of logical reasoning and constraint satisfaction tasks. By examining the phase transitions in 3-SAT, we empirically characterize the reasoning abilities of LLMs and show how they vary with the inherent hardness of the problems. Our experimental evidence shows that LLMs cannot perform true reasoning, as is required for solving 3-SAT problems.},
-      preview={gpt4-search-vs-decision.png}
-}
-
 @article{revolve,
     author = {Hazra*, Rishi and Sygkounas*, Alkis and Persson, Andreas and Loutfi, Amy and Zuidberg Dos Martires, Pedro},
     title = {REvolve: Reward Evolution with Large Language Models using Human Feedback},
@@ -34,6 +23,17 @@
     abstract = {Designing effective reward functions is crucial to training reinforcement learning (RL) algorithms. However, this design is non-trivial, even for domain experts, due to the subjective nature of certain tasks that are hard to quantify explicitly. In recent works, large language models (LLMs) have been used for reward generation from natural language task descriptions, leveraging their extensive instruction tuning and commonsense understanding of human behavior. In this work, we hypothesize that LLMs, guided by human feedback, can be used to formulate reward functions that reflect human implicit knowledge. We study this in three challenging settings – autonomous driving, humanoid locomotion, and dexterous manipulation – wherein notions of “good” behavior are tacit and hard to quantify. To this end, we introduce REvolve, a truly evolutionary framework that uses LLMs for reward design in RL. REvolve generates and refines reward functions by utilizing human feedback to guide the evolution process, effectively translating implicit human knowledge into explicit reward functions for training (deep) RL agents. Experimentally, we demonstrate that agents trained on REvolve-designed rewards outperform other state-of-the-art baselines.},
     website = {https://rishihazra.github.io/REvolve/},
     code = {https://github.com/RishiHazra/Revolve/tree/main},
+}
+
+@article{llmsat,
+      title={Can Large Language Models Reason? A Characterization via 3-SAT},
+      author={Rishi Hazra and Gabriele Venturato and Pedro Zuidberg Dos Martires and Luc De Raedt},
+      year={2025},
+      abbr={ICLR 2025},
+      pdf={https://arxiv.org/abs/2408.07215},
+      journal={Planning and Reasoning for LLMs @ International Conference for Learning Representations (ICLR)},
+      abstract={Large Language Models (LLMs) are said to possess advanced reasoning abilities. However, some skepticism exists as recent works show how LLMs often bypass true reasoning using shortcuts. Current methods for assessing the reasoning abilities of LLMs typically rely on open-source benchmarks that may be overrepresented in LLM training data, potentially skewing performance. We instead provide a computational theory perspective of reasoning, using 3-SAT -- the prototypical NP-complete problem that lies at the core of logical reasoning and constraint satisfaction tasks. By examining the phase transitions in 3-SAT, we empirically characterize the reasoning abilities of LLMs and show how they vary with the inherent hardness of the problems. Our experimental evidence shows that LLMs cannot perform true reasoning, as is required for solving 3-SAT problems.},
+      preview={gpt4-search-vs-decision.png}
 }
 
 @article{bident,
