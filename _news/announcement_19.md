@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Invited Talk at UCSB NLP Group on [A Computational Theory Perspective on Reasoning](https://drive.google.com/file/d/1VBbR58PpwZxGzHX4oekuTLqXttsPl_Fs/view?usp=sharing)
+Invited Talk at [UCSB NLP Group](http://nlp.cs.ucsb.edu/) on [A Computational Theory Perspective on Reasoning](https://drive.google.com/file/d/1VBbR58PpwZxGzHX4oekuTLqXttsPl_Fs/view?usp=sharing)
