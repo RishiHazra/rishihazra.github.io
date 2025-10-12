@@ -11,10 +11,11 @@ pretty_table: true
 citation: true
 ---
 
-In the previous part ([Why are LLMs required for Planning?](https://rishihazra.github.io/llm-planning/2024/05/26/llms_as_planners.html)), the question we asked was: 
+In the previous part ([Why are LLMs required for Planning?](https://rishihazra.github.io/llm-planning/2024/05/26/llms_as_planners.html)), the question we asked was:
 **Can we improve LLM planning to have <u>some</u> formal guarantees?**
 
 To answer that, Let's first recap.
+
 <style>
   /* Color the header of the second column blue */
   .blue-text {
@@ -60,7 +61,7 @@ To answer that, Let's first recap.
 </tr>
 </table><br><br>
 
-We can observe that the formal guarantees come from classical planning. 
+We can observe that the formal guarantees come from classical planning.
 Can we somehow combine the best of both? Any guesses? Here's a hint to jog your memories.<br><br>
 
 <div class="row">
@@ -73,9 +74,10 @@ Can we somehow combine the best of both? Any guesses? Here's a hint to jog your 
 Ring any bells now? You guessed it right. <br><br>
 
 Considering <span style="color: darksalmon;">LLM Planning</span> as <span style="color: darksalmon;">System 1</span> and <span style="color: cornflowerblue;">Classical Planning</span> as <span style="color: cornflowerblue;">System 2</span>, we look at two different ways of combining the best of both.
-* Equip LLMs with verifiers, dynamics, and heuristic search.
-* Use LLms as knowledge bases for open-world planning
-<br><br>
+
+- Equip LLMs with verifiers, dynamics, and heuristic search.
+- Use LLms as knowledge bases for open-world planning
+  <br><br>
 
 <div class="row">
     <!-- Full width image -->
@@ -96,8 +98,9 @@ Considering <span style="color: darksalmon;">LLM Planning</span> as <span style=
 </div><br><br>
 
 Let's first start with some motivation. [[1]](#1) shows that:
-* LLMs can generate *good* solutions if called multiple times.
-* Verifiers help discard *bad* candidate actions/plans.<br><br>
+
+- LLMs can generate _good_ solutions if called multiple times.
+- Verifiers help discard _bad_ candidate actions/plans.<br><br>
 
 ### 1. LLMs + external verifiers<br><br>
 
@@ -115,10 +118,10 @@ Let's first start with some motivation. [[1]](#1) shows that:
     </div>
 </div><br><br>
 
-SayCan has a critical limitation: it selects actions based solely on feasibility, not their relevance to the goal. 
+SayCan has a critical limitation: it selects actions based solely on feasibility, not their relevance to the goal.
 Consider this analogy: if you're traveling from San Francisco to New York, would it make sense to fly via New Delhi simply because it's feasible?
-To address this, **SayCanPay**[[3]](#3) further adds a Pay model to estimate the payoff of an action with respect to the goal. 
-That is, actions which are more *optimal* wrt the goal are more likely to be selected.<br><br>
+To address this, **SayCanPay**[[3]](#3) further adds a Pay model to estimate the payoff of an action with respect to the goal.
+That is, actions which are more _optimal_ wrt the goal are more likely to be selected.<br><br>
 
 ### 2. LLMs + external verifiers + heuristic search<br><br>
 
@@ -129,9 +132,9 @@ That is, actions which are more *optimal* wrt the goal are more likely to be sel
     </div>
 </div><br><br>
 
-**SayCanPay**[[3]](#3) also proposes heuristic search using an aggregated score of the Say (LLM), Can (feasibility), and Pay (optimality) models. 
-As shown in the Figure, the Beam-Action search performs a beam search over the action. This mirrors the search in heuristic planners. 
-They show that the overall score for each action is a sum of the aggregated score and heuristic score, akin to A* planning.
+**SayCanPay**[[3]](#3) also proposes heuristic search using an aggregated score of the Say (LLM), Can (feasibility), and Pay (optimality) models.
+As shown in the Figure, the Beam-Action search performs a beam search over the action. This mirrors the search in heuristic planners.
+They show that the overall score for each action is a sum of the aggregated score and heuristic score, akin to A\* planning.
 <br><br>
 
 ### 3. LLMs + dynamics models<br><br>
@@ -149,7 +152,6 @@ They show that the overall score for each action is a sum of the aggregated scor
         <img src="/assets/img/video_language_planning.png" width="80%" alt="Description of the image content" class="img-fluid rounded z-depth-1" style="display: block; margin: auto;" onerror="this.onerror=null; this.src='image-not-found.png';">
     </div>
 </div><br><br>
-
 
 ---
 
@@ -169,12 +171,11 @@ They show that the overall score for each action is a sum of the aggregated scor
     </div>
 </div><br><br>
 
-
 ---
 
 Perhaps, a more apt conlusion would be:
 
-[//]: # (A Large Language Model *&#40;+ a Solver&#41;* is All You Need!<br><br>)
+[//]: # "A Large Language Model *(+ a Solver)* is All You Need!<br><br>"
 
 <div class="row">
     <!-- Full width image -->
@@ -192,37 +193,37 @@ Perhaps, a more apt conlusion would be:
 
 ---
 
-
 ## References
-<a id="1">[1]</a> 
-Lightman, H. (2023). 
+
+<a id="1">[1]</a>
+Lightman, H. (2023).
 Let's Verify Step by Step.
 
-<a id="2">[2]</a> 
-Ahn, M. (2022). 
+<a id="2">[2]</a>
+Ahn, M. (2022).
 Do As I Can, Not As I Say: Grounding Language in Robotic Affordances.
 6th Annual Conference on Robot Learning
 
-<a id="3">[3]</a> 
-Hazra, R. (2023). 
-SayCanPay: Heuristic Planning with Large Language Models Using Learnable Domain Knowledge. 
+<a id="3">[3]</a>
+Hazra, R. (2023).
+SayCanPay: Heuristic Planning with Large Language Models Using Learnable Domain Knowledge.
 Proceedings of the AAAI Conference on Artificial Intelligence, 20123--20133.
 
-<a id="4">[4]</a> 
-Hao, S. (2023). 
+<a id="4">[4]</a>
+Hao, S. (2023).
 Reasoning with Language Models is Planning with World Models.
 Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing, 8154--8173.
 
-<a id="5">[5]</a> 
-Du, Y. (2024). 
+<a id="5">[5]</a>
+Du, Y. (2024).
 Video Language Planning.
 The Twelfth International Conference on Learning Representations.
 
-<a id="6">[6]</a> 
-Liu, B. (2023). 
+<a id="6">[6]</a>
+Liu, B. (2023).
 LLM+P: Empowering Large Language Models with Optimal Planning Proficiency.
 
-<a id="7">[7]</a> 
-Wong, L. (2024). 
+<a id="7">[7]</a>
+Wong, L. (2024).
 Learning Grounded Action Abstraction from Language.
 The Twelfth International Conference on Learning Representations
