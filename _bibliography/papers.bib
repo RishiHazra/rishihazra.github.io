@@ -4,12 +4,24 @@
       title={AI Research Agents for Machine Learning: Search, Exploration, and Generalization in MLE-bench},
       author={Edan Toledo and Karen Hambardzumyan and Martin Josifoski and Rishi Hazra and Nicolas Baldwin and Alexis Audran-Reiss and Michael Kuchnik and Despoina Magka and Minqi Jiang and Alisia Maria Lupidi and Andrei Lupu and Roberta Raileanu and Kelvin Niu and Tatiana Shavrina and Jean-Christophe Gagnon-Audet and Michael Shvartsman and Shagun Sodhani and Alexander H. Miller and Abhishek Charnalia and Derek Dunfield and Carole-Jean Wu and Pontus Stenetorp and Nicola Cancedda and Jakob Nicolaus Foerster and Yoram Bachrach},
       year={2025},
-      abbr={arXiv},
+      abbr={NeurIPS 2025 (Spotlight)},
       pdf={https://arxiv.org/abs/2507.02554},
-      journal={arXiv},
+      journal={The Thirty-Ninth Annual Conference on Neural Information Processing Systems (NeurIPS)},
       abstract={AI research agents are demonstrating great potential to accelerate scientific progress by automating the design, implementation, and training of machine learning models. We focus on methods for improving agents' performance on MLE-bench, a challenging benchmark where agents compete in Kaggle competitions to solve real-world machine learning problems. We formalize AI research agents as search policies that navigate a space of candidate solutions, iteratively modifying them using operators. By designing and systematically varying different operator sets and search policies (Greedy, MCTS, Evolutionary), we show that their interplay is critical for achieving high performance. Our best pairing of search strategy and operator set achieves a state-of-the-art result on MLE-bench lite, increasing the success rate of achieving a Kaggle medal from 39.6% to 47.7%. Our investigation underscores the importance of jointly considering the search strategy, operator design, and evaluation methodology in advancing automated machine learning.},
       preview={aira_overview.png},
       code = {https://github.com/facebookresearch/aira-dojo}
+}
+
+@misc{lexicon,
+      title={LexiCon: a Benchmark for Planning under Temporal Constraints in Natural Language},
+      author={Periklis Mantenoglou and Rishi Hazra and Pedro Zuidberg Dos Martires and Luc De Raedt},
+      year={2025},
+      abbr={NeurIPS 2025 DB Track},
+      pdf={https://openreview.net/forum?id=wxFfPVPtdy}
+      journal={The Thirty-ninth Annual Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+      abstract={Owing to their reasoning capabilities, large language models (LLMs) have been evaluated on planning tasks described in natural language. However, LLMs have largely been tested on planning domains without constraints. In order to deploy them in real-world settings where adherence to constraints, in particular safety constraints, is critical, we need to evaluate their performance on constrained planning tasks. We introduce LexiCon—a natural language-based (Lexi) constrained (Con) planning benchmark, consisting of a suite of environments, that can be used to evaluate the planning capabilities of LLMs in a principled fashion. The core idea behind LexiCon is to take existing planning environments and impose temporal constraints on the states. These constrained problems are then translated into natural language and given to an LLM to solve. A key feature of LexiCon is its extensibility. That is, the set of supported environments can be extended with new (unconstrained) environment generators, for which temporal constraints are constructed automatically. This renders LexiCon future-proof: the hardness of the generated planning problems can be increased as the planning capabilities of LLMs improve. Our experiments reveal that the performance of state-of-the-art LLMs, including reasoning models like GPT-5, o3, and R1, deteriorates as the degree of constrainedness of the planning tasks increases.}
+      preview={lexicon.png},
+      code = {https://github.com/periklismant/lexicon_neurips}
 }
 
 @article{llmsat-new,

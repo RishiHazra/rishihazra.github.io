@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>WASP Ph.D. at Örebro University, Sweden</a>
+subtitle: <a href='#'>Postdoc at FAIR, Meta</a>
 
 profile:
   align: right
@@ -23,7 +23,7 @@ social: true  # includes social icons at the bottom of the page
 
 [//]: # (Last fall, I interned at [FAIR &#40;Meta AI&#41;]&#40;https://ai.meta.com/research/&#41;, London with [Nicolas Carion]&#40;https://www.nicolascarion.com/&#41; working on VLMs and [Yoram Bachrach]&#40;https://sites.google.com/view/yoram-bachrach&#41; on Agentic systems. In Fall 2022, I also interned at [Meta Reality Labs]&#40;https://about.meta.com/realitylabs/&#41;, Seattle under [Ruta Desai]&#40;https://rutadesai.github.io/&#41; and [Akshara Rai]&#40;https://ai.meta.com/people/423502423531745/akshara-rai/&#41;.)
 
-I'm starting as a Postdoctoral research at [FAIR (Meta AI)](https://ai.meta.com/research/), London, working with [Yoram Bachrach](https://sites.google.com/view/yoram-bachrach) on AI Research Agents. Previously, I have interned twice at Meta, working closely with [Nicolas Carion](https://www.nicolascarion.com/), [Yoram Bachrach](https://sites.google.com/view/yoram-bachrach), [Ruta Desai](https://rutadesai.github.io/) and [Akshara Rai](https://ai.meta.com/people/423502423531745/akshara-rai/)
+I'm a Postdoctoral research at [FAIR (Meta AI)](https://ai.meta.com/research/), London, working with [Yoram Bachrach](https://sites.google.com/view/yoram-bachrach) on AI Research Agents. Previously, I have interned twice at Meta, working closely with [Nicolas Carion](https://www.nicolascarion.com/), [Yoram Bachrach](https://sites.google.com/view/yoram-bachrach), [Ruta Desai](https://rutadesai.github.io/) and [Akshara Rai](https://ai.meta.com/people/423502423531745/akshara-rai/)
 
 My doctoral research, supervised by [Luc De Raedt](https://wms.cs.kuleuven.be/people/lucderaedt) and [Pedro Zuidberg Dos Martires](https://pedrozudo.github.io/), primarily focused on developing LLM Agents equipped with search capabilities for improved reasoning and decision-making.
 
