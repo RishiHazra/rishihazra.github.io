@@ -6,7 +6,7 @@ subtitle: <a href='https://ai.meta.com/research/'>Postdoc at FAIR, Meta</a>
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: self-image-nyc.jpeg
   image_circular: true # crops the image to make it circular
   address: >
     <p>FAIR (Meta AI)</p>
