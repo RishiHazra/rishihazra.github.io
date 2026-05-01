@@ -9,7 +9,7 @@ layout: default
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
           <div class="profile-image-wrapper">
             {%
-              include figure.liquid loading="eager" path=profile_image_path class="img-fluid rounded-circle" sizes="180px" alt=page.profile.image
+              include figure.liquid loading="eager" path=profile_image_path class="img-fluid rounded-circle" sizes="220px" alt=page.profile.image
               cache_bust=true
             %}
           </div>
