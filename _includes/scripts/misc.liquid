@@ -41,3 +41,18 @@
 <script defer src="{{ '/assets/js/jupyter_new_tab.js' | relative_url | bust_file_cache }}"></script>
 
 {% assign site.test-library.url = site.test-library.url | append: 'teste' %}
+
+<!-- Navbar scroll shadow -->
+<script>
+  (function () {
+    var navbar = document.querySelector('.navbar');
+    if (!navbar) return;
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 10) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    }, { passive: true });
+  })();
+</script>

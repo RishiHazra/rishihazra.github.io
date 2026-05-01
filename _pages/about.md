@@ -2,15 +2,15 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Postdoc at FAIR, Meta</a>
+subtitle: <a href='https://ai.meta.com/research/'>Postdoc at FAIR, Meta</a>
 
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
   address: >
-    <p>T2245, Teknikhuset</p>
-    <p>Örebro University</p>
+    <p>FAIR (Meta AI)</p>
+    <p>London, United Kingdom</p>
 
 news: true # includes a list of news items
 academic_service: true
@@ -19,10 +19,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-[//]: # "I am a fourth-year Ph.D. student though [Wallenberg AI, Autonomous Systems and Software Program (WASP)](https://wasp-sweden.org/) graduate school, supervised by [Luc De Raedt](https://wms.cs.kuleuven.be/people/lucderaedt) and [Pedro Zuidberg Dos Martires](https://pedrozudo.github.io/)."
-[//]: # "Last fall, I interned at [FAIR (Meta AI)](https://ai.meta.com/research/), London with [Nicolas Carion](https://www.nicolascarion.com/) working on VLMs and [Yoram Bachrach](https://sites.google.com/view/yoram-bachrach) on Agentic systems. In Fall 2022, I also interned at [Meta Reality Labs](https://about.meta.com/realitylabs/), Seattle under [Ruta Desai](https://rutadesai.github.io/) and [Akshara Rai](https://ai.meta.com/people/423502423531745/akshara-rai/)."
-
-I'm a Postdoctoral research at [FAIR (Meta AI)](https://ai.meta.com/research/), London, working with [Yoram Bachrach](https://sites.google.com/view/yoram-bachrach) on AI Research Agents. Previously, I have interned twice at Meta, working closely with [Nicolas Carion](https://www.nicolascarion.com/), [Yoram Bachrach](https://sites.google.com/view/yoram-bachrach), [Ruta Desai](https://rutadesai.github.io/) and [Akshara Rai](https://ai.meta.com/people/423502423531745/akshara-rai/)
+I'm a Postdoctoral researcher at [FAIR (Meta AI)](https://ai.meta.com/research/), London, working with [Yoram Bachrach](https://sites.google.com/view/yoram-bachrach) on AI Research Agents. Previously, I have interned twice at Meta, working closely with [Nicolas Carion](https://www.nicolascarion.com/), [Yoram Bachrach](https://sites.google.com/view/yoram-bachrach), [Ruta Desai](https://rutadesai.github.io/) and [Akshara Rai](https://ai.meta.com/people/423502423531745/akshara-rai/).
 
 My doctoral research, supervised by [Luc De Raedt](https://wms.cs.kuleuven.be/people/lucderaedt) and [Pedro Zuidberg Dos Martires](https://pedrozudo.github.io/), primarily focused on developing LLM Agents equipped with search capabilities for improved reasoning and decision-making.
 

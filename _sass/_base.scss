@@ -2,7 +2,32 @@
  * Styles for the base elements of the theme.
  ******************************************************************************/
 
-// Typography
+// ── Global ──────────────────────────────────────────────────────────────────
+
+html {
+  scroll-behavior: smooth;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--global-theme-color);
+  outline-offset: 2px;
+}
+
+// ── Typography ──────────────────────────────────────────────────────────────
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Source Serif 4", "Georgia", serif;
+}
+
+code, pre, .mono {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+}
 
 p,
 h1,
@@ -37,9 +62,10 @@ table {
 a,
 table.table a {
   color: var(--global-theme-color);
+  transition: color 0.2s ease, border-color 0.2s ease;
 
   &:hover {
-    color: var(--global-theme-color);
+    color: var(--global-hover-color);
     text-decoration: underline;
   }
 
@@ -125,11 +151,10 @@ blockquote {
 // Checklist
 
 ul.task-list {
-  list-style-type: none; /* Remove bullets from all levels */
+  list-style-type: none;
 }
 
 ul.task-list > li ul {
-  /* Nested lists within .task-list */
   padding-inline-start: 1.5rem;
 }
 
@@ -180,8 +205,72 @@ ul.task-list input[type="checkbox"] {
   color: var(--global-theme-color);
 }
 
-// Profile
+// ── Hero / Profile (centered) ───────────────────────────────────────────────
 
+.profile-hero {
+  text-align: center;
+  padding: 2.5rem 1rem 1rem;
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    rgba(var(--teal-rgb), 0.06) 0%,
+    rgba(var(--bg-rgb), 0) 100%
+  );
+  margin-bottom: 1.5rem;
+  border-radius: 0 0 1.5rem 1.5rem;
+
+  .profile-image-wrapper {
+    display: inline-block;
+    margin-bottom: 1.25rem;
+
+    img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid rgba(var(--teal-rgb), 0.3);
+      box-shadow: 0 0 30px rgba(var(--teal-rgb), 0.15);
+    }
+  }
+
+  .profile-name {
+    font-family: "Source Serif 4", "Georgia", serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: var(--global-text-color);
+  }
+
+  .profile-subtitle {
+    font-size: 1.05rem;
+    color: var(--global-text-color-light);
+    margin-bottom: 0.35rem;
+
+    a {
+      color: var(--global-theme-color);
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .profile-affiliation {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.8rem;
+    color: var(--global-text-color-light);
+    letter-spacing: 0.02em;
+  }
+}
+
+.profile-bio {
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+// Legacy float profile — keep for non-about pages
 .profile {
   width: 100%;
 
@@ -231,13 +320,19 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
-// Navbar customization
+// ── Navbar — pill active + glassmorphism ────────────────────────────────────
 
 .navbar {
   box-shadow: none;
   border-bottom: 1px solid var(--global-divider-color);
-  background-color: var(--global-bg-color);
-  opacity: 0.95;
+  background-color: rgba(var(--bg-rgb), 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: box-shadow 0.3s ease;
+
+  &.scrolled {
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  }
 }
 
 .navbar .dropdown-menu {
@@ -279,19 +374,24 @@ ul.task-list input[type="checkbox"] {
 
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
+    border-radius: 100px;
+    padding: 0.35rem 0.85rem;
+    transition: all 0.25s ease;
 
     &:hover {
-      color: var(--global-hover-color);
+      color: var(--global-theme-color);
+      background-color: rgba(var(--teal-rgb), 0.08);
     }
   }
 
   .navbar-nav .nav-item.active > .nav-link {
-    background-color: inherit;
-    font-weight: bolder;
-    color: var(--global-theme-color);
+    background-color: var(--global-theme-color);
+    color: #fff;
+    font-weight: 600;
 
     &:hover {
-      color: var(--global-hover-color);
+      background-color: var(--global-hover-color);
+      color: #fff;
     }
   }
 
@@ -367,23 +467,42 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
-// Social (bottom)
+// ── Social Icons — circular buttons ─────────────────────────────────────────
 
 .social {
   text-align: center;
 
   .contact-icons {
-    font-size: 4rem;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
 
     a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.8rem;
+      height: 2.8rem;
+      border-radius: 50%;
+      background-color: rgba(var(--teal-rgb), 0.08);
+      transition: all 0.25s ease;
+      text-decoration: none;
+
       i::before {
         color: var(--global-text-color);
-        transition-property: all 0.2s ease-in-out;
+        transition: color 0.25s ease;
       }
 
       &:hover {
+        background-color: var(--global-theme-color);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(var(--teal-rgb), 0.3);
+        text-decoration: none;
+
         i::before {
-          color: var(--global-theme-color);
+          color: #fff;
         }
       }
     }
@@ -391,6 +510,7 @@ ul.task-list input[type="checkbox"] {
 
   .contact-note {
     font-size: 0.8rem;
+    margin-top: 0.75rem;
   }
 }
 
@@ -424,16 +544,29 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
-// Footer
+// ── Footer — two-column ─────────────────────────────────────────────────────
+
 footer.fixed-bottom {
   background-color: var(--global-footer-bg-color);
   font-size: 0.75rem;
+  border-top: 1px solid var(--global-divider-color);
 
   .container {
     color: var(--global-footer-text-color);
     padding-top: 9px;
     padding-bottom: 8px;
-    text-align: center;
+  }
+
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+      text-align: center;
+      gap: 0.25rem;
+    }
   }
 
   a {
@@ -454,6 +587,18 @@ footer.sticky-bottom {
 
   .container {
     text-align: center;
+  }
+
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+      text-align: center;
+      gap: 0.5rem;
+    }
   }
 }
 
@@ -635,7 +780,7 @@ footer.sticky-bottom {
   }
 }
 
-// Publications
+// ── Publications — card style with hover ────────────────────────────────────
 
 .publications {
   margin-top: 2rem;
@@ -671,8 +816,15 @@ footer.sticky-bottom {
 
     li {
       margin-bottom: 1rem;
+      border: 1px solid var(--global-divider-color);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      background-color: var(--global-card-bg-color);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-      .preview {
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(var(--teal-rgb), 0.1);
       }
 
       .abbr {
@@ -682,6 +834,9 @@ footer.sticky-bottom {
           display: inline-block;
           background-color: var(--global-theme-color);
           margin-bottom: 0.5rem;
+          border-radius: 100px;
+          padding: 0.15rem 0.65rem;
+          font-size: 0.8rem;
 
           a {
             color: white;
@@ -732,15 +887,16 @@ footer.sticky-bottom {
       .links {
         a.btn {
           color: var(--global-text-color);
-          border: 1px solid var(--global-text-color);
-          padding-left: 1rem;
-          padding-right: 1rem;
-          padding-top: 0.25rem;
-          padding-bottom: 0.25rem;
+          border: 1px solid var(--global-divider-color);
+          padding: 0.2rem 0.85rem;
+          border-radius: 100px;
+          font-size: 0.85rem;
           margin-left: 0;
+          transition: all 0.2s ease;
 
           &:hover {
-            color: var(--global-theme-color);
+            color: #fff;
+            background-color: var(--global-theme-color);
             border-color: var(--global-theme-color);
           }
         }
@@ -1112,7 +1268,6 @@ swiper-container {
 }
 
 // Ninja Keys
-// for more options, check https://github.com/ssleptsov/ninja-keys?tab=readme-ov-file#css-variables
 ninja-keys {
   --ninja-accent-color: var(--global-theme-color);
   --ninja-icon-size: 0px;
@@ -1123,3 +1278,147 @@ ninja-keys {
 ninja-keys::part(ninja-input-wrapper) {
   background: var(--global-bg-color);
 }
+
+// ── News Timeline ───────────────────────────────────────────────────────────
+
+.news-timeline {
+  position: relative;
+  padding-left: 1.75rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0.45rem;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 2px;
+    background-color: var(--global-divider-color);
+  }
+
+  .news-item {
+    position: relative;
+    padding-bottom: 1.25rem;
+    padding-left: 0.75rem;
+    transition: background-color 0.2s ease;
+    border-radius: 0.5rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -1.3rem;
+      top: 0.55rem;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 2px solid var(--global-theme-color);
+      background-color: var(--global-bg-color);
+      transition: background-color 0.2s ease;
+      z-index: 1;
+    }
+
+    &:hover {
+      background-color: rgba(var(--teal-rgb), 0.04);
+
+      &::before {
+        background-color: var(--global-theme-color);
+      }
+    }
+
+    .news-date {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      color: var(--global-text-color-light);
+      letter-spacing: 0.04em;
+      margin-bottom: 0.15rem;
+    }
+
+    .news-content {
+      font-size: 0.92rem;
+      color: var(--global-text-color);
+
+      a {
+        color: var(--global-theme-color);
+      }
+    }
+  }
+}
+
+// ── Academic Service — categorized pills ────────────────────────────────────
+
+.academic-service {
+  .service-group {
+    margin-bottom: 1.25rem;
+
+    .service-group-title {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--global-text-color-light);
+      margin-bottom: 0.5rem;
+    }
+
+    .service-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .service-pill {
+      display: inline-block;
+      font-size: 0.82rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 100px;
+      border: 1px solid var(--global-divider-color);
+      color: var(--global-text-color);
+      background-color: var(--global-card-bg-color);
+      transition: all 0.2s ease;
+
+      &:hover {
+        border-color: var(--global-theme-color);
+        color: var(--global-theme-color);
+      }
+
+      &.highlight {
+        background-color: var(--global-theme-color);
+        color: #fff;
+        border-color: var(--global-theme-color);
+
+        &:hover {
+          background-color: var(--global-hover-color);
+          border-color: var(--global-hover-color);
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+// ── Animations ──────────────────────────────────────────────────────────────
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.post > article > h2,
+.post > article > .news-timeline,
+.post > article > .academic-service,
+.post > article > .social,
+.profile-hero,
+.profile-bio {
+  animation: fadeInUp 0.5s ease both;
+}
+
+.post > article > h2:nth-child(2) { animation-delay: 0.1s; }
+.post > article > .news-timeline { animation-delay: 0.15s; }
+.post > article > h2:nth-child(4) { animation-delay: 0.2s; }
+.post > article > .academic-service { animation-delay: 0.25s; }
+.post > article > .social { animation-delay: 0.3s; }

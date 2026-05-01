@@ -2,48 +2,41 @@
 layout: default
 ---
 <div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
-
   <article>
     {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
+      <div class="profile-hero">
         {% if page.profile.image %}
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
-          {% endif %}
-          {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
+          <div class="profile-image-wrapper">
+            {%
+              include figure.liquid loading="eager" path=profile_image_path class="img-fluid rounded-circle" sizes="180px" alt=page.profile.image
+              cache_bust=true
+            %}
+          </div>
         {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
+
+        <h1 class="profile-name">
+          {% if site.title == 'blank' %}
+            <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
+            {{ site.last_name }}
+          {% else %}
+            {{ site.title }}
+          {% endif %}
+        </h1>
+
+        <p class="profile-subtitle">{{ page.subtitle }}</p>
+
+        {% if page.profile.address %}
+          <p class="profile-affiliation">{{ page.profile.address | strip_html | strip }}</p>
         {% endif %}
       </div>
     {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+    <div class="profile-bio">{{ content }}</div>
 
     <!-- News -->
     {% if page.news and site.announcements.enabled %}
       <h2 style="margin-top: 30px;">
-        <!-- Added top margin to create space -->
         <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
       </h2>
       {% include news.liquid limit=true %}
@@ -60,14 +53,32 @@ layout: default
     <!-- Academic Service -->
     {% if page.academic_service %}
       <h2 style="margin-top: 30px;">
-        <!-- Added top margin to create space -->
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">academic service</a>
+        <a href="#" style="color: inherit">academic service</a>
       </h2>
-      <div class="academic_service">
-        <p>
-          Program Committee & Session Chair for AAMAS'22, NeurIPS'22 (Top Reviewer)-23-24 (Top Reviewer)-25, Reviewer for EACL'23, ICML'23-24-25,
-          KR'24, ICLR'24-25, TMLR
-        </p>
+      <div class="academic-service">
+        <div class="service-group">
+          <div class="service-group-title">Program Committee & Session Chair</div>
+          <div class="service-pills">
+            <span class="service-pill">AAMAS'22</span>
+          </div>
+        </div>
+        <div class="service-group">
+          <div class="service-group-title">Reviewer</div>
+          <div class="service-pills">
+            <span class="service-pill highlight">NeurIPS'22 (Top Reviewer)</span>
+            <span class="service-pill">NeurIPS'23</span>
+            <span class="service-pill highlight">NeurIPS'24 (Top Reviewer)</span>
+            <span class="service-pill">NeurIPS'25</span>
+            <span class="service-pill">EACL'23</span>
+            <span class="service-pill">ICML'23</span>
+            <span class="service-pill">ICML'24</span>
+            <span class="service-pill">ICML'25</span>
+            <span class="service-pill">KR'24</span>
+            <span class="service-pill">ICLR'24</span>
+            <span class="service-pill">ICLR'25</span>
+            <span class="service-pill">TMLR</span>
+          </div>
+        </div>
       </div>
     {%- endif %}
 
