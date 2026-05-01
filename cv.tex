@@ -1,0 +1,195 @@
+\documentclass[a4paper,10pt]{article}
+
+% ── Packages ─────────────────────────────────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{titlesec}
+\usepackage{academicons}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{microtype}
+\usepackage{lmodern}
+\usepackage{parskip}
+
+% ── Page geometry ────────────────────────────────────────────────────────────
+\geometry{a4paper, top=0.6in, bottom=0.6in, left=0.7in, right=0.7in}
+\pagestyle{empty}
+
+% ── Colors ───────────────────────────────────────────────────────────────────
+\definecolor{accent}{HTML}{0D9488}
+\definecolor{subtle}{HTML}{64748B}
+\definecolor{lightgray}{HTML}{E2E8F0}
+
+% ── Hyperlinks ───────────────────────────────────────────────────────────────
+\hypersetup{
+  colorlinks=true,
+  linkcolor=accent,
+  urlcolor=accent,
+  pdfauthor={Rishi Hazra},
+  pdftitle={CV -- Rishi Hazra}
+}
+
+% ── Section formatting ──────────────────────────────────────────────────────
+\titleformat{\section}
+  {\large\bfseries\color{accent}}
+  {}
+  {0em}
+  {\MakeUppercase}
+  [\vspace{-0.6em}{\color{lightgray}\rule{\linewidth}{0.5pt}}]
+\titlespacing{\section}{0pt}{1em}{0.5em}
+
+% ── List formatting ─────────────────────────────────────────────────────────
+\setlist{leftmargin=1.2em, noitemsep, topsep=2pt, parsep=1pt}
+
+% ── Custom commands ──────────────────────────────────────────────────────────
+\newcommand{\cventry}[4]{%
+  \noindent\textbf{#1}\hfill{\small\color{subtle}#3}\\
+  {\color{subtle}#2}\\[-0.3em]
+  {\small #4}\par\vspace{0.5em}%
+}
+
+\newcommand{\cvlink}[2]{\href{#2}{\small\textcolor{accent}{[#1]}}}
+
+\newcommand{\cvcontact}[3]{\href{#3}{\textcolor{subtle}{#1}\;\textcolor{black}{#2}}}
+
+% ═════════════════════════════════════════════════════════════════════════════
+\begin{document}
+
+% ── Header ───────────────────────────────────────────────────────────────────
+\begin{center}
+  {\huge\bfseries Rishi Hazra}\\\vspace{0.3em}
+  {\color{subtle}\normalsize Postdoctoral Researcher\;\textcolor{lightgray}{|}\;FAIR (Meta AI), London}\\\vspace{0.5em}
+  \cvcontact{\faEnvelope}{rishi.hazra@oru.se}{mailto:rishi.hazra@oru.se}\quad
+  \cvcontact{\faGlobe}{rishihazra.github.io}{https://rishihazra.github.io}\quad
+  \cvcontact{\aiGoogleScholar}{Scholar}{https://scholar.google.com/citations?user=aWN72pEAAAAJ\&hl=en}\quad
+  \cvcontact{\faGithub}{RishiHazra}{https://github.com/RishiHazra}\quad
+  \cvcontact{\faPhone}{(+44) 7405 599904}{tel:+447405599904}
+\end{center}
+
+\vspace{-0.3em}
+
+% ── Experience ───────────────────────────────────────────────────────────────
+\section{Research \& Professional Experience}
+
+\cventry{Postdoctoral Researcher}{FAIR (Meta AI), London, UK}{Jul 2025 -- Present}{%
+  AI Research Agents.}
+
+\cventry{Research Science Intern}{FAIR (Meta AI), London, UK}{Aug 2024 -- Feb 2025}{%
+  Language grounding in images; multiagent evolutionary frameworks.}
+
+\cventry{Research Science Intern}{Meta Reality Labs Research, Redmond, USA}{Jul 2022 -- Dec 2022}{%
+  Vision and language-based task tracking.}
+
+\cventry{Data Scientist}{Amazon Alexa-AI, Bangalore, India}{Apr 2020 -- Sep 2020}{%
+  NLU metrics for Alexa.}
+
+\cventry{Research Associate}{Statistics \& Machine Learning Group, IISc Bangalore}{Jun 2019 -- Mar 2020}{%
+  Multi-agent reinforcement learning.}
+
+% ── Education ────────────────────────────────────────────────────────────────
+\section{Education}
+
+\cventry{Ph.D.\ in Machine Reasoning}{\"Orebro University \& WASP, Sweden}{2021 -- 2025}{%
+  Reasoning \& decision making with LLMs.
+  Supervisors: Luc De Raedt, Pedro Zuidberg Dos Martires.}
+
+\cventry{M.Tech in Artificial Intelligence}{Indian Institute of Science, Bangalore}{2017 -- 2019}{%
+  Active learning in sequence tagging. GPA: 8.10/10. Supervisor: Ambedkar Dukkipati.}
+
+\cventry{B.Tech in Electrical Engineering}{Birsa Institute of Technology, India}{2013 -- 2017}{%
+  GPA: 8.03/10.}
+
+% ── Publications ─────────────────────────────────────────────────────────────
+\section{Selected Publications}
+
+\begin{enumerate}[leftmargin=1.5em, label={\small\arabic*.}]
+\small
+
+  \item \textbf{Training AI Co-Scientists Using Rubric Rewards}\\
+    S Goel, \underline{R Hazra}, D Jayalath, T Willi, P Jain, WF Shen, I Leontiadis, F Barbieri, Y Bachrach, J Geiping, C Whitehouse\\
+    \textit{ICML 2026}\quad\cvlink{pdf}{https://openreview.net/pdf?id=bTySLCPXHO}
+
+  \item \textbf{SAM 3: Segment Anything with Concepts}\\
+    N Carion et al.\\
+    \textit{ICLR 2026}\quad\cvlink{pdf}{https://arxiv.org/pdf/2511.16719v1}\;\cvlink{code}{https://github.com/facebookresearch/sam3}
+
+  \item \textbf{AI Research Agents for ML: Search, Exploration, and Generalization in MLE-bench}\\
+    E Toledo, K Hambardzumyan, M Josifoski, \underline{R Hazra} et al.\\
+    \textit{NeurIPS 2025} (Spotlight)\quad\cvlink{pdf}{https://arxiv.org/abs/2507.02554}\;\cvlink{code}{https://github.com/facebookresearch/aira-dojo}
+
+  \item \textbf{LexiCon: Planning under Temporal Constraints in Natural Language}\\
+    P Mantenoglou, \underline{R Hazra}, PZD Martires, L De Raedt\\
+    \textit{NeurIPS 2025} (DB Track)\quad\cvlink{pdf}{https://openreview.net/pdf?id=wxFfPVPtdy}\;\cvlink{code}{https://github.com/periklismant/lexicon_neurips}
+
+  \item \textbf{Have Large Language Models Learned to Reason? A Characterization via 3-SAT}\\
+    \underline{R Hazra}, G Venturato, PZD Martires, L De Raedt\\
+    \textit{COLM 2025}\quad\cvlink{pdf}{https://openreview.net/pdf?id=MPTlWIVSMU}\;\cvlink{code}{https://github.com/RishiHazra/Revolve/tree/main}
+
+  \item \textbf{REvolve: Reward Evolution with Large Language Models using Human Feedback}\\
+    \underline{R Hazra*}, A Sygkounas*, A Persson, A Loutfi, PZD Martires\\
+    \textit{ICLR 2025}\quad\cvlink{web}{https://rishihazra.github.io/REvolve/}\;\cvlink{pdf}{https://arxiv.org/pdf/2406.01309}\;\cvlink{code}{https://github.com/RishiHazra/Revolve/tree/main}
+
+  \item \textbf{SayCanPay: Heuristic Planning with LLMs using Learnable Domain Knowledge}\\
+    \underline{R Hazra}, PZD Martires, L De Raedt\\
+    \textit{AAAI 2024}\quad\cvlink{web}{https://rishihazra.github.io/SayCanPay/}\;\cvlink{pdf}{https://arxiv.org/pdf/2308.12682.pdf}\;\cvlink{code}{https://github.com/RishiHazra/saycanpay}
+
+  \item \textbf{EgoTV: Egocentric Task Verification from Natural Language Task Descriptions}\\
+    \underline{R Hazra}, B Chen, A Rai, N Kamra, R Desai\\
+    \textit{ICCV 2023}\quad\cvlink{web}{https://rishihazra.github.io/EgoTV/}\;\cvlink{pdf}{https://arxiv.org/pdf/2303.16975.pdf}\;\cvlink{code}{https://github.com/facebookresearch/EgoTV}
+
+  \item \textbf{Deep Explainable Relational Reinforcement Learning: A Neuro-Symbolic Approach}\\
+    \underline{R Hazra}, L De Raedt\\
+    \textit{ECML PKDD 2023}\quad\cvlink{pdf}{https://arxiv.org/pdf/2304.08349.pdf}
+
+  \item \textbf{Active$^2$ Learning: Reducing Redundancies in Active Learning for Sequence Tagging}\\
+    \underline{R Hazra}, P Dutta, S Gupta, MA Qaathir, A Dukkipati\\
+    \textit{NAACL-HLT 2021}\quad\cvlink{pdf}{https://www.aclweb.org/anthology/2021.naacl-main.159.pdf}\;\cvlink{code}{https://github.com/parag1604/A2L}
+
+  \item \textbf{Networked Multi-Agent Reinforcement Learning with Emergent Communication}\\
+    S Gupta*, \underline{R Hazra*}, A Dukkipati\\
+    \textit{AAMAS 2020}\quad\cvlink{pdf}{https://arxiv.org/pdf/2004.02780.pdf}
+
+\end{enumerate}
+
+{\small\color{subtle}Workshop papers (ViGIL @ NAACL-HLT 2021, IEEE RO-MAN 2024, HRI 2025 LBR) omitted for brevity.\par}
+
+% ── Mentorship ───────────────────────────────────────────────────────────────
+\section{Mentorship}
+
+\noindent\textbf{Master Thesis Supervision}\hfill{\small\color{subtle}2024 -- 2025}\\
+{\color{subtle}Jens V R\"uppel, TU Chemnitz} \quad{\small(Co-supervisor: Tim Schreiter)}
+
+\vspace{0.5em}
+
+% ── Achievements ─────────────────────────────────────────────────────────────
+\section{Achievements}
+
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+  \textbf{Top Reviewer} & NeurIPS 2022, NeurIPS 2024 (Top 8\%)\\[2pt]
+  \textbf{Guinness World Record} & Most users to complete a remote 10\,km in 24 hours\;\cvlink{record}{https://www.guinnessworldrecords.com/world-records/647729-most-users-to-run-a-remote-10-km-in-24-hours}\;\cvlink{cert}{https://drive.google.com/file/d/1Y8NRmzR7t79GxzP67qui0aX_ey5ZcUvx/view?usp=sharing}\\[2pt]
+  \textbf{Kaggle} & 2\textsuperscript{nd} rank in secondary track of \href{https://www.kaggle.com/rishih/present-sir}{PASSNYC}\\[2pt]
+  \textbf{GATE 2017} & All India Rank 133 (top 0.001\%)\\[2pt]
+  \textbf{Undergrad} & Best Outgoing Project Award (BIT Sindri \& IIT ISM Dhanbad)\\[2pt]
+\end{tabularx}
+
+% ── Academic Service ─────────────────────────────────────────────────────────
+\section{Academic Service}
+
+\noindent\textbf{Program Committee \& Session Chair:}\;AAMAS 2022\\[2pt]
+\textbf{Reviewer:}\;NeurIPS 2022{\small\,\textcolor{accent}{(Top)}}, 2023, 2024{\small\,\textcolor{accent}{(Top)}}, 2025\;\textcolor{lightgray}{|}\;ICML 2023--25\;\textcolor{lightgray}{|}\;ICLR 2024--25\;\textcolor{lightgray}{|}\;KR 2024\;\textcolor{lightgray}{|}\;EACL 2023\;\textcolor{lightgray}{|}\;TMLR
+
+\vspace{0.5em}
+
+% ── Community ────────────────────────────────────────────────────────────────
+\section{Community}
+
+\begin{itemize}
+  \item \textbf{PRAYAAS India} (2013--2016): Taught mathematics to underprivileged children.
+  \item \textbf{Tarumitra} (2011--2013): Student President; led plantation drives and awareness programs.
+\end{itemize}
+
+\end{document}

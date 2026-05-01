@@ -1,97 +1,120 @@
-- title: General Information
-  type: map
-  contents:
-    - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
-
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Ph.D. in Machine Reasoning
+      institution: Örebro University & WASP, Sweden
+      year: 2021 – 2025
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - "Research Topic: Reasoning & Decision Making with LLMs"
+        - "Supervisors: Luc De Raedt, Pedro Zuidberg Dos Martires"
+    - title: M.Tech in Artificial Intelligence
+      institution: Indian Institute of Science, Bangalore, India
+      year: 2017 – 2019
       description:
-        - Description 1.
-        - Description 2.
+        - "Grade: 8.10/10"
+        - "Research Topic: Active Learning in Sequence Tagging"
+        - "Supervisor: Ambedkar Dukkipati"
+    - title: B.Tech in Electrical Engineering
+      institution: Birsa Institute of Technology, India
+      year: 2013 – 2017
+      description:
+        - "Grade: 8.03/10"
+        - "Supervisor: Pankaj Kumar Rai"
 
-- title: Experience
+- title: Research & Professional Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Postdoctoral Researcher
+      institution: FAIR (Meta AI), London, UK
+      year: 2025 – Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - "Topic: AI Research Agents"
+    - title: Research Science Intern
+      institution: FAIR (Meta), London, UK
+      year: Aug 2024 – Feb 2025
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+        - "Topics: Language Grounding in Images, Multiagent Evolutionary Frameworks"
+    - title: Research Science Intern
+      institution: Meta Reality Labs Research, Redmond, USA
+      year: Jul 2022 – Dec 2022
       description:
+        - "Topic: Vision and Language-based Task Tracking"
+    - title: Data Scientist
+      institution: Amazon Alexa-AI, Bangalore, India
+      year: Apr 2020 – Sep 2020
+      description:
+        - "Topic: NLU Metrics in Alexa"
+    - title: Research Associate
+      institution: Statistics and Machine Learning Group, Indian Institute of Science, Bangalore
+      year: Jun 2019 – Mar 2020
+      description:
+        - "Topic: Multi-Agent Reinforcement Learning"
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Mentorship
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: Master Thesis Supervision
+      institution: Jens V Rüppel, TU Chemnitz
+      year: 2024 – 2025
+      description:
+        - "Co-supervisor: Tim Schreiter"
 
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
-
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
-      items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
+- title: Skills
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - Python, PyTorch, MATLAB, C++
+
+- title: Achievements
+  type: map
+  contents:
+    - name: Top Reviewer
+      value: NeurIPS 2022, NeurIPS 2024 (Top 8%)
+    - name: Guinness World Record
+      value: Most users to complete a remote 10 km in 24 hours
+      links:
+        - link: https://www.guinnessworldrecords.com/world-records/647729-most-users-to-run-a-remote-10-km-in-24-hours
+          name: record
+        - link: https://drive.google.com/file/d/1Y8NRmzR7t79GxzP67qui0aX_ey5ZcUvx/view?usp=sharing
+          name: certificate
+    - name: Kaggle
+      value: 2nd Rank in secondary track of PASSNYC
+    - name: GATE 2017
+      value: All India Rank 133 (top 0.001%)
+    - name: Undergrad
+      value: Best Outgoing Project Award jointly from BIT Sindri & IIT (ISM) Dhanbad
+    - name: Undergrad
+      value: Best Academics Award for excellent academic performance
+    - name: High School
+      value: Principal's Award for all-round academic performance
+
+- title: Courses & Workshops
+  type: nested_list
+  contents:
+    - title: Basic
+      items:
+        - Machine Learning
+        - Game Theory
+        - Practical Data Science
+    - title: Advanced
+      items:
+        - Natural Language Understanding
+        - Reinforcement Learning
+        - Graphical Models & Bayesian Learning
+    - title: Undergrad
+      items:
+        - Signal Processing
+        - Control Systems
+        - Digital Electronics
+        - Network Theory
+    - title: Workshops
+      items:
+        - Workshop on Neural Systems (Pratiksha Trust, IISc)
+        - Robovision (Robotics and Computer Applications Institute, USA)
+
+- title: Community Service
+  type: list
+  contents:
+    - "NeurIPS 2022–24, ICML 2023–24, ICLR 2024, KR 2024, EACL 2023: Reviewer"
+    - "AAMAS 2022: Program Committee member and Session Chair"
+    - "PRAYAAS India: Active member (2013–2016), teaching mathematics to underprivileged children"
+    - "Tarumitra (Friend of Trees) Club: Student President for three consecutive years (2011–2013), leading plantation drives and awareness programs"
