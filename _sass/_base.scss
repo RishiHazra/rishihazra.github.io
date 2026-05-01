@@ -16,16 +16,29 @@ html {
 // ── Typography ──────────────────────────────────────────────────────────────
 
 body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Source Serif 4", "Georgia", serif;
 }
 
-code, pre, .mono {
+code,
+pre,
+.mono {
   font-family: "JetBrains Mono", "Fira Code", monospace;
 }
 
@@ -62,7 +75,9 @@ table {
 a,
 table.table a {
   color: var(--global-theme-color);
-  transition: color 0.2s ease, border-color 0.2s ease;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
 
   &:hover {
     color: var(--global-hover-color);
@@ -211,11 +226,7 @@ ul.task-list input[type="checkbox"] {
   text-align: center;
   padding: 2.5rem 1rem 1rem;
   position: relative;
-  background: linear-gradient(
-    180deg,
-    rgba(var(--teal-rgb), 0.06) 0%,
-    rgba(var(--bg-rgb), 0) 100%
-  );
+  background: linear-gradient(180deg, rgba(var(--teal-rgb), 0.06) 0%, rgba(var(--bg-rgb), 0) 100%);
   margin-bottom: 1.5rem;
   border-radius: 0 0 1.5rem 1.5rem;
 
@@ -820,7 +831,9 @@ footer.sticky-bottom {
       border-radius: 0.75rem;
       padding: 1.25rem;
       background-color: var(--global-card-bg-color);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 
       &:hover {
         transform: translateY(-2px);
@@ -1417,8 +1430,18 @@ ninja-keys::part(ninja-input-wrapper) {
   animation: fadeInUp 0.5s ease both;
 }
 
-.post > article > h2:nth-child(2) { animation-delay: 0.1s; }
-.post > article > .news-timeline { animation-delay: 0.15s; }
-.post > article > h2:nth-child(4) { animation-delay: 0.2s; }
-.post > article > .academic-service { animation-delay: 0.25s; }
-.post > article > .social { animation-delay: 0.3s; }
+.post > article > h2:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.post > article > .news-timeline {
+  animation-delay: 0.15s;
+}
+.post > article > h2:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.post > article > .academic-service {
+  animation-delay: 0.25s;
+}
+.post > article > .social {
+  animation-delay: 0.3s;
+}
