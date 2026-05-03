@@ -1,54 +1,90 @@
 - title: Education
   type: time_table
   contents:
-    - title: Ph.D. in Machine Reasoning
+    - title: Ph.D.
       institution: Örebro University & WASP, Sweden
       year: 2021 – 2025
       description:
-        - "Research Topic: Reasoning & Decision Making with LLMs"
-        - "Supervisors: Luc De Raedt, Pedro Zuidberg Dos Martires"
+        - "Thesis: Neurosymbolic decision-making with LLMs."
+        - "Supervisors: Luc De Raedt, Pedro Zuidberg Dos Martires."
+
     - title: M.Tech in Artificial Intelligence
-      institution: Indian Institute of Science, Bangalore, India
+      institution: Indian Institute of Science, Bangalore
       year: 2017 – 2019
       description:
-        - "Grade: 8.10/10"
-        - "Research Topic: Active Learning in Sequence Tagging"
-        - "Supervisor: Ambedkar Dukkipati"
+        - "Thesis: Active learning in sequence tagging."
+        - "GPA: 8.10/10. Supervisor: Ambedkar Dukkipati."
+
     - title: B.Tech in Electrical Engineering
       institution: Birsa Institute of Technology, India
       year: 2013 – 2017
       description:
-        - "Grade: 8.03/10"
-        - "Supervisor: Pankaj Kumar Rai"
+        - "GPA: 8.03/10."
 
 - title: Research & Professional Experience
   type: time_table
   contents:
     - title: Postdoctoral Researcher
       institution: FAIR (Meta AI), London, UK
-      year: 2025 – Present
+      year: Jul 2025 – Present
       description:
-        - "Topic: AI Research Agents"
+        - AI Research Agents.
+
     - title: Research Science Intern
-      institution: FAIR (Meta), London, UK
+      institution: FAIR (Meta AI), London, UK
       year: Aug 2024 – Feb 2025
       description:
-        - "Topics: Language Grounding in Images, Multiagent Evolutionary Frameworks"
+        - SAM 3; AI Research Agents.
+
     - title: Research Science Intern
       institution: Meta Reality Labs Research, Redmond, USA
       year: Jul 2022 – Dec 2022
       description:
-        - "Topic: Vision and Language-based Task Tracking"
+        - Vision and language-based task tracking.
+
     - title: Data Scientist
       institution: Amazon Alexa-AI, Bangalore, India
       year: Apr 2020 – Sep 2020
       description:
-        - "Topic: NLU Metrics in Alexa"
+        - NLU metrics for Alexa.
+
     - title: Research Associate
-      institution: Statistics and Machine Learning Group, Indian Institute of Science, Bangalore
+      institution: Statistics & Machine Learning Group, IISc Bangalore
       year: Jun 2019 – Mar 2020
       description:
-        - "Topic: Multi-Agent Reinforcement Learning"
+        - Multi-agent reinforcement learning.
+
+
+- title: Selected Publications
+  type: list
+  contents:
+    - '<b>AIRA<sub>2</sub>: Overcoming Bottlenecks in AI Research Agents</b><br>K Hambardzumyan*, N Baldwin*, E Toledo*, <u>R Hazra*</u>, M Kuchnik*, M Josifosky* et al. (*: equal contribution)<br><i>NeurIPS 2026</i> (under review) <a href="https://arxiv.org/pdf/2603.26499">[pdf]</a>'
+
+    - '<b>Training AI Co-Scientists Using Rubric Rewards</b><br>S Goel, <u>R Hazra</u>, D Jayalath, T Willi, P Jain, WF Shen, I Leontiadis, F Barbieri, Y Bachrach, J Geiping, C Whitehouse<br><i>ICML 2026</i> <a href="https://openreview.net/pdf?id=bTySLCPXHO">[pdf]</a> <a href="https://huggingface.co/datasets/facebook/research-plan-gen">[dataset]</a>'
+
+    - '<b>COvolve: Adversarial Co-Evolution of Large-Language-Model-Generated Policies and Environments via Two-Player Zero-Sum Game</b><br>A Sygkounas, <u>R Hazra</u>, A Persson, PZD Martires, A Loutfi<br><i>GECCO 2026</i> <a href="https://arxiv.org/pdf/2603.28386">[pdf]</a>'
+
+    - '<b>SAM 3: Segment Anything with Concepts</b><br>N Carion et al.<br><i>ICLR 2026</i> <a href="https://arxiv.org/pdf/2511.16719v1">[pdf]</a> <a href="https://github.com/facebookresearch/sam3">[code]</a> <a href="https://ai.meta.com/research/sam3/">[website]</a>'
+
+    - '<b>AI Research Agents for ML: Search, Exploration, and Generalization in MLE-bench</b><br>E Toledo, K Hambardzumyan, M Josifoski, <u>R Hazra</u> et al.<br><i>NeurIPS 2025</i> (Spotlight) <a href="https://arxiv.org/abs/2507.02554">[pdf]</a> <a href="https://github.com/facebookresearch/aira-dojo">[code]</a>'
+
+    - '<b>LexiCon: Planning under Temporal Constraints in Natural Language</b><br>P Mantenoglou, <u>R Hazra</u>, PZD Martires, L De Raedt<br><i>NeurIPS 2025</i> (DB Track) <a href="https://openreview.net/pdf?id=wxFfPVPtdy">[pdf]</a> <a href="https://github.com/periklismant/lexicon_neurips">[code]</a>'
+
+    - '<b>Have Large Language Models Learned to Reason? A Characterization via 3-SAT</b><br><u>R Hazra</u>, G Venturato, PZD Martires, L De Raedt<br><i>COLM 2025</i> <a href="https://openreview.net/pdf?id=MPTlWIVSMU">[pdf]</a> <a href="https://github.com/RishiHazra/Revolve/tree/main">[code]</a>'
+
+    - '<b>REvolve: Reward Evolution with Large Language Models using Human Feedback</b><br><u>R Hazra*</u>, A Sygkounas*, A Persson, A Loutfi, PZD Martires<br><i>ICLR 2025</i> <a href="https://rishihazra.github.io/REvolve/">[web]</a> <a href="https://arxiv.org/pdf/2406.01309">[pdf]</a> <a href="https://github.com/RishiHazra/Revolve/tree/main">[code]</a>'
+
+    - '<b>SayCanPay: Heuristic Planning with LLMs using Learnable Domain Knowledge</b><br><u>R Hazra</u>, PZD Martires, L De Raedt<br><i>AAAI 2024</i> <a href="https://rishihazra.github.io/SayCanPay/">[web]</a> <a href="https://arxiv.org/pdf/2308.12682.pdf">[pdf]</a> <a href="https://github.com/RishiHazra/saycanpay">[code]</a>'
+
+    - '<b>EgoTV: Egocentric Task Verification from Natural Language Task Descriptions</b><br><u>R Hazra</u>, B Chen, A Rai, N Kamra, R Desai<br><i>ICCV 2023</i> <a href="https://rishihazra.github.io/EgoTV/">[web]</a> <a href="https://arxiv.org/pdf/2303.16975.pdf">[pdf]</a> <a href="https://github.com/facebookresearch/EgoTV">[code]</a>'
+
+    - '<b>Deep Explainable Relational Reinforcement Learning: A Neuro-Symbolic Approach</b><br><u>R Hazra</u>, L De Raedt<br><i>ECML PKDD 2023</i> <a href="https://arxiv.org/pdf/2304.08349.pdf">[pdf]</a>'
+
+    - '<b>Active<sup>2</sup> Learning: Reducing Redundancies in Active Learning for Sequence Tagging</b><br><u>R Hazra</u>, P Dutta, S Gupta, MA Qaathir, A Dukkipati<br><i>NAACL-HLT 2021</i> <a href="https://www.aclweb.org/anthology/2021.naacl-main.159.pdf">[pdf]</a> <a href="https://github.com/parag1604/A2L">[code]</a>'
+
+    - '<b>Networked Multi-Agent Reinforcement Learning with Emergent Communication</b><br>S Gupta*, <u>R Hazra*</u>, A Dukkipati<br><i>AAMAS 2020</i> <a href="https://arxiv.org/pdf/2004.02780.pdf">[pdf]</a>'
+
+    - '<span style="color: #64748B;">Workshop papers (ViGIL @ NAACL-HLT 2021, IEEE RO-MAN 2024, HRI 2025 LBR) omitted for brevity.</span>'
 
 - title: Mentorship
   type: time_table
@@ -59,62 +95,14 @@
       description:
         - "Co-supervisor: Tim Schreiter"
 
-- title: Skills
+- title: Academic Service
   type: list
   contents:
-    - Python, PyTorch, MATLAB, C++
+    - "Program Committee & Session Chair: AAMAS 2022"
+    - "Reviewer: NeurIPS 2022 (Top), 2023, 2024 (Top), 2025 | ICML 2023–25 | ICLR 2024–25 | KR 2024 | EACL 2023 | TMLR"
 
-- title: Achievements
-  type: map
-  contents:
-    - name: Top Reviewer
-      value: NeurIPS 2022, NeurIPS 2024 (Top 8%)
-    - name: Guinness World Record
-      value: Most users to complete a remote 10 km in 24 hours
-      links:
-        - link: https://www.guinnessworldrecords.com/world-records/647729-most-users-to-run-a-remote-10-km-in-24-hours
-          name: record
-        - link: https://drive.google.com/file/d/1Y8NRmzR7t79GxzP67qui0aX_ey5ZcUvx/view?usp=sharing
-          name: certificate
-    - name: Kaggle
-      value: 2nd Rank in secondary track of PASSNYC
-    - name: GATE 2017
-      value: All India Rank 133 (top 0.001%)
-    - name: Undergrad
-      value: Best Outgoing Project Award jointly from BIT Sindri & IIT (ISM) Dhanbad
-    - name: Undergrad
-      value: Best Academics Award for excellent academic performance
-    - name: High School
-      value: Principal's Award for all-round academic performance
-
-- title: Courses & Workshops
-  type: nested_list
-  contents:
-    - title: Basic
-      items:
-        - Machine Learning
-        - Game Theory
-        - Practical Data Science
-    - title: Advanced
-      items:
-        - Natural Language Understanding
-        - Reinforcement Learning
-        - Graphical Models & Bayesian Learning
-    - title: Undergrad
-      items:
-        - Signal Processing
-        - Control Systems
-        - Digital Electronics
-        - Network Theory
-    - title: Workshops
-      items:
-        - Workshop on Neural Systems (Pratiksha Trust, IISc)
-        - Robovision (Robotics and Computer Applications Institute, USA)
-
-- title: Community Service
+- title: Community
   type: list
   contents:
-    - "NeurIPS 2022–24, ICML 2023–24, ICLR 2024, KR 2024, EACL 2023: Reviewer"
-    - "AAMAS 2022: Program Committee member and Session Chair"
-    - "PRAYAAS India: Active member (2013–2016), teaching mathematics to underprivileged children"
-    - "Tarumitra (Friend of Trees) Club: Student President for three consecutive years (2011–2013), leading plantation drives and awareness programs"
+    - "PRAYAAS India (2013–2016): Taught mathematics to underprivileged children."
+    - "Tarumitra (2011–2013): Student President; led plantation drives and awareness programs."
