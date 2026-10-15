@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Featuring [AIRA<sub>3</sub>](https://x.com/RishiHazra95/status/2096296377491837088) that won gold 🏅 in live Kaggle competition on fine-tuning Nemotron 30B.
+🏅 **Gold medal** for [AIRA<sub>3</sub>](https://x.com/RishiHazra95/status/2096296377491837088)! Our AI research agent finished **8th of ~4,000 teams** in NVIDIA's live Kaggle competition on fine-tuning a **30B Nemotron** model.
