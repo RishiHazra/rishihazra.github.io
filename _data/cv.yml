@@ -25,18 +25,18 @@
   type: time_table
   contents:
     - title: Postdoctoral Researcher
-      institution: FAIR (Meta AI), London, UK
+      institution: FAIR (Meta Superintelligence Labs), London, UK
       year: Jul 2025 – Present
       description:
         - AI Research Agents.
 
-    - title: Research Science Intern
+    - title: Research Scientist Intern
       institution: FAIR (Meta AI), London, UK
       year: Aug 2024 – Feb 2025
       description:
         - SAM 3; AI Research Agents.
 
-    - title: Research Science Intern
+    - title: Research Scientist Intern
       institution: Meta Reality Labs Research, Redmond, USA
       year: Jul 2022 – Dec 2022
       description:
@@ -59,6 +59,8 @@
   type: list
   contents:
     - '<b>AIRA<sub>2</sub>: Overcoming Bottlenecks in AI Research Agents</b><br>K Hambardzumyan*, N Baldwin*, E Toledo*, <u>R Hazra*</u>, M Kuchnik*, M Josifoski* et al. (*: equal contribution)<br><i>NeurIPS 2026</i> <a href="https://arxiv.org/pdf/2603.26499">[pdf]</a>'
+
+    - '<b>AI Research Preference Models</b><br>TS Foster*, B Al Omari*, T Fu*, T Mann, C Domond et al.<br><i>Preprint 2026</i> <a href="https://arxiv.org/abs/2608.13940">[pdf]</a>'
 
     - '<b>Training AI Co-Scientists Using Rubric Rewards</b><br>S Goel, <u>R Hazra</u>, D Jayalath, T Willi, P Jain, WF Shen, I Leontiadis, F Barbieri, Y Bachrach, J Geiping, C Whitehouse<br><i>ICML 2026</i> <a href="https://openreview.net/pdf?id=bTySLCPXHO">[pdf]</a> <a href="https://huggingface.co/datasets/facebook/research-plan-gen">[dataset]</a>'
 
