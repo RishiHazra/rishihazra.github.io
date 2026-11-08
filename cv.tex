@@ -69,7 +69,7 @@
 % ── Header ───────────────────────────────────────────────────────────────────
 \begin{center}
   {\huge\bfseries Rishi Hazra}\\\vspace{0.3em}
-  {\color{subtle}\normalsize Postdoctoral Researcher\;\textcolor{lightgray}{|}\;FAIR, Meta Superintelligence Labs, London}\\\vspace{0.5em}
+  {\color{subtle}\normalsize Research Scientist, Postdoctoral Researcher\;\textcolor{lightgray}{|}\;FAIR, Meta Superintelligence Labs, London}\\\vspace{0.5em}
   \cvcontact{\faEnvelope}{rishihazra63@gmail.com}{mailto:rishihazra63@gmail.com}\quad
   \cvcontact{\faGlobe}{rishihazra.github.io}{https://rishihazra.github.io}\quad
   \cvcontact{\aiGoogleScholar}{Scholar}{https://scholar.google.com/citations?user=aWN72pEAAAAJ\&hl=en}\quad
@@ -95,19 +95,19 @@
 % ── Experience ───────────────────────────────────────────────────────────────
 \section{Research \& Professional Experience}
 
-\cventry{Postdoctoral Researcher}{FAIR, Meta Superintelligence Labs, London, UK}{Jul 2025 -- Present}{%
+\cventry{Research Scientist, Postdoctoral Researcher}{FAIR, Meta Superintelligence Labs, London, UK}{Jul 2025 -- Present}{%
   \begin{cvitems}
     \item \cvproj{AIRA$_3$ (Kaggle Gold Medal):} Co-first author of an autonomous research agent that fine-tuned a 30B reasoning model end-to-end with no human in the loop, placing 8\textsuperscript{th} of $\sim$4,000 teams in NVIDIA's live Nemotron challenge -- the first Kaggle gold medal won by an autonomous system.\;\cvlink{announcement}{https://x.com/AIatMeta/status/2096271545589190927}
     \item \cvproj{AIRA$_2$ (NeurIPS 2026):} Co-first author; identified the bottlenecks limiting AI research agents on MLE-bench and removed them by scaling agents across many GPUs.\;\cvlink{pdf}{https://arxiv.org/abs/2603.26499}
     \item \cvproj{AgentBox (FAIR Engineering Award):} Built the execution infrastructure for running autonomous agents at scale across MSL, the backbone of multi-GPU AIRA experiments.
     \item \cvproj{Production Impact:} Applied research agents to production GPU and accelerator kernel generation: 1.25--17$\times$ speedups on recommendation and LLM models, 27\% lower kernel latency (internal benchmark), weeks-to-hours development.
-    \item \cvproj{Data Annotation \& AI Co-Scientists (ICML 2026):} Led large-scale collection of research ideas from AIRA$_1$ and their annotation as preference data to train rubric-based LLM judges, used to improve AIRA$_2$ via quality-diversity search. These annotations underpinned training AI co-scientists with RL on rubric rewards, whose research plans experts preferred for 70\% of goals.\;\cvlink{pdf}{https://openreview.net/pdf?id=bTySLCPXHO}
+    \item \cvproj{Data Collection, Annotation \& Vendor Management:} Led large-scale data collection and preference annotation with external vendors, used for post-training of models and LLM judges to improve the long-horizon ideation, planning, and judging abilities of AIRA$_2$.
   \end{cvitems}}
 
 \cventry{Research Scientist Intern}{FAIR, Meta AI, London, UK}{Aug 2024 -- Feb 2025}{%
   \begin{cvitems}
     \item \cvproj{AIRA$_1$ (NeurIPS 2025 Spotlight):} Developed research agents for MLE-bench, studying search policies, exploration, and generalization; open-sourced \textbf{aira-dojo}.\;\cvlink{pdf}{https://arxiv.org/abs/2507.02554}\;\cvlink{code}{https://github.com/facebookresearch/aira-dojo}
-    \item \cvproj{SAM 3 (ICLR 2026):} Contributed to compositional-concept evaluation for Segment Anything with Concepts.\;\cvlink{pdf}{https://arxiv.org/pdf/2511.16719v1}\;\cvlink{code}{https://github.com/facebookresearch/sam3}
+    \item \cvproj{SAM 3 (ICLR 2026):} Owned the compositional concepts effort, leading large-scale data collection and building the evaluation for segmenting concepts with attributes and relations.\;\cvlink{pdf}{https://arxiv.org/pdf/2511.16719v1}\;\cvlink{code}{https://github.com/facebookresearch/sam3}
   \end{cvitems}}
 
 \cventry{Research Scientist Intern}{Meta Reality Labs Research, Redmond, USA}{Jul 2022 -- Dec 2022}{%
@@ -117,12 +117,12 @@
 
 \cventry{Data Scientist}{Amazon Alexa-AI, Bangalore, India}{Apr 2020 -- Sep 2020}{%
   \begin{cvitems}
-    \item \cvproj{Alexa Metrics:} Built evaluations bridging offline and online Natural Language Understanding metrics.
+    \item \cvproj{Alexa Metrics:} Led an investigation into why offline evaluation metrics failed to predict live Natural Language Understanding error rates in production, and designed a better offline metric that tracks live errors, raising offline--online correlation across 4 locales and 2 device profiles over the last 10 model releases.
   \end{cvitems}}
 
 \cventry{Research Associate}{Statistics \& Machine Learning Group, IISc Bangalore}{Jun 2019 -- Mar 2020}{%
   \begin{cvitems}
-    \item \cvproj{Networked MARL (AAMAS 2020):} Co-first author; multi-agent RL with emergent communication.\;\cvlink{pdf}{https://arxiv.org/pdf/2004.02780.pdf}
+    \item \cvproj{Networked MARL (AAMAS 2020):} Co-first author; developed networked reinforcement learning agents that learn an emergent language to coordinate traffic signal control, and analysed how the language is grounded.\;\cvlink{pdf}{https://arxiv.org/pdf/2004.02780.pdf}
   \end{cvitems}}
 
 % ── Honors ───────────────────────────────────────────────────────────────────
@@ -214,7 +214,30 @@
 
 \end{enumerate}
 
-{\small\color{subtle}* Equal contribution. Workshop papers (ViGIL @ NAACL 2021, RO-MAN 2024, HRI 2025 LBR) omitted.\par}
+\textbf{\small Workshop Papers}
+
+\begin{enumerate}[leftmargin=1.6em, label={\small W\arabic*.}, itemsep=2pt]
+\small\interlinepenalty=10000
+
+  \item \textbf{LLM-Driven Adaptability or Pre-programmed Efficiency? A Comparative Study for Short Interactions}\\
+    T Schreiter*, JV Ruppel*, \underline{R Hazra}, A Rudenko, M Magnusson, AJ Lilienthal\\
+    \textit{HRI 2025} (Late-Breaking Report)\quad\cvlink{pdf}{https://arxiv.org/pdf/2501.12128}
+
+  \item \textbf{Bidirectional Intent Communication: A Role for Large Foundation Models}\\
+    T Schreiter*, \underline{R Hazra*}, J Ruppel, A Rudenko\\
+    \textit{LLMs in the RO-MAN Age @ IEEE RO-MAN 2024}\quad\cvlink{pdf}{https://arxiv.org/abs/2408.10589}
+
+  \item \textbf{Intrinsically Motivated Compositional Language Emergence}\\
+    \underline{R Hazra}, S Dixit, S Sen\\
+    \textit{ViGIL @ NAACL 2021}\quad\cvlink{pdf}{https://arxiv.org/pdf/2012.05011.pdf}
+
+  \item \textbf{gComm: An Environment for Investigating Generalization in Grounded Language Acquisition}\\
+    \underline{R Hazra*}, S Dixit*\\
+    \textit{ViGIL @ NAACL 2021}\quad\cvlink{pdf}{https://vigilworkshop.github.io/static/papers-2021/16.pdf}
+
+\end{enumerate}
+
+{\small\color{subtle}* Equal contribution.\par}
 
 % ── Talks ────────────────────────────────────────────────────────────────────
 \needspace{8\baselineskip}
