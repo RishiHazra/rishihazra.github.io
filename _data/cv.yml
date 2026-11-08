@@ -1,12 +1,13 @@
 - title: Education
   type: time_table
   contents:
-    - title: Ph.D.
+    - title: Ph.D. in Computer Science
       institution: Örebro University & WASP, Sweden
       year: 2021 – 2025
       description:
         - "Thesis: Neurosymbolic decision-making with LLMs."
         - "Supervisors: Luc De Raedt, Pedro Zuidberg Dos Martires."
+        - "Fully funded by WASP (Wallenberg AI, Autonomous Systems & Software Program), Sweden's largest research program."
 
     - title: M.Tech in Artificial Intelligence
       institution: Indian Institute of Science, Bangalore
@@ -25,39 +26,58 @@
   type: time_table
   contents:
     - title: Postdoctoral Researcher
-      institution: FAIR (Meta Superintelligence Labs), London, UK
+      institution: FAIR, Meta Superintelligence Labs, London, UK
       year: Jul 2025 – Present
       description:
-        - AI Research Agents.
+        - "<b>AIRA<sub>3</sub> (Kaggle Gold Medal):</b> Co-first author of an autonomous research agent that fine-tuned a 30B reasoning model end-to-end with no human in the loop, placing 8th of ~4,000 teams in NVIDIA's live Nemotron challenge — the first Kaggle gold medal won by an autonomous system. <a href=\"https://x.com/AIatMeta/status/2096271545589190927\">[announcement]</a>"
+        - "<b>AIRA<sub>2</sub> (NeurIPS 2026):</b> Co-first author; identified the bottlenecks limiting AI research agents on MLE-bench and removed them by scaling agents across many GPUs. <a href=\"https://arxiv.org/abs/2603.26499\">[pdf]</a>"
+        - "<b>AgentBox (FAIR Engineering Award):</b> Built the execution infrastructure for running autonomous agents at scale across MSL, the backbone of multi-GPU AIRA experiments."
+        - "<b>Production Impact:</b> Applied research agents to production GPU and accelerator kernel generation: 1.25–17× speedups on recommendation and LLM models, 27% lower kernel latency (internal benchmark), weeks-to-hours development."
+        - "<b>Data Annotation & AI Co-Scientists (ICML 2026):</b> Led large-scale collection of research ideas from AIRA<sub>1</sub> and their annotation as preference data to train rubric-based LLM judges, used to improve AIRA<sub>2</sub> via quality-diversity search. These annotations underpinned training AI co-scientists with RL on rubric rewards, whose research plans experts preferred for 70% of goals. <a href=\"https://openreview.net/pdf?id=bTySLCPXHO\">[pdf]</a>"
 
     - title: Research Scientist Intern
       institution: FAIR (Meta AI), London, UK
       year: Aug 2024 – Feb 2025
       description:
-        - SAM 3; AI Research Agents.
+        - "<b>AIRA<sub>1</sub> (NeurIPS 2025 Spotlight):</b> Developed research agents for MLE-bench, studying search policies, exploration, and generalization; open-sourced <b>aira-dojo</b>. <a href=\"https://arxiv.org/abs/2507.02554\">[pdf]</a> <a href=\"https://github.com/facebookresearch/aira-dojo\">[code]</a>"
+        - "<b>SAM 3 (ICLR 2026):</b> Contributed to compositional-concept evaluation for Segment Anything with Concepts. <a href=\"https://arxiv.org/pdf/2511.16719v1\">[pdf]</a> <a href=\"https://github.com/facebookresearch/sam3\">[code]</a>"
 
     - title: Research Scientist Intern
       institution: Meta Reality Labs Research, Redmond, USA
       year: Jul 2022 – Dec 2022
       description:
-        - Vision and language-based task tracking.
+        - "<b>EgoTV (ICCV 2023):</b> First author; built a benchmark for verifying compositional multi-step tasks from natural-language descriptions in egocentric video, and proposed a neuro-symbolic grounding model for it. <a href=\"https://rishihazra.github.io/EgoTV/\">[web]</a> <a href=\"https://arxiv.org/pdf/2303.16975.pdf\">[pdf]</a> <a href=\"https://github.com/facebookresearch/EgoTV\">[code]</a>"
 
     - title: Data Scientist
       institution: Amazon Alexa-AI, Bangalore, India
       year: Apr 2020 – Sep 2020
       description:
-        - NLU metrics for Alexa.
+        - "<b>Alexa Metrics:</b> Built evaluations bridging offline and online Natural Language Understanding metrics."
 
     - title: Research Associate
       institution: Statistics & Machine Learning Group, IISc Bangalore
       year: Jun 2019 – Mar 2020
       description:
-        - Multi-agent reinforcement learning.
+        - "<b>Networked MARL (AAMAS 2020):</b> Co-first author; multi-agent RL with emergent communication. <a href=\"https://arxiv.org/pdf/2004.02780.pdf\">[pdf]</a>"
 
+
+- title: Honors & Awards
+  type: list
+  contents:
+    - "<b>First Gold Medal in a Live Kaggle Competition achieved by an Autonomous System</b> (2026)<br>NVIDIA – Nemotron Model Reasoning Challenge (8th / ~4,000 teams, AIRA<sub>3</sub>)"
+    - "<b>Featured in Forbes</b>, AIRA<sub>2</sub>: Breaking Bottlenecks in AI Research Agents <a href=\"https://www.forbes.com/sites/jonmarkman/2026/04/01/aira_2-breaking-bottlenecks-in-ai-research-agents/\">[article]</a> (2026)"
+    - "<b>FAIR Engineering Award</b>, AgentBox – infrastructure for scaling autonomous research agents (2025)"
+    - "<b>Nominee, WASP Best PhD Award</b> (2026)"
+    - "<b>Spotlight Presentation</b>, NeurIPS 2025 (AIRA<sub>1</sub>) (2025)"
+    - "<b>Top Reviewer</b>, NeurIPS 2022 and NeurIPS 2024 (top 8%)"
+    - "<b>Best Project Award</b>, B.Tech thesis (2017)"
+    - "<b>GATE 2017</b>, Graduate Aptitude Test in Engineering – top 0.1%<br>India's national exam for postgraduate engineering admissions"
 
 - title: Selected Publications
   type: list
   contents:
+    - '<b>AIRA<sub>3</sub>: Autonomous AI Research Agents in Live Competition</b><br>M Josifoski*, K Hambardzumyan*, E Toledo*, <u>R Hazra*</u>, N Baldwin*, M Kuchnik* (*: equal contribution)<br><i>Live Kaggle Gold Medal, 2026</i> <a href="https://x.com/AIatMeta/status/2096271545589190927">[announcement]</a>'
+
     - '<b>AIRA<sub>2</sub>: Overcoming Bottlenecks in AI Research Agents</b><br>K Hambardzumyan*, N Baldwin*, E Toledo*, <u>R Hazra*</u>, M Kuchnik*, M Josifoski* et al. (*: equal contribution)<br><i>NeurIPS 2026</i> <a href="https://arxiv.org/pdf/2603.26499">[pdf]</a>'
 
     - '<b>AI Research Preference Models</b><br>TS Foster*, B Al Omari*, T Fu*, T Mann, C Domond et al.<br><i>Preprint 2026</i> <a href="https://arxiv.org/abs/2608.13940">[pdf]</a>'
@@ -69,6 +89,8 @@
     - '<b>SAM 3: Segment Anything with Concepts</b><br>N Carion et al.<br><i>ICLR 2026</i> <a href="https://arxiv.org/pdf/2511.16719v1">[pdf]</a> <a href="https://github.com/facebookresearch/sam3">[code]</a> <a href="https://ai.meta.com/research/sam3/">[website]</a>'
 
     - '<b>AI Research Agents for ML: Search, Exploration, and Generalization in MLE-bench</b><br>E Toledo, K Hambardzumyan, M Josifoski, <u>R Hazra</u> et al.<br><i>NeurIPS 2025</i> (Spotlight) <a href="https://arxiv.org/abs/2507.02554">[pdf]</a> <a href="https://github.com/facebookresearch/aira-dojo">[code]</a>'
+
+    - '<b>Combining Code Generating Large Language Models and Self-Play to Iteratively Refine Strategies in Games</b><br>Y Bachrach, E Toledo, K Hambardzumyan, D Magka et al., <u>R Hazra</u><br><i>IJCAI 2025</i> <a href="https://www.ijcai.org/proceedings/2025/1249.pdf">[pdf]</a>'
 
     - '<b>LexiCon: Planning under Temporal Constraints in Natural Language</b><br>P Mantenoglou, <u>R Hazra</u>, PZD Martires, L De Raedt<br><i>NeurIPS 2025</i> (DB Track) <a href="https://openreview.net/pdf?id=wxFfPVPtdy">[pdf]</a> <a href="https://github.com/periklismant/lexicon_neurips">[code]</a>'
 
@@ -100,11 +122,5 @@
 - title: Academic Service
   type: list
   contents:
-    - "Program Committee & Session Chair: AAMAS 2022"
-    - "Reviewer: NeurIPS 2022 (Top), 2023, 2024 (Top), 2025, 2026 | ICML 2023–25 | ICLR 2024–25 | KR 2024 | EACL 2023 | TMLR"
-
-- title: Community
-  type: list
-  contents:
-    - "PRAYAAS India (2013–2016): Taught mathematics to underprivileged children."
-    - "Tarumitra (2011–2013): Student President; led plantation drives and awareness programs."
+    - "Session Chair: AAMAS 2022"
+    - "Program Committee: NeurIPS 2022–26 | ICML 2023–25 | ICLR 2024–25 | KR 2024 | EACL 2023 | TMLR"
