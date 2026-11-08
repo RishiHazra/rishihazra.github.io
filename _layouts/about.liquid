@@ -29,6 +29,15 @@ layout: default
         {% if page.profile.address %}
           <p class="profile-affiliation">{{ page.profile.address | strip_html | strip }}</p>
         {% endif %}
+
+        {% if page.social %}
+          <div class="social profile-social">
+            <div class="contact-icons">
+              {% include social.liquid %}
+              <a href="{{ '/assets/pdf/CV_Rishi.pdf' | relative_url }}" title="CV" target="_blank"><i class="ai ai-cv"></i></a>
+            </div>
+          </div>
+        {% endif %}
       </div>
     {% endif %}
 
@@ -57,26 +66,14 @@ layout: default
       </h2>
       <div class="academic-service">
         <div class="service-group">
-          <div class="service-group-title">Program Committee & Session Chair</div>
+          <div class="service-group-title">Session Chair & Program Committee</div>
           <div class="service-pills">
-            <span class="service-pill">AAMAS'22</span>
-          </div>
-        </div>
-        <div class="service-group">
-          <div class="service-group-title">Reviewer</div>
-          <div class="service-pills">
-            <span class="service-pill highlight">NeurIPS'22 (Top Reviewer)</span>
-            <span class="service-pill">NeurIPS'23</span>
-            <span class="service-pill highlight">NeurIPS'24 (Top Reviewer)</span>
-            <span class="service-pill">NeurIPS'25</span>
-            <span class="service-pill">NeurIPS'26</span>
-            <span class="service-pill">EACL'23</span>
-            <span class="service-pill">ICML'23</span>
-            <span class="service-pill">ICML'24</span>
-            <span class="service-pill">ICML'25</span>
+            <span class="service-pill highlight">AAMAS'22 (Session Chair)</span>
+            <span class="service-pill">NeurIPS'22–26</span>
+            <span class="service-pill">ICML'23–25</span>
+            <span class="service-pill">ICLR'24–25</span>
             <span class="service-pill">KR'24</span>
-            <span class="service-pill">ICLR'24</span>
-            <span class="service-pill">ICLR'25</span>
+            <span class="service-pill">EACL'23</span>
             <span class="service-pill">TMLR</span>
           </div>
         </div>
@@ -91,13 +88,5 @@ layout: default
       {% include selected_papers.liquid %}
     {% endif %}
 
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
-      </div>
-    {% endif %}
   </article>
 </div>

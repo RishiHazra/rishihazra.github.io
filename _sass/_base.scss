@@ -525,6 +525,20 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+.profile-hero .profile-social {
+  margin-top: 1rem;
+
+  .contact-icons {
+    font-size: 1.3rem;
+    gap: 0.6rem;
+
+    a {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+}
+
 .wechat-modal {
   display: none;
   position: fixed;
