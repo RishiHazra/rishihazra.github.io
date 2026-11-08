@@ -12,15 +12,17 @@
 \usepackage{xcolor}
 \usepackage{tabularx}
 \usepackage{microtype}
+\usepackage{needspace}
 \usepackage{lmodern}
-\usepackage{parskip}
 
 % ── Page geometry ────────────────────────────────────────────────────────────
 \geometry{a4paper, top=0.6in, bottom=0.6in, left=0.7in, right=0.7in}
 \pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
 
 % ── Colors ───────────────────────────────────────────────────────────────────
-\definecolor{accent}{HTML}{0D9488}
+\definecolor{accent}{HTML}{047857}
 \definecolor{subtle}{HTML}{64748B}
 \definecolor{lightgray}{HTML}{E2E8F0}
 
@@ -39,18 +41,24 @@
   {}
   {0em}
   {\MakeUppercase}
-  [\vspace{-0.6em}{\color{lightgray}\rule{\linewidth}{0.5pt}}]
-\titlespacing{\section}{0pt}{1em}{0.5em}
+  [\vspace{-0.75em}{\color{lightgray}\rule{\linewidth}{0.5pt}}]
+\titlespacing{\section}{0pt}{1.1em}{0.5em}
 
 % ── List formatting ─────────────────────────────────────────────────────────
 \setlist{leftmargin=1.2em, noitemsep, topsep=2pt, parsep=1pt}
 
 % ── Custom commands ──────────────────────────────────────────────────────────
+% \cventry{title}{organisation}{dates}{body}
 \newcommand{\cventry}[4]{%
-  \noindent\textbf{#1}\hfill{\small\color{subtle}#3}\\
-  {\small\color{subtle}#2}\\
-  {\small #4}\par\vspace{0.5em}%
+  {\sffamily\bfseries #1}\hfill{\small\color{subtle}#3}\par\nopagebreak
+  {\small\color{subtle}#2}\par\nopagebreak
+  {\small #4}\par\vspace{0.6em}%
 }
+\newenvironment{cvitems}
+  {\begin{itemize}[leftmargin=1.1em, label={\textbullet}, topsep=2pt, itemsep=2pt, parsep=0pt]}
+  {\end{itemize}}
+% project tag inside experience bullets
+\newcommand{\cvproj}[1]{\textbf{\color{accent}#1}}
 \newcommand{\cvlink}[2]{\href{#2}{\small\textcolor{accent}{[#1]}}}
 
 \newcommand{\cvcontact}[3]{\href{#3}{\textcolor{subtle}{#1}\;\textcolor{black}{#2}}}
@@ -61,7 +69,7 @@
 % ── Header ───────────────────────────────────────────────────────────────────
 \begin{center}
   {\huge\bfseries Rishi Hazra}\\\vspace{0.3em}
-  {\color{subtle}\normalsize Postdoctoral Researcher\;\textcolor{lightgray}{|}\;FAIR (Meta AI), London}\\\vspace{0.5em}
+  {\color{subtle}\normalsize Postdoctoral Researcher\;\textcolor{lightgray}{|}\;FAIR, Meta Superintelligence Labs, London}\\\vspace{0.5em}
   \cvcontact{\faEnvelope}{rishihazra63@gmail.com}{mailto:rishihazra63@gmail.com}\quad
   \cvcontact{\faGlobe}{rishihazra.github.io}{https://rishihazra.github.io}\quad
   \cvcontact{\aiGoogleScholar}{Scholar}{https://scholar.google.com/citations?user=aWN72pEAAAAJ\&hl=en}\quad
@@ -71,47 +79,86 @@
 
 \vspace{-0.3em}
 
-% ── Experience ───────────────────────────────────────────────────────────────
-\section{Research \& Professional Experience}
-
-\cventry{Postdoctoral Researcher}{FAIR (Meta AI), London, UK}{Jul 2025 -- Present}{%
-  AI Research Agents.}
-
-\cventry{Research Science Intern}{FAIR (Meta AI), London, UK}{Aug 2024 -- Feb 2025}{%
-  SAM 3; AI Research Agents.}
-
-\cventry{Research Science Intern}{Meta Reality Labs Research, Redmond, USA}{Jul 2022 -- Dec 2022}{%
-  Vision and language-based task tracking.}
-
-\cventry{Data Scientist}{Amazon Alexa-AI, Bangalore, India}{Apr 2020 -- Sep 2020}{%
-  NLU metrics for Alexa.}
-
-\cventry{Research Associate}{Statistics \& Machine Learning Group, IISc Bangalore}{Jun 2019 -- Mar 2020}{%
-  Multi-agent reinforcement learning.}
-
 % ── Education ────────────────────────────────────────────────────────────────
 \section{Education}
 
-\cventry{Ph.D.}{\"{O}rebro University \& WASP, Sweden}{2021 -- 2025}{%
-  Thesis: Neurosymbolic decision-making with LLMs.\\
-  Supervisors: Luc De Raedt, Pedro Zuidberg Dos Martires.}
+\cventry{Ph.D. in Computer Science}{\"{O}rebro University \& WASP, Sweden}{2021 -- 2025}{%
+  Thesis: Neurosymbolic decision-making with LLMs\;\textcolor{lightgray}{|}\;Supervisors: Luc De Raedt, Pedro Zuidberg Dos Martires\\
+  Fully funded by WASP (Wallenberg AI, Autonomous Systems \& Software Program), Sweden's largest research program}
 
 \cventry{M.Tech in Artificial Intelligence}{Indian Institute of Science, Bangalore}{2017 -- 2019}{%
-  Thesis: Active learning in sequence tagging.\\
-  GPA: 8.10/10. Supervisor: Ambedkar Dukkipati.}
+  Thesis: Active learning in sequence tagging\;\textcolor{lightgray}{|}\;Supervisor: Ambedkar Dukkipati\;\textcolor{lightgray}{|}\;GPA: 8.10/10}
 
 \cventry{B.Tech in Electrical Engineering}{Birsa Institute of Technology, India}{2013 -- 2017}{%
-  GPA: 8.03/10.}
+  GPA: 8.03/10}
+
+% ── Experience ───────────────────────────────────────────────────────────────
+\section{Research \& Professional Experience}
+
+\cventry{Postdoctoral Researcher}{FAIR, Meta Superintelligence Labs, London, UK}{Jul 2025 -- Present}{%
+  \begin{cvitems}
+    \item \cvproj{AIRA$_3$ (Kaggle Gold Medal):} Co-first author of an autonomous research agent that fine-tuned a 30B reasoning model end-to-end with no human in the loop, placing 8\textsuperscript{th} of $\sim$4,000 teams in NVIDIA's live Nemotron challenge -- the first Kaggle gold medal won by an autonomous system.\;\cvlink{announcement}{https://x.com/AIatMeta/status/2096271545589190927}
+    \item \cvproj{AIRA$_2$ (NeurIPS 2026):} Co-first author; identified the bottlenecks limiting AI research agents on MLE-bench and removed them by scaling agents across many GPUs.\;\cvlink{pdf}{https://arxiv.org/abs/2603.26499}
+    \item \cvproj{AgentBox (FAIR Engineering Award):} Built the execution infrastructure for running autonomous agents at scale across MSL, the backbone of multi-GPU AIRA experiments.
+    \item \cvproj{Production Impact:} Applied research agents to production GPU and accelerator kernel generation: 1.25--17$\times$ speedups on recommendation and LLM models, 27\% lower kernel latency (internal benchmark), weeks-to-hours development.
+    \item \cvproj{Data Annotation \& AI Co-Scientists (ICML 2026):} Led large-scale collection of research ideas from AIRA$_1$ and their annotation as preference data to train rubric-based LLM judges, used to improve AIRA$_2$ via quality-diversity search. These annotations underpinned training AI co-scientists with RL on rubric rewards, whose research plans experts preferred for 70\% of goals.\;\cvlink{pdf}{https://openreview.net/pdf?id=bTySLCPXHO}
+  \end{cvitems}}
+
+\cventry{Research Scientist Intern}{FAIR, Meta AI, London, UK}{Aug 2024 -- Feb 2025}{%
+  \begin{cvitems}
+    \item \cvproj{AIRA$_1$ (NeurIPS 2025 Spotlight):} Developed research agents for MLE-bench, studying search policies, exploration, and generalization; open-sourced \textbf{aira-dojo}.\;\cvlink{pdf}{https://arxiv.org/abs/2507.02554}\;\cvlink{code}{https://github.com/facebookresearch/aira-dojo}
+    \item \cvproj{SAM 3 (ICLR 2026):} Contributed to compositional-concept evaluation for Segment Anything with Concepts.\;\cvlink{pdf}{https://arxiv.org/pdf/2511.16719v1}\;\cvlink{code}{https://github.com/facebookresearch/sam3}
+  \end{cvitems}}
+
+\cventry{Research Scientist Intern}{Meta Reality Labs Research, Redmond, USA}{Jul 2022 -- Dec 2022}{%
+  \begin{cvitems}
+    \item \cvproj{EgoTV (ICCV 2023):} First author; built a benchmark for verifying compositional multi-step tasks from natural-language descriptions in egocentric video, and proposed a neuro-symbolic grounding model for it.\;\cvlink{web}{https://rishihazra.github.io/EgoTV/}\;\cvlink{pdf}{https://arxiv.org/pdf/2303.16975.pdf}\;\cvlink{code}{https://github.com/facebookresearch/EgoTV}
+  \end{cvitems}}
+
+\cventry{Data Scientist}{Amazon Alexa-AI, Bangalore, India}{Apr 2020 -- Sep 2020}{%
+  \begin{cvitems}
+    \item \cvproj{Alexa Metrics:} Built evaluations bridging offline and online Natural Language Understanding metrics.
+  \end{cvitems}}
+
+\cventry{Research Associate}{Statistics \& Machine Learning Group, IISc Bangalore}{Jun 2019 -- Mar 2020}{%
+  \begin{cvitems}
+    \item \cvproj{Networked MARL (AAMAS 2020):} Co-first author; multi-agent RL with emergent communication.\;\cvlink{pdf}{https://arxiv.org/pdf/2004.02780.pdf}
+  \end{cvitems}}
+
+% ── Honors ───────────────────────────────────────────────────────────────────
+\needspace{14\baselineskip}
+\section{Honors \& Awards}
+
+\begin{cvitems}
+  \item \textbf{First Gold Medal in a Live Kaggle Competition achieved by an Autonomous System}\hfill{\small\color{subtle}2026}\\
+    {\small NVIDIA -- Nemotron Model Reasoning Challenge (8\textsuperscript{th} / $\sim$4,000 teams, AIRA$_3$)}
+  \item \textbf{Featured in Forbes}, AIRA$_2$: Breaking Bottlenecks in AI Research Agents\;\cvlink{article}{https://www.forbes.com/sites/jonmarkman/2026/04/01/aira_2-breaking-bottlenecks-in-ai-research-agents/}\hfill{\small\color{subtle}2026}
+  \item \textbf{FAIR Engineering Award}, AgentBox -- infrastructure for scaling autonomous research agents\hfill{\small\color{subtle}2025}
+    \item \textbf{Nominee, WASP Best PhD Award}\hfill{\small\color{subtle}2026}
+  \item \textbf{Spotlight Presentation}, NeurIPS 2025 (AIRA$_1$)\hfill{\small\color{subtle}2025}
+  \item \textbf{Top Reviewer}, NeurIPS 2022 and NeurIPS 2024 (top 8\%)\hfill{\small\color{subtle}2022, 2024}
+  \item \textbf{Best Project Award}, B.Tech thesis\hfill{\small\color{subtle}2017}
+  \item \textbf{GATE 2017}, Graduate Aptitude Test in Engineering -- top 0.1\%\hfill{\small\color{subtle}2017}\\
+    {\small India's national exam for postgraduate engineering admissions}
+\end{cvitems}
 
 % ── Publications ─────────────────────────────────────────────────────────────
 \section{Selected Publications}
 
-\begin{enumerate}[leftmargin=1.5em, label={\small\arabic*.}]
-\small
+\begin{enumerate}[leftmargin=1.6em, label={\small\arabic*.}, itemsep=2pt]
+\small\interlinepenalty=10000
+
+\item \textbf{AIRA$_3$: Autonomous AI Research Agents in Live Competition}\\
+    M Josifoski*, K Hambardzumyan*, E Toledo*, \underline{R Hazra*}, N Baldwin*, M Kuchnik*\\
+    \textit{Live Kaggle Gold Medal, 2026}\quad\cvlink{announcement}{https://x.com/AIatMeta/status/2096271545589190927}
 
 \item \textbf{AIRA$_2$: Overcoming Bottlenecks in AI Research Agents}\\
-    K Hambardzumyan*, N Baldwin*, E Toledo*, \underline{R Hazra*}, M Kuchnik*, M Josifosky* et al. (*: equal contribution)\\
-    \textit{NeurIPS 2026} (under review) \quad\cvlink{pdf}{https://arxiv.org/pdf/2603.26499}
+    K Hambardzumyan*, N Baldwin*, E Toledo*, \underline{R Hazra*}, M Kuchnik*, M Josifoski* et al.\\
+    \textit{NeurIPS 2026} \quad\cvlink{pdf}{https://arxiv.org/pdf/2603.26499}
+
+\item \textbf{AI Research Preference Models}\\
+    TS Foster*, B Al Omari*, T Fu*, T Mann, C Domond et al.\\
+    \textit{Preprint 2026}\quad\cvlink{pdf}{https://arxiv.org/abs/2608.13940}
 
 \item \textbf{Training AI Co-Scientists Using Rubric Rewards}\\
     S Goel, \underline{R Hazra}, D Jayalath, T Willi, P Jain, WF Shen, I Leontiadis, F Barbieri, Y Bachrach, J Geiping, C Whitehouse\\
@@ -119,7 +166,7 @@
 
   \item \textbf{COvolve: Adversarial Co-Evolution of Large-Language-Model-Generated Policies and Environments via Two-Player Zero-Sum Game}\\
     A Sygkounas, \underline{R Hazra}, A Persson, PZD Martires, A Loutfi\\
-    \textit{GECCO 2026}\;\cvlink{pdf}{https://arxiv.org/pdf/2603.28386}
+    \textit{GECCO 2026}\quad\cvlink{pdf}{https://arxiv.org/pdf/2603.28386}
 
   \item \textbf{SAM 3: Segment Anything with Concepts}\\
     N Carion et al.\\
@@ -128,6 +175,10 @@
   \item \textbf{AI Research Agents for ML: Search, Exploration, and Generalization in MLE-bench}\\
     E Toledo, K Hambardzumyan, M Josifoski, \underline{R Hazra} et al.\\
     \textit{NeurIPS 2025} (Spotlight)\quad\cvlink{pdf}{https://arxiv.org/abs/2507.02554}\;\cvlink{code}{https://github.com/facebookresearch/aira-dojo}
+
+  \item \textbf{Combining Code Generating Large Language Models and Self-Play to Iteratively Refine Strategies in Games}\\
+    Y Bachrach, E Toledo, K Hambardzumyan, D Magka et al., \underline{R Hazra}\\
+    \textit{IJCAI 2025}\quad\cvlink{pdf}{https://www.ijcai.org/proceedings/2025/1249.pdf}
 
   \item \textbf{LexiCon: Planning under Temporal Constraints in Natural Language}\\
     P Mantenoglou, \underline{R Hazra}, PZD Martires, L De Raedt\\
@@ -163,41 +214,22 @@
 
 \end{enumerate}
 
-{\small\color{subtle}Workshop papers (ViGIL @ NAACL-HLT 2021, IEEE RO-MAN 2024, HRI 2025 LBR) omitted for brevity.\par}
+{\small\color{subtle}* Equal contribution. Workshop papers (ViGIL @ NAACL 2021, RO-MAN 2024, HRI 2025 LBR) omitted.\par}
 
 % ── Mentorship ───────────────────────────────────────────────────────────────
+\needspace{6\baselineskip}
 \section{Mentorship}
 
-\noindent\textbf{Master Thesis Supervision}\hfill{\small\color{subtle}2024 -- 2025}\\
-{\color{subtle}Jens V R\"uppel, TU Chemnitz} \quad{\small(Co-supervisor: Tim Schreiter)}
-
-\vspace{0.5em}
-
-% % ── Achievements ─────────────────────────────────────────────────────────────
-% \section{Achievements}
-%
-% \begin{tabularx}{\textwidth}{@{}l X@{}}
-%   \textbf{Top Reviewer} & NeurIPS 2022, NeurIPS 2024 (Top 8\%)\\[2pt]
-%   \textbf{Guinness World Record} & Most users to complete a remote 10\,km in 24 hours\;\cvlink{record}{https://www.guinnessworldrecords.com/world-records/647729-most-users-to-run-a-remote-10-km-in-24-hours}\;\cvlink{cert}{https://drive.google.com/file/d/1Y8NRmzR7t79GxzP67qui0aX_ey5ZcUvx/view?usp=sharing}\\[2pt]
-%   \textbf{Kaggle} & 2\textsuperscript{nd} rank in secondary track of \href{https://www.kaggle.com/rishih/present-sir}{PASSNYC}\\[2pt]
-%   \textbf{GATE 2017} & All India Rank 133 (top 0.001\%)\\[2pt]
-%   \textbf{Undergrad} & Best Outgoing Project Award (BIT Sindri \& IIT ISM Dhanbad)\\[2pt]
-% \end{tabularx}
+\cventry{Master Thesis Co-supervision}{TU Chemnitz}{2024 -- 2025}{%
+  Jens V R\"uppel\;\textcolor{lightgray}{|}\;with Tim Schreiter}
 
 % ── Academic Service ─────────────────────────────────────────────────────────
+\needspace{5\baselineskip}
 \section{Academic Service}
 
-\noindent\textbf{Program Committee \& Session Chair:}\;AAMAS 2022\\[2pt]
-\textbf{Reviewer:}\;NeurIPS 2022{\small\,\textcolor{accent}{(Top)}}, 2023, 2024{\small\,\textcolor{accent}{(Top)}}, 2025\;\textcolor{lightgray}{|}\;ICML 2023--25\;\textcolor{lightgray}{|}\;ICLR 2024--25\;\textcolor{lightgray}{|}\;KR 2024\;\textcolor{lightgray}{|}\;EACL 2023\;\textcolor{lightgray}{|}\;TMLR
+\textbf{Session Chair:}\;AAMAS 2022\\[2pt]
+\textbf{Program Committee:}\;NeurIPS 2022--26\;\textcolor{lightgray}{|}\;ICML 2023--25\;\textcolor{lightgray}{|}\;ICLR 2024--25\;\textcolor{lightgray}{|}\;KR 2024\;\textcolor{lightgray}{|}\;EACL 2023\;\textcolor{lightgray}{|}\;TMLR
 
 \vspace{0.5em}
-
-% ── Community ────────────────────────────────────────────────────────────────
-\section{Community}
-
-\begin{itemize}
-  \item \textbf{PRAYAAS India} (2013--2016): Taught mathematics to underprivileged children.
-  \item \textbf{Tarumitra} (2011--2013): Student President; led plantation drives and awareness programs.
-\end{itemize}
 
 \end{document}
