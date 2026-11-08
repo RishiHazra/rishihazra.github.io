@@ -25,7 +25,7 @@
 - title: Research & Professional Experience
   type: time_table
   contents:
-    - title: Postdoctoral Researcher
+    - title: Research Scientist, Postdoctoral Researcher
       institution: FAIR, Meta Superintelligence Labs, London, UK
       year: Jul 2025 – Present
       description:
@@ -33,14 +33,14 @@
         - "<b>AIRA<sub>2</sub> (NeurIPS 2026):</b> Co-first author; identified the bottlenecks limiting AI research agents on MLE-bench and removed them by scaling agents across many GPUs. <a href=\"https://arxiv.org/abs/2603.26499\">[pdf]</a>"
         - "<b>AgentBox (FAIR Engineering Award):</b> Built the execution infrastructure for running autonomous agents at scale across MSL, the backbone of multi-GPU AIRA experiments."
         - "<b>Production Impact:</b> Applied research agents to production GPU and accelerator kernel generation: 1.25–17× speedups on recommendation and LLM models, 27% lower kernel latency (internal benchmark), weeks-to-hours development."
-        - "<b>Data Annotation & AI Co-Scientists (ICML 2026):</b> Led large-scale collection of research ideas from AIRA<sub>1</sub> and their annotation as preference data to train rubric-based LLM judges, used to improve AIRA<sub>2</sub> via quality-diversity search. These annotations underpinned training AI co-scientists with RL on rubric rewards, whose research plans experts preferred for 70% of goals. <a href=\"https://openreview.net/pdf?id=bTySLCPXHO\">[pdf]</a>"
+        - "<b>Data Collection, Annotation & Vendor Management:</b> Led large-scale data collection and preference annotation with external vendors, used for post-training of models and LLM judges to improve the long-horizon ideation, planning, and judging abilities of AIRA<sub>2</sub>."
 
     - title: Research Scientist Intern
       institution: FAIR (Meta AI), London, UK
       year: Aug 2024 – Feb 2025
       description:
         - "<b>AIRA<sub>1</sub> (NeurIPS 2025 Spotlight):</b> Developed research agents for MLE-bench, studying search policies, exploration, and generalization; open-sourced <b>aira-dojo</b>. <a href=\"https://arxiv.org/abs/2507.02554\">[pdf]</a> <a href=\"https://github.com/facebookresearch/aira-dojo\">[code]</a>"
-        - "<b>SAM 3 (ICLR 2026):</b> Contributed to compositional-concept evaluation for Segment Anything with Concepts. <a href=\"https://arxiv.org/pdf/2511.16719v1\">[pdf]</a> <a href=\"https://github.com/facebookresearch/sam3\">[code]</a>"
+        - "<b>SAM 3 (ICLR 2026):</b> Owned the compositional concepts effort, leading large-scale data collection and building the evaluation for segmenting concepts with attributes and relations. <a href=\"https://arxiv.org/pdf/2511.16719v1\">[pdf]</a> <a href=\"https://github.com/facebookresearch/sam3\">[code]</a>"
 
     - title: Research Scientist Intern
       institution: Meta Reality Labs Research, Redmond, USA
@@ -52,13 +52,13 @@
       institution: Amazon Alexa-AI, Bangalore, India
       year: Apr 2020 – Sep 2020
       description:
-        - "<b>Alexa Metrics:</b> Built evaluations bridging offline and online Natural Language Understanding metrics."
+        - "<b>Alexa Metrics:</b> Led an investigation into why offline evaluation metrics failed to predict live Natural Language Understanding error rates in production, and designed a better offline metric that tracks live errors, raising offline–online correlation across 4 locales and 2 device profiles over the last 10 model releases."
 
     - title: Research Associate
       institution: Statistics & Machine Learning Group, IISc Bangalore
       year: Jun 2019 – Mar 2020
       description:
-        - "<b>Networked MARL (AAMAS 2020):</b> Co-first author; multi-agent RL with emergent communication. <a href=\"https://arxiv.org/pdf/2004.02780.pdf\">[pdf]</a>"
+        - "<b>Networked MARL (AAMAS 2020):</b> Co-first author; developed networked reinforcement learning agents that learn an emergent language to coordinate traffic signal control, and analysed how the language is grounded. <a href=\"https://arxiv.org/pdf/2004.02780.pdf\">[pdf]</a>"
 
 
 - title: Honors & Awards
@@ -108,7 +108,15 @@
 
     - '<b>Networked Multi-Agent Reinforcement Learning with Emergent Communication</b><br>S Gupta*, <u>R Hazra*</u>, A Dukkipati<br><i>AAMAS 2020</i> <a href="https://arxiv.org/pdf/2004.02780.pdf">[pdf]</a>'
 
-    - '<span style="color: #64748B;">Workshop papers (ViGIL @ NAACL-HLT 2021, IEEE RO-MAN 2024, HRI 2025 LBR) omitted for brevity.</span>'
+    - '<b>Workshop:</b> <b>LLM-Driven Adaptability or Pre-programmed Efficiency? A Comparative Study for Short Interactions</b><br>T Schreiter*, JV Ruppel*, <u>R Hazra</u>, A Rudenko, M Magnusson, AJ Lilienthal<br><i>HRI 2025</i> (Late-Breaking Report) <a href="https://arxiv.org/pdf/2501.12128">[pdf]</a>'
+
+    - '<b>Workshop:</b> <b>Bidirectional Intent Communication: A Role for Large Foundation Models</b><br>T Schreiter*, <u>R Hazra*</u>, J Ruppel, A Rudenko<br><i>LLMs in the RO-MAN Age @ IEEE RO-MAN 2024</i> <a href="https://arxiv.org/abs/2408.10589">[pdf]</a>'
+
+    - '<b>Workshop:</b> <b>Intrinsically Motivated Compositional Language Emergence</b><br><u>R Hazra</u>, S Dixit, S Sen<br><i>ViGIL @ NAACL 2021</i> <a href="https://arxiv.org/pdf/2012.05011.pdf">[pdf]</a>'
+
+    - '<b>Workshop:</b> <b>gComm: An Environment for Investigating Generalization in Grounded Language Acquisition</b><br><u>R Hazra*</u>, S Dixit*<br><i>ViGIL @ NAACL 2021</i> <a href="https://vigilworkshop.github.io/static/papers-2021/16.pdf">[pdf]</a>'
+
+    - '<span style="color: #64748B;">* Equal contribution.</span>'
 
 - title: Mentorship
   type: time_table
