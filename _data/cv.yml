@@ -29,7 +29,7 @@
       institution: FAIR, Meta Superintelligence Labs, London, UK
       year: Jul 2025 – Present
       description:
-        - "<b>AIRA<sub>3</sub> (Kaggle Gold Medal):</b> Co-first author of an autonomous research agent that fine-tuned a 30B reasoning model end-to-end with no human in the loop, placing 8th of ~4,000 teams in NVIDIA's live Nemotron challenge — the first Kaggle gold medal won by an autonomous system. <a href=\"https://x.com/AIatMeta/status/2096271545589190927\">[announcement]</a>"
+        - "<b>AIRA<sub>3</sub> (Kaggle Gold Medal):</b> Co-first author of an autonomous research agent that fine-tuned a 30B reasoning model end-to-end with no human in the loop, placing 8th of ~4,000 teams in NVIDIA's live Nemotron challenge — the first Kaggle gold medal won by an autonomous system. It also reached gold-level performance in another Kaggle competition translating 4,000-year-old Akkadian clay tablets into English, showing it can generalize across domains. <a href=\"https://x.com/AIatMeta/status/2096271545589190927\">[announcement]</a>"
         - "<b>AIRA<sub>2</sub> (NeurIPS 2026):</b> Co-first author; identified the bottlenecks limiting AI research agents on MLE-bench and removed them by scaling agents across many GPUs. <a href=\"https://arxiv.org/abs/2603.26499\">[pdf]</a>"
         - "<b>AgentBox (FAIR Engineering Award):</b> Built the execution infrastructure for running autonomous agents at scale across MSL, the backbone of multi-GPU AIRA experiments."
         - "<b>Production Impact:</b> Applied research agents to production GPU and accelerator kernel generation: 1.25–17× speedups on recommendation and LLM models, 27% lower kernel latency (internal benchmark), weeks-to-hours development."
