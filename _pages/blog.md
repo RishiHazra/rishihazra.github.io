@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /blog/
-title: blog
+title: blog & projects
 nav: true
 nav_order: 1
 pagination:
@@ -17,6 +17,22 @@ pagination:
 ---
 
 <div class="post">
+
+{% unless paginator.page > 1 %}
+{% assign sorted_projects = site.projects | sort: "importance" %}
+{% if sorted_projects.size > 0 %}
+
+  <div class="projects">
+    <h2 class="category">projects</h2>
+    <div class="row row-cols-1 row-cols-md-3">
+      {% for project in sorted_projects %}
+        {% include projects.liquid %}
+      {% endfor %}
+    </div>
+    <h2 class="category">posts</h2>
+  </div>
+  {% endif %}
+{% endunless %}
 
 {% assign blog_name_size = site.blog_name | size %}
 {% assign blog_description_size = site.blog_description | size %}

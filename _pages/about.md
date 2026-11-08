@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://ai.meta.com/research/'>Postdoc at FAIR</a>
+subtitle: <a href='https://ai.meta.com/research/'>Postdoc at FAIR</a> &middot; <a href='/assets/pdf/CV_Rishi.pdf' target='_blank'>CV (PDF)</a>
 
 profile:
   align: right
